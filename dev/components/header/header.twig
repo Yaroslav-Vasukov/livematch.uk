@@ -1,0 +1,99 @@
+{# dev/components/header/header.twig #}
+
+{% set headerData = headerData|default({
+  logo: {
+    text: 'MATCH',
+    accent: 'LIVE',
+    url: '/'
+  }
+}) %}
+
+<header class="header" data-module="header">
+  <div class="header__container">
+    
+    {# Logo #}
+    <a href="{{ headerData.logo.url }}" class="header__logo">
+      <span class="header__logo-text">{{ headerData.logo.text }}</span>
+      <span class="header__logo-accent">{{ headerData.logo.accent }}</span>
+    </a>
+
+    {# Main navigation (sports) #}
+    <nav class="header__main-nav main-nav" aria-label="Sports">
+      <ul class="main-nav__list">
+
+        {# Main sports #}
+        {% for sport in sports %}
+        <li class="main-nav__item {{ sport.active ? 'main-nav__item--active' : '' }}" data-sport="{{ sport.id }}">
+          <button class="main-nav__link main-nav__link--dropdown" aria-expanded="false">
+            <span class="main-nav__icon material-symbols-outlined">{{ sport.icon }}</span>
+            <span class="main-nav__text">{{ sport.name|upper }}</span>
+            <span class="main-nav__arrow material-symbols-outlined">expand_more</span>
+          </button>
+          
+          {# Leagues dropdown #}
+          <div class="main-nav__dropdown" hidden>
+            <ul class="main-nav__dropdown-list">
+              {% for league in sport.leagues %}
+              <li class="main-nav__dropdown-item">
+                <a href="{{ league.url }}" class="main-nav__dropdown-link">
+                  {{ league.name }}
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </li>
+        {% endfor %}
+
+        {# More sports #}
+        {% if moreSports|length > 0 %}
+        <li class="main-nav__item main-nav__item--more">
+          <button class="main-nav__link main-nav__link--dropdown" aria-expanded="false">
+            <span class="main-nav__text">MORE</span>
+            <span class="main-nav__arrow material-symbols-outlined">expand_more</span>
+          </button>
+          
+          <div class="main-nav__dropdown" hidden>
+            <ul class="main-nav__dropdown-list">
+              {% for sport in moreSports %}
+              <li class="main-nav__dropdown-item">
+                <a href="{{ sport.url }}" class="main-nav__dropdown-link">
+                  <span class="main-nav__icon material-symbols-outlined">{{ sport.icon }}</span>
+                  {{ sport.name }}
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </li>
+        {% endif %}
+
+      </ul>
+    </nav>
+
+    {# Burger menu for mobile #}
+    <button class="header__burger" aria-label="Menu" aria-expanded="false">
+      <span class="header__burger-line"></span>
+      <span class="header__burger-line"></span>
+      <span class="header__burger-line"></span>
+    </button>
+
+  </div>
+
+  {# Secondary navigation (league pages) #}
+  <nav class="header__secondary-nav secondary-nav" aria-label="Sections">
+    <div class="secondary-nav__container">
+      <ul class="secondary-nav__list">
+        {% for page in leaguePages %}
+        <li class="secondary-nav__item {{ page.active ? 'secondary-nav__item--active' : '' }}">
+          <a href="{{ page.url|default('#') }}" class="secondary-nav__link">
+            <span class="secondary-nav__icon material-symbols-outlined">{{ page.icon }}</span>
+            <span class="secondary-nav__text">{{ page.name }}</span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </nav>
+
+</header>

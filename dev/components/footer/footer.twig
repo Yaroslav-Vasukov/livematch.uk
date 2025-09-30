@@ -1,0 +1,91 @@
+{# dev/components/footer/footer.twig #}
+
+{% set footerData = footerData|default({
+  logo: {
+    text: 'MATCH',
+    accent: 'LIVE'
+  },
+  description: 'Your ultimate destination for the latest sports news, live scores, and in-depth analysis.',
+  links: [
+    {
+      title: 'Sports',
+      items: [
+        { text: 'Football', url: '/football' },
+        { text: 'Basketball', url: '/basketball' },
+        { text: 'Tennis', url: '/tennis' },
+        { text: 'Hockey', url: '/hockey' }
+      ]
+    },
+    {
+      title: 'Sections',
+      items: [
+        { text: 'News', url: '/news' },
+        { text: 'Live', url: '/live' },
+        { text: 'Video', url: '/video' },
+        { text: 'Matches', url: '/matches' }
+      ]
+    },
+    {
+      title: 'Company',
+      items: [
+        { text: 'About Us', url: '/about' },
+        { text: 'Contact', url: '/contact' },
+        { text: 'Advertise', url: '/advertise' },
+        { text: 'Careers', url: '/careers' }
+      ]
+    },
+    {
+      title: 'Legal',
+      items: [
+        { text: 'Privacy Policy', url: '/privacy' },
+        { text: 'Terms of Service', url: '/terms' },
+        { text: 'Cookie Policy', url: '/cookies' },
+        { text: 'DMCA', url: '/dmca' }
+      ]
+    }
+  ],
+  copyright: '2024 MatchLive. All rights reserved.'
+}) %}
+
+<footer class="footer">
+  <div class="footer__container">
+    
+    {# Top section #}
+    <div class="footer__top">
+      
+      {# Brand column #}
+      <div class="footer__brand">
+        <a href="/" class="footer__logo">
+          <span class="footer__logo-text">{{ footerData.logo.text }}</span>
+          <span class="footer__logo-accent">{{ footerData.logo.accent }}</span>
+        </a>
+        
+        <p class="footer__description">{{ footerData.description }}</p>
+      
+      </div>
+
+      {# Links columns #}
+      <div class="footer__links">
+        {% for column in footerData.links %}
+        <div class="footer__column">
+          <h3 class="footer__column-title">{{ column.title }}</h3>
+          <ul class="footer__list">
+            {% for link in column.items %}
+            <li class="footer__list-item">
+              <a href="{{ link.url }}" class="footer__link">{{ link.text }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endfor %}
+      </div>
+
+    </div>
+
+    {# Bottom section #}
+    <div class="footer__bottom">
+      <p class="footer__copyright">© {{ footerData.copyright }}</p>
+    </div>
+
+  </div>
+</footer>

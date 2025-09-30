@@ -1,0 +1,358 @@
+{% extends "../layouts/_base.html" %} 
+{% block title %}Home{% endblock %} 
+{% block active_nav %}home{% endblock %} 
+{% block body_class %}page page--home{% endblock %} 
+{% block head_extra %}
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+{% endblock %} {% block content %}
+
+
+
+{% set calendarData = load_json('data/calendar.json') %}
+{% set videos = load_json('data/videos.json') %}
+{% set teams = load_json('data/teams.json') %}
+{% set upcomingGames = calendarData|slice(0, 3) %}
+ {% set premierLeague = load_json("@/data/leagues/premier-league.json") %} 
+ {% set laLiga = load_json("@/data/leagues/la-liga.json") %} 
+{% set serieA = load_json("@/data/leagues/serie-a.json") %}
+{% set postsData = load_json('data/posts.json') %}
+{% set statsData = load_json('data/stats-data.json') %}
+
+
+
+
+
+{% include '../components/hero-split/hero-split.twig' with {
+  hero: {
+    featured: {
+      title: 'Breaking: Barcelona wins Champions League',
+      description: 'Historic victory in the final match',
+      category: 'Breaking News',
+      image: '/assets/images/bg1.webp',
+      url: '/news/barcelona-wins'
+    },
+    calendarEvent: upcomingGames
+  }
+} %}
+
+<section class="section section--margin">
+  <div class="container">
+    <div class="section__inner">
+      {% include '../components/section-header/section-header.twig' with {
+        title: 'Trending Videos',
+        icon: 'videocam',
+        more: 'See All Videos',
+        more_href: '/videos'
+      } %}
+      
+                  <div
+        class="swiper home-videos-swiper"
+        data-swiper='{
+               "slidesPerView": 1,
+               "spaceBetween": 16,
+               "loop": true,
+               "autoplay": { "delay": 2500, "disableOnInteraction": false },
+               "breakpoints": {
+                 "0":  { "slidesPerView": 1 },
+                 "440":  { "slidesPerView": 2 },
+                 "768":  { "slidesPerView": 3 },
+                 "1024":  { "slidesPerView": 4 }
+               }
+             }'
+      >
+        <div class="swiper-wrapper">
+           {% for v in videos|slice(12, 12) %}
+          <div class="swiper-slide">
+            {% include "../components/card-video/card-video.twig" with { video: v } only %}
+          </div>
+          {% else %}
+          <div class="swiper-slide"><p class="muted">No videos.</p></div>
+          {% endfor %}
+        </div>
+        <div class="swiper-button__wrap">
+          <button
+            class="swiper-button-prev"
+            data-swiper-prev
+            aria-label="Prev"
+          ></button>
+          <button
+            class="swiper-button-next"
+            data-swiper-next
+            aria-label="Next"
+          ></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section section--margin">
+  <div class="container">
+    <div class="section__inner">
+      {% include "../components/section-header/section-header.twig" with {
+      title: "Standings" } %}
+      <div class="tabs" data-tabs id="tabs" aria-label="standings">
+          <div class="tabs__nav" role="tablist" aria-label="Conferences">
+            <button
+              class="tabs__tab is-active"
+              id="tab-premier-league"
+              role="tab"
+              aria-selected="true"
+              aria-controls="panel-premier-league"
+              tabindex="0"
+              data-tab="premier-league"
+            >
+              Premier League
+            </button>
+
+            <button
+              class="tabs__tab"
+              id="tab-laLiga"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-laLiga"
+              tabindex="-1"
+              data-tab="laLiga"
+            >
+              LaLiga
+            </button>
+            <button
+              class="tabs__tab"
+              id="tab-serieA"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-serieA"
+              tabindex="-1"
+              data-tab="serieA"
+            >
+              serie A
+            </button>
+          </div>
+        <div
+          class="tabs__panel is-active"
+          id="panel-premier-league"
+          role="tabpanel"
+          aria-labelledby="tab-premier-league"
+          tabindex="0"
+        >
+          {% include "../components/table/table.twig" with 
+          { variant: 'main', caption: 'Premier League', 
+          columns: [ { key:'pos', label:'#',
+          align:'center', width:'64px' }, { key:'team', label:'Team',
+          type:'team',align:'left', width:'minmax(200px,1fr)' }, { key:'gp',
+          label:'GP', type:'number', align:'right', width:'4.5rem' }, { key:'w',
+          label:'W', type:'number', align:'right', width:'4rem' }, { key:'d',
+          label:'D', type:'number', align:'right', width:'4rem' }, { key:'l',
+          label:'L', type:'number', align:'right', width:'4rem' }, { key:'f',
+          label:'F', type:'number', align:'right', width:'4.5rem' }, { key:'a',
+          label:'A', type:'number', align:'right', width:'4.5rem' }, { key:'gd',
+          label:'GD', type:'number', align:'right', width:'4.5rem' }, { key:'p',
+          label:'P', type:'number', align:'right', width:'4.5rem' }, {
+          key:'form', label:'Form', type:'form', align:'center',
+          width:'minmax(200px,2fr)' } ], rows: premierLeague } only %}
+        </div>
+        <div
+          class="tabs__panel"
+          id="panel-laLiga"
+          role="tabpanel"
+          aria-labelledby="tab-laLiga"
+          tabindex="0"
+          hidden
+        >
+          {% include "../components/table/table.twig" with { variant: 'main',
+          caption: 'laLiga', columns: [ { key:'pos', label:'#', align:'center',
+          width:'64px' }, { key:'team', label:'Team', type:'team',align:'left',
+          width:'minmax(200px,1fr)' }, { key:'gp', label:'GP', type:'number',
+          align:'right', width:'4.5rem' }, { key:'w', label:'W', type:'number',
+          align:'right', width:'4rem' }, { key:'d', label:'D', type:'number',
+          align:'right', width:'4rem' }, { key:'l', label:'L', type:'number',
+          align:'right', width:'4rem' }, { key:'f', label:'F', type:'number',
+          align:'right', width:'4.5rem' }, { key:'a', label:'A', type:'number',
+          align:'right', width:'4.5rem' }, { key:'gd', label:'GD',
+          type:'number', align:'right', width:'4.5rem' }, { key:'p', label:'P',
+          type:'number', align:'right', width:'4.5rem' }, { key:'form',
+          label:'Form', type:'form', align:'center', width:'minmax(200px,2fr)' }
+          ], rows: laLiga } only %}
+        </div>
+        <div
+          class="tabs__panel"
+          id="panel-serieA"
+          role="tabpanel"
+          aria-labelledby="tab-serieA"
+          tabindex="0"
+          hidden
+        >
+          {% include "../components/table/table.twig" with { variant: 'main',
+          caption: 'Serie A', columns: [ { key:'pos', label:'#', align:'center',
+          width:'64px' }, { key:'team', label:'Team', type:'team',align:'left',
+          width:'minmax(200px,1fr)' }, { key:'gp', label:'GP', type:'number',
+          align:'right', width:'4.5rem' }, { key:'w', label:'W', type:'number',
+          align:'right', width:'4rem' }, { key:'d', label:'D', type:'number',
+          align:'right', width:'4rem' }, { key:'l', label:'L', type:'number',
+          align:'right', width:'4rem' }, { key:'f', label:'F', type:'number',
+          align:'right', width:'4.5rem' }, { key:'a', label:'A', type:'number',
+          align:'right', width:'4.5rem' }, { key:'gd', label:'GD',
+          type:'number', align:'right', width:'4.5rem' }, { key:'p', label:'P',
+          type:'number', align:'right', width:'4.5rem' }, { key:'form',
+          label:'Form', type:'form', align:'center', width:'minmax(200px,2fr)' }
+          ], rows: serieA } only %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section section--margin">
+  <div class="container">
+    <div class="section__inner">
+      {% include '../components/section-header/section-header.twig' with {
+        title: 'Latest News',
+        icon: 'article',
+        more: 'See All News',
+        more_href: '/news'
+      } %}
+            <div class="news__layout">
+        
+        <div class="news__main">
+          {% set postsData = load_json('data/posts.json') %}
+          {% for post in postsData|slice(0, 10) %}
+              {% include '../components/card-post/card-post-horizontal.twig' with { post: post } %}
+          {% endfor %}
+        </div>
+
+        <aside class="news__sidebar">
+          <h3 class="news__sidebar-title">Trending</h3>
+          {% for post in postsData|slice(10, 3) %}
+            <div class="card-post--compact">
+              {% include '../components/card-post/card-post.twig' with { post: post } %}
+            </div>
+          {% endfor %}
+        </aside>
+
+      </div>
+        </div>
+    </div>
+  </div>
+</section>
+<section class="secrion section--margin">
+  <div class="container">
+    <div class="section__inner">
+            {% include '../components/section-header/section-header.twig' with {
+        title: 'Premier League Stats',
+        icon: 'sports',
+        more: 'See League',
+        more_href: '/league'
+      } %}
+      {% include '../components/stats-section/stats-section.twig' with {
+  subtitle: statsData.subtitle,
+  stats: statsData.stats
+} %}
+
+    </div>
+  </div>
+</section>
+
+<section class="section section--margin">
+  <div class="container">
+    <div class="section__inner">
+            {% include '../components/section-header/section-header.twig' with {
+        title: 'Popular Teams',
+        icon: 'group',
+        more: 'All Teams',
+        more_href: '/teams'
+      } %}
+                        <div
+        class="swiper home-teams-swiper"
+        data-swiper='{
+               "slidesPerView": 1,
+               "spaceBetween": 16,
+               "loop": true,
+               "autoplay": { "delay": 2500, "disableOnInteraction": false },
+               "breakpoints": {
+                 "0":  { "slidesPerView": 1 },
+                 "600":  { "slidesPerView": 2 },
+                 "768":  { "slidesPerView": 3 },
+                 "1280":  { "slidesPerView": 4 }
+               }
+             }'
+      >
+        <div class="swiper-wrapper">
+           {% for t in teams %}
+          <div class="swiper-slide">
+            {% include "../components/card-team/card-team.twig" with { team: t } only %}
+          </div>
+          {% else %}
+          <div class="swiper-slide"><p class="muted">No teams.</p></div>
+          {% endfor %}
+        </div>
+        <div class="swiper-button__wrap">
+          <button
+            class="swiper-button-prev"
+            data-swiper-prev
+            aria-label="Prev"
+          ></button>
+          <button
+            class="swiper-button-next"
+            data-swiper-next
+            aria-label="Next"
+          ></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section section--margin">
+  <div class="container">
+    <div class="section__inner">
+            {% include '../components/section-header/section-header.twig' with {
+        title: 'Popular Teams',
+        icon: 'group',
+        more: 'All Teams',
+        more_href: '/teams'
+      } %}
+                        <div
+        class="swiper home-videos-swiper"
+        data-swiper='{
+               "slidesPerView": 1,
+               "spaceBetween": 16,
+               "loop": true,
+               "autoplay": { "delay": 2500, "disableOnInteraction": false },
+               "breakpoints": {
+                 "0":  { "slidesPerView": 1 },
+                 "1100":  { "slidesPerView": 2 }
+               }
+             }'
+      >
+        <div class="swiper-wrapper">
+            {% for calendarEvent in calendarData %}
+          <div class="swiper-slide">
+              {% include '../components/card-match/card-match.twig' %}
+          </div>
+          {% else %}
+          <div class="swiper-slide"><p class="muted">No matches.</p></div>
+          {% endfor %}
+        </div>
+        <div class="swiper-button__wrap">
+          <button
+            class="swiper-button-prev"
+            data-swiper-prev
+            aria-label="Prev"
+          ></button>
+          <button
+            class="swiper-button-next"
+            data-swiper-next
+            aria-label="Next"
+          ></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %} {% block scripts %}
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+></script>
+{% endblock %}

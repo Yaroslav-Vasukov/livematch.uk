@@ -1,0 +1,32 @@
+{
+  "stats": [
+    {
+      "icon": "sports_soccer",
+      "number": 347,
+      "label": "Goals Scored",
+      "trend": "↑ 12%",
+      "trendUp": true
+    },
+    {
+      "icon": "emoji_events",
+      "number": 156,
+      "label": "Matches Played",
+      "trend": "↑ 8%",
+      "trendUp": true
+    },
+    {
+      "icon": "group",
+      "number": 28,
+      "label": "Teams Participating",
+      "trend": "↑ 2",
+      "trendUp": true
+    },
+    {
+      "icon": "bar_chart",
+      "number": 92,
+      "label": "Avg. Attendance (k)",
+      "trend": "↓ 5%",
+      "trendUp": false
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{# dev/components/hero-split/hero-split.twig #}
+
+{% set hero = hero|default({}) %}
+
+<section class="hero-split section--margin">
+  <div class="hero-split__container">
+    
+    {# Left side - Featured content #}
+    <div class="hero-split__featured">
+      <a href="{{ hero.featured.url|default('#') }}" class="hero-split__featured-link">
+        
+        {# Image/Video #}
+        <div class="hero-split__media">
+          {% if hero.featured.video %}
+            <video 
+              class="hero-split__video"
+              autoplay 
+              muted 
+              loop 
+              playsinline
+              poster="{{ hero.featured.image|default('') }}"
+            >
+              <source src="{{ hero.featured.video }}" type="video/mp4">
+            </video>
+          {% elseif hero.featured.image %}
+            <img 
+              src="{{ hero.featured.image }}" 
+              alt="{{ hero.featured.title|default('Featured') }}"
+              class="hero-split__image"
+            />
+          {% else %}
+            <div class="hero-split__image hero-split__image--placeholder">
+              <span class="material-symbols-outlined">image</span>
+            </div>
+          {% endif %}
+          
+          {# Gradient overlay #}
+          <div class="hero-split__overlay"></div>
+        </div>
+
+        {# Content over image #}
+        <div class="hero-split__content">
+          
+          {# Category badge #}
+          {% if hero.featured.category %}
+            <span class="hero-split__badge">{{ hero.featured.category }}</span>
+          {% endif %}
+
+          {# Title #}
+          <h1 class="hero-split__title">
+            {{ hero.featured.title|default('Breaking News in Sports') }}
+          </h1>
+
+          {# Description #}
+          {% if hero.featured.description %}
+            <p class="hero-split__description">
+              {{ hero.featured.description }}
+            </p>
+          {% endif %}
+
+          {# Meta #}
+          <div class="hero-split__meta">
+            {% if hero.featured.sport %}
+              <span class="hero-split__sport">
+                <span class="material-symbols-outlined">{{ hero.featured.sportIcon|default('sports_soccer') }}</span>
+                {{ hero.featured.sport }}
+              </span>
+            {% endif %}
+            
+            {% if hero.featured.date %}
+              <time class="hero-split__date" datetime="{{ hero.featured.dateISO|default('') }}">
+                {{ hero.featured.date }}
+              </time>
+            {% endif %}
+          </div>
+
+          {# Read More button #}
+          <div class="hero-split__action">
+            <span class="hero-split__read-more">
+              Read Full Story
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </span>
+          </div>
+
+        </div>
+
+      </a>
+    </div>
+
+    {# Right side - Upcoming matches #}
+    <div class="hero-split__sidebar">
+      
+{% include '../section-header/section-header.twig' with {
+  title: 'Upcoming Matches',
+  icon: 'schedule',
+  more: 'View All',
+  more_href: '/matches'
+} %}
+
+      {# Matches list #}
+      <div class="hero-split__matches">
+        {% if hero.calendarEvent|length > 0 %}
+          {% for event in hero.calendarEvent %}
+            {% include '../card-match/card-match.twig' with { 
+              calendarEvent: event
+            } %}
+          {% endfor %}
+        {% else %}
+          {# Placeholder #}
+          <div class="hero-split__empty">
+            <span class="material-symbols-outlined">event_busy</span>
+            <p>No upcoming matches</p>
+          </div>
+        {% endif %}
+      </div>
+
+    </div>
+
+  </div>
+</section>

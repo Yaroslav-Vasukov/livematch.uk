@@ -1,0 +1,41 @@
+{% extends "../layouts/_base.html" %} 
+{% block title %}Teams{% endblock %} 
+{% block active_nav %}teams{% endblock %} 
+{% block body_class %}page page--teams{% endblock %} 
+{% block head_extra %}{% endblock %} 
+
+{% block content %}
+{% set teams = load_json("@/data/teams.json") %}
+
+{% include "../components/page-head/page-head.twig" with {
+  title: "popular teams",
+  subtitle: "Best soccer teams",
+  breadcrumbs: [
+    { label: "Home", href: "/", home: true },
+    { label: "Popular Teams" }
+  ],
+  meta: {
+    count: teams|length ~ " teams"
+  }
+} only %}
+
+<section class="section section--margin">
+  <div class="container">
+    <div class="section__inner">
+      {% include "../components/infinite-scroll/infinite-scroll.twig" with {
+        type: 'team',
+        data: teams,
+        initial_count: 9,
+        items_per_page: 6,
+        loading_text: 'Loading more articles...',
+        end_text: 'All articles loaded',
+        no_items_text: 'No articles available'
+      } only %}
+    </div>
+  </div>
+</section>
+
+{% endblock %} 
+
+{% block scripts %}
+{% endblock %}

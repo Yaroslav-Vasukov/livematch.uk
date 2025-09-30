@@ -1,0 +1,110 @@
+{# dev/components/card-match/card-match.twig #}
+
+{% set event = calendarEvent|default({}) %}
+{% set status = event.status|default('scheduled') %}
+
+<article class="card-match" 
+         data-module="card-match" 
+         data-match-id="{{ event.id|default('') }}"
+         data-match-time="{{ event.published_at|default('') }}"
+         data-status="{{ status }}">
+  
+  {# Header #}
+  <div class="card-match__header">
+    {% if event.league %}
+      <a href="{{ event.league.href|default('#') }}" class="card-match__league">
+        {% if event.league.logo %}
+          <img src="{{ event.league.logo }}" alt="{{ event.league.name }}" class="card-match__league-logo">
+        {% endif %}
+        <span class="card-match__league-name">{{ event.league.name }}</span>
+      </a>
+    {% endif %}
+    
+    <time class="card-match__date" datetime="{{ event.published_at|default('') }}">
+      {{ event.published_at|date('M d, H:i')|default('TBD') }}
+    </time>
+  </div>
+
+  {# Teams #}
+  <div class="card-match__teams">
+    
+    {# Team 1 #}
+    <a href="{{ event.team1.href|default('#') }}" class="card-match__team card-match__team--home">
+      <div class="card-match__team-logo">
+        {% if event.team1.logo %}
+          <img src="{{ event.team1.logo }}" alt="{{ event.team1.name }}" loading="lazy">
+        {% else %}
+          <span class="material-symbols-outlined">shield</span>
+        {% endif %}
+      </div>
+      <h3 class="card-match__team-name">{{ event.team1.name|default('Team 1') }}</h3>
+    </a>
+
+    {# Middle - Score/Time #}
+    <div class="card-match__middle">
+      {% if status == 'live' %}
+        {# Live #}
+        <div class="card-match__status card-match__status--live">
+          <span class="card-match__status-dot"></span>
+          Live
+        </div>
+        <div class="card-match__score">
+          <span class="card-match__score-number">{{ event.score.t1|default('0') }}</span>
+          <span class="card-match__score-separator">:</span>
+          <span class="card-match__score-number">{{ event.score.t2|default('0') }}</span>
+        </div>
+        {% if event.minute %}
+          <span class="card-match__minute">{{ event.minute }}'</span>
+        {% endif %}
+        
+      {% elseif status == 'finished' %}
+        {# Finished #}
+        <div class="card-match__status">Finished</div>
+        <div class="card-match__score">
+          <span class="card-match__score-number">{{ event.score.t1|default('0') }}</span>
+          <span class="card-match__score-separator">:</span>
+          <span class="card-match__score-number">{{ event.score.t2|default('0') }}</span>
+        </div>
+        
+      {% else %}
+        {# Scheduled - just show time #}
+        <div class="card-match__time">
+          <span class="material-symbols-outlined">schedule</span>
+          {{ event.published_at|date('H:i')|default('--:--') }}
+        </div>
+      {% endif %}
+    </div>
+
+    {# Team 2 #}
+    <a href="{{ event.team2.href|default('#') }}" class="card-match__team card-match__team--away">
+      <h3 class="card-match__team-name">{{ event.team2.name|default('Team 2') }}</h3>
+      <div class="card-match__team-logo">
+        {% if event.team2.logo %}
+          <img src="{{ event.team2.logo }}" alt="{{ event.team2.name }}" loading="lazy">
+        {% else %}
+          <span class="material-symbols-outlined">shield</span>
+        {% endif %}
+      </div>
+    </a>
+
+  </div>
+
+  {# Footer #}
+  {% if event.href %}
+    <div class="card-match__footer">
+      <a href="{{ event.href }}" class="card-match__link">
+        {% if status == 'live' %}
+          <span class="material-symbols-outlined">play_circle</span>
+          Watch Live
+        {% elseif status == 'finished' %}
+          <span class="material-symbols-outlined">info</span>
+          Match Details
+        {% else %}
+          <span class="material-symbols-outlined">event</span>
+          View Match
+        {% endif %}
+      </a>
+    </div>
+  {% endif %}
+
+</article>

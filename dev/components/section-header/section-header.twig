@@ -1,0 +1,30 @@
+{# dev/components/section-header/section-header.twig #}
+
+{% set _title     = title|default('Section title') %}
+{% set _icon      = icon|default(null) %}
+{% set _subtitle  = subtitle|default(null) %}
+{% set _more      = more|default('View All') %}
+{% set _more_href = more_href|default('#') %}
+{% set _show_more = show_more|default(true) %}
+
+<div class="section-header">
+  <div class="section-header__content">
+    <h2 class="section-header__title">
+      {% if _icon %}
+        <span class="material-symbols-outlined section-header__icon">{{ _icon }}</span>
+      {% endif %}
+      {{ _title }}
+    </h2>
+    
+    {% if _subtitle %}
+      <p class="section-header__subtitle">{{ _subtitle }}</p>
+    {% endif %}
+  </div>
+
+  {% if _show_more %}
+    <a href="{{ _more_href }}" class="section-header__more">
+      <span class="section-header__more-text">{{ _more }}</span>
+      <span class="material-symbols-outlined">arrow_forward</span>
+    </a>
+  {% endif %}
+</div>

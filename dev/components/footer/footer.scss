@@ -1,0 +1,262 @@
+// dev/components/footer/footer.scss
+
+// ============================================
+// FOOTER
+// ============================================
+
+.footer {
+  background: $color-dark-gray;
+  border-top: 1px solid rgba($color-light, 0.1);
+  margin-top: auto;
+}
+
+.footer__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+// ============================================
+// TOP SECTION
+// ============================================
+
+.footer__top {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 80px;
+  padding: 80px 0 60px;
+  border-bottom: 1px solid rgba($color-light, 0.1);
+}
+
+// ============================================
+// BRAND COLUMN
+// ============================================
+
+.footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.footer__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: $font-title;
+  font-weight: 700;
+  font-size: 24px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+  width: fit-content;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.footer__logo-text {
+  color: $color-light;
+}
+
+.footer__logo-accent {
+  color: $color-primary;
+}
+
+.footer__description {
+  font-size: 14px;
+  color: $color-gray;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 320px;
+}
+
+// ============================================
+// SOCIAL LINKS
+// ============================================
+
+.footer__social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba($color-light, 0.05);
+  border: 1px solid rgba($color-light, 0.1);
+  border-radius: 8px;
+  color: $color-gray;
+  transition: all 0.2s;
+
+  &:hover {
+    background: $color-primary;
+    border-color: $color-primary;
+    color: $color-dark;
+    transform: translateY(-2px);
+  }
+
+  .material-symbols-outlined {
+    font-size: 20px;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+  }
+}
+
+// ============================================
+// LINKS COLUMNS
+// ============================================
+
+.footer__links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.footer__column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer__column-title {
+  font-family: $font-title;
+  font-size: 16px;
+  font-weight: 700;
+  color: $color-light;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footer__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer__list-item {
+  margin: 0;
+}
+
+.footer__link {
+  font-size: 14px;
+  color: $color-gray;
+  text-decoration: none;
+  transition: color 0.2s;
+  display: inline-block;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+// ============================================
+// BOTTOM SECTION
+// ============================================
+
+.footer__bottom {
+  padding: 24px 0;
+}
+
+.footer__copyright {
+  font-size: 14px;
+  color: $color-gray;
+  text-align: center;
+  margin: 0;
+}
+
+// ============================================
+// RESPONSIVE
+// ============================================
+
+@media (max-width: 1024px) {
+  .footer__container {
+    padding: 0 16px;
+  }
+
+  .footer__top {
+    gap: 60px;
+    padding: 60px 0 40px;
+  }
+
+  .footer__links {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__top {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 40px 0 32px;
+  }
+
+  .footer__brand {
+    gap: 20px;
+  }
+
+  .footer__description {
+    max-width: 100%;
+  }
+
+  .footer__links {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .footer__bottom {
+    padding: 20px 0;
+  }
+
+  .footer__copyright {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer__container {
+    padding: 0 12px;
+  }
+
+  .footer__top {
+    gap: 32px;
+    padding: 32px 0 24px;
+  }
+
+  .footer__logo {
+    font-size: 20px;
+  }
+
+  .footer__description {
+    font-size: 13px;
+  }
+
+  .footer__social-link {
+    width: 36px;
+    height: 36px;
+
+    .material-symbols-outlined {
+      font-size: 18px;
+    }
+  }
+
+  .footer__links {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .footer__column-title {
+    font-size: 14px;
+  }
+
+  .footer__link {
+    font-size: 13px;
+  }
+}

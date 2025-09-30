@@ -1,0 +1,78 @@
+$color-primary: #10B981;        // Изумрудный
+$color-primary-dark: #059669;   
+$color-primary-light: #34D399;  
+
+$color-dark: #0C0C0C;           
+$color-dark-gray: #1A1A1A;      
+$color-light: #FFFFFF;          
+$color-gray: #9CA3AF;           
+
+$color-accent-orange: #F59E0B;  
+$color-accent-blue: #3B82F6;
+
+// ============================================
+// GLOBAL SCROLLBAR STYLES
+// ============================================
+
+// Базовые стили для всех скроллбаров
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba($color-primary, 0.3) transparent;
+}
+
+// Webkit browsers (Chrome, Safari, Edge)
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba($color-light, 0.03);
+  border-radius: 3px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba($color-primary, 0.3);
+  border-radius: 3px;
+  transition: background 0.2s;
+
+  &:hover {
+    background: rgba($color-primary, 0.5);
+  }
+
+  &:active {
+    background: $color-primary;
+  }
+}
+
+// Тонкий скроллбар (3px) для горизонтальных списков
+.scrollbar-thin {
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    height: 3px;
+  }
+}
+
+// Скрытый скроллбар (но функциональный)
+.scrollbar-hidden {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+// Кастомный цвет скроллбара
+.scrollbar-accent {
+  scrollbar-color: rgba($color-accent-orange, 0.3) transparent;
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba($color-accent-orange, 0.3);
+
+    &:hover {
+      background: rgba($color-accent-orange, 0.5);
+    }
+  }
+}

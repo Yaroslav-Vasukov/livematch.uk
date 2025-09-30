@@ -1,0 +1,47 @@
+{# components/card-video/card-video.twig #}
+{# Props: 
+   - video: { id, href, title, thumb, published_at }
+   - или отдельные: id, href, title, thumb, published_at
+#}
+
+{% set v = video is defined and video is not empty 
+  ? video 
+  : {
+      id: id|default(null),
+      href: href|default('#'),
+      title: title|default('Untitled video'),
+      thumb: thumb|default('/assets/images/img1.webp'),
+      published_at: published_at|default(null)
+    } 
+%}
+
+{% set url = v.href ?? '#' %}
+{% set titleText = v.title ?? 'Untitled video' %}
+{% set thumbUrl = v.thumb ?? '/assets/images/placeholder-video.webp' %}
+{% set published = v.published_at ?? null %}
+{% set pubISO = published ? published|date('c') : null %}
+{% set pubHuman = published ? published|date('d.m.Y, H:i') : null %}
+
+<article class="card-video" data-id="{{ v.id }}">
+  <a class="card-video__link" href="{{ url }}" aria-label="Смотреть: {{ titleText }}">
+    <div class="card-video__media" aria-hidden="true">
+      <img
+        class="card-video__thumb"
+        src="{{ thumbUrl }}"
+        alt=""
+        loading="lazy"
+        decoding="async"
+      />
+        <span class="material-symbols-outlined card-video__play">
+         play_circle
+        </span>
+
+    </div>
+
+    <h3 class="card-video__title">{{ titleText }}</h3>
+
+    {% if pubHuman %}
+      <time class="card-video__meta" datetime="{{ pubISO }}">{{ pubHuman }}</time>
+    {% endif %}
+  </a>
+</article>

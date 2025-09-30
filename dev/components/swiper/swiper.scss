@@ -1,0 +1,69 @@
+.swiper {
+  width: 100%;
+  min-width: 0;      
+  overflow: hidden;
+  .swiper-slide {
+    height: auto;
+    position: relative;
+  }
+  .card-live {
+    height: 100%;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: block;
+    position: static;
+    color: $color-light;
+    background-color: $color-primary-dark;
+    border: none;
+    z-index: 10;
+    border-radius: 0;
+    height: 40px;
+    width: 40px;
+          transition: background-color .3s;
+    &::after {
+      font-size: 16px;
+      font-weight: 700;
+      color: $color-light;
+    }
+    &:hover {
+      background-color: $color-primary-light;
+      transition: background-color .3s;
+  }
+  }
+  }
+  .swiper-button__wrap {
+    position: relative;
+    height: 56px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 4px;
+    padding: 24px 0 0;
+    box-sizing: border-box;
+    pointer-events: none;
+    .swiper-button-prev,
+    .swiper-button-next {
+      pointer-events: auto;
+    }
+    .swiper-button-prev {
+      border-radius: 8px 0 0 8px;
+    }
+    .swiper-button-next {
+      border-radius: 0 8px 8px 0;
+    }
+  }
+.swiper-button-disabled {
+  opacity: 0!important;
+  pointer-events: none;
+}
+.swiper .swiper-wrapper,
+.swiper .swiper-slide {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.home-leagues-swiper .swiper-button__wrap {
+  height: 72px;
+}

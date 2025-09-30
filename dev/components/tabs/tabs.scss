@@ -1,0 +1,67 @@
+.tabs {
+  &__nav {
+    display: inline-flex;
+    gap: 4px;
+    margin-bottom: 16px;
+  }
+
+  &__tab {
+    appearance: none;
+    background-color: $color-dark-gray;
+    border: 0;
+    padding: 8px 12px;
+    font: inherit;
+    cursor: pointer;
+    color: $color-light;
+    border: 1px solid rgba($color-light, 0.1);
+    font-weight: 600;
+    font-size: 14px;
+    transition: transform 0.12s ease, box-shadow 0.2s ease, background 0.2s ease, color .2s ease;
+     text-transform: capitalize;
+    &:first-child {
+      border-radius: 8px 0 0 8px;
+    }
+    &:last-child {
+      border-radius: 0 8px 8px 0;
+    }
+    &:hover {
+      background: $color-primary;
+      color: $color-light;
+    
+    }
+    &:active {
+      background-color: $color-primary;
+    }
+    &.is-active {
+      background: $color-primary-dark;
+      color: $color-light;
+    }
+    @media (max-width: 480px) {
+      font-size: 16px;
+      padding: 8px 16px;
+    }
+  }
+
+  &__panel {
+    /* Базовая обёртка для будущей таблицы */
+    display: block;
+    /* Управление видимостью через атрибут hidden (нативно) + класс для анимаций */
+    &[hidden] {
+      display: none;
+    }
+
+    &.is-active {
+      animation: fadeIn 0.18s ease;
+    }
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

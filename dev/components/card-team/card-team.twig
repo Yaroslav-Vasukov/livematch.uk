@@ -1,0 +1,58 @@
+{% set team = team|default({}) %}
+{% set team_id = team.id|default('') %}
+{% set team_url = team.href|default('#') %}
+{% set team_name = team.name|default('Team Name') %}
+{% set team_meta = team.meta|default(null) %}
+{% set thumb_url = team.thumb|default(null) %}
+{% set thumb_alt = team.thumb_alt|default('Stadium') %}
+{% set logo_url = team.logo|default(null) %}
+{% set logo_alt = team.logo_alt|default(team_name) %}
+
+<article class="card-team" data-team-id="{{ team_id }}">
+  
+  {# Thumb #}
+  <a href="{{ team_url }}" class="card-team__link">
+    <div class="card-team__thumb">
+      {% if thumb_url %}
+        <img 
+          src="{{ thumb_url }}" 
+          alt="{{ thumb_alt }}" 
+          class="card-team__thumb-img"
+          loading="lazy"
+        >
+      {% else %}
+        <div class="card-team__thumb-placeholder">
+          <span class="material-symbols-outlined">stadium</span>
+        </div>
+      {% endif %}
+            <div class="card-team__logo">
+        {% if logo_url %}
+          <img 
+            src="{{ logo_url }}" 
+            alt="{{ logo_alt }}"
+            loading="lazy"
+          >
+        {% else %}
+          <span class="material-symbols-outlined">shield</span>
+        {% endif %}
+      </div>
+      <div class="card-team__thumb-overlay"></div>
+    </div>
+
+    {# Content #}
+    <div class="card-team__content">
+      
+
+
+      {# Info #}
+      <div class="card-team__info">
+        <h3 class="card-team__name">{{ team_name }}</h3>
+        {% if team_meta %}
+          <p class="card-team__meta">{{ team_meta }}</p>
+        {% endif %}
+      </div>
+
+    </div>
+  </a>
+
+</article>

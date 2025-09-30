@@ -1,0 +1,24 @@
+{# stats-section.twig #}
+
+
+
+
+    <div class="stats-section__grid" data-module="stats-section">
+      {% for stat in stats %}
+        <div class="stats-card">
+          <div class="stats-card__icon-wrapper">
+            <span class="material-symbols-outlined stats-card__icon">
+              {{ stat.icon }}
+            </span>
+          </div>
+
+          <div class="stats-card__number" data-count="{{ stat.number }}">0</div>
+          <div class="stats-card__label">{{ stat.label }}</div>
+          
+          {% if stat.trend %}
+            <span class="stats-card__trend stats-card__trend--{{ stat.trendUp ? 'up' : 'down' }}">
+              {{ stat.trend }}
+            </span>
+          {% endif %}
+        </div>
+      {% endfor %}

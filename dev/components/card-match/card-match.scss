@@ -1,0 +1,405 @@
+// dev/components/card-match/card-match.scss
+
+// ============================================
+// CARD MATCH
+// ============================================
+
+.card-match {
+  background: $color-dark-gray;
+  border: 1px solid rgba($color-light, 0.1);
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  &:hover {
+    border-color: rgba($color-primary, 0.3);
+    box-shadow: 0 8px 24px rgba($color-primary, 0.1);
+    transform: translateY(-4px);
+  }
+}
+
+// ============================================
+// HEADER
+// ============================================
+
+.card-match__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba($color-light, 0.1);
+}
+
+.card-match__league {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.card-match__league-logo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.card-match__league-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: $color-light;
+}
+
+.card-match__date {
+  font-size: 13px;
+  color: $color-gray;
+}
+
+.card-match__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: rgba($color-light, 0.05);
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: $color-gray;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+
+  &--live {
+    background: rgba($color-primary, 0.15);
+    color: $color-primary;
+  }
+}
+
+.card-match__status-dot {
+  width: 6px;
+  height: 6px;
+  background: $color-primary;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+}
+
+// ============================================
+// TEAMS
+// ============================================
+
+.card-match__teams {
+  display: grid;
+  flex-grow: 1;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.card-match__team {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &--away {
+    justify-content: flex-end;
+  }
+}
+
+.card-match__team-logo {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba($color-light, 0.05);
+  border-radius: 12px;
+  flex-shrink: 0;
+
+  img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+  }
+
+  .material-symbols-outlined {
+    font-size: 32px;
+    color: $color-gray;
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 32;
+  }
+}
+
+.card-match__team-name {
+  font-family: $font-title;
+  font-size: 18px;
+  font-weight: 700;
+  color: $color-light;
+  margin: 0;
+  line-height: 1.2;
+}
+
+// ============================================
+// MIDDLE (Score/Countdown)
+// ============================================
+
+.card-match__middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+// Score
+.card-match__score {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.card-match__score-number {
+  font-family: $font-title;
+  font-size: 48px;
+  font-weight: 800;
+  color: $color-primary;
+  line-height: 1;
+}
+
+.card-match__score-separator {
+  font-size: 32px;
+  color: $color-gray;
+  opacity: 0.5;
+}
+
+.card-match__minute {
+  font-size: 14px;
+  font-weight: 600;
+  color: $color-primary;
+  padding: 4px 12px;
+  background: rgba($color-primary, 0.1);
+  border-radius: 6px;
+}
+
+.card-match__time {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: $font-title;
+  font-size: 32px;
+  font-weight: 700;
+  color: $color-light;
+
+  .material-symbols-outlined {
+    font-size: 32px;
+    color: $color-primary;
+    font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 32;
+  }
+}
+
+// Countdown (not used anymore)
+.card-match__countdown {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-match__countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: 60px;
+}
+
+.card-match__countdown-value {
+  font-family: $font-title;
+  font-size: 32px;
+  font-weight: 800;
+  color: $color-primary;
+  line-height: 1;
+  padding: 12px 16px;
+  background: rgba($color-primary, 0.1);
+  border-radius: 8px;
+  min-width: 60px;
+  text-align: center;
+}
+
+.card-match__countdown-label {
+  font-size: 11px;
+  color: $color-gray;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card-match__countdown-separator {
+  font-size: 24px;
+  color: $color-gray;
+  opacity: 0.5;
+  margin: 0 4px;
+  align-self: flex-start;
+  margin-top: 12px;
+}
+
+// ============================================
+// FOOTER
+// ============================================
+
+.card-match__footer {
+  padding-top: 16px;
+  border-top: 1px solid rgba($color-light, 0.1);
+}
+
+.card-match__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 24px;
+  background: $color-primary;
+  color: $color-dark;
+  font-family: $font-title;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.2s;
+
+  &:hover {
+    background: $color-primary-dark;
+    transform: translateY(-2px);
+  }
+
+  .material-symbols-outlined {
+    font-size: 20px;
+    font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 20;
+  }
+}
+
+// ============================================
+// RESPONSIVE
+// ============================================
+
+@media (max-width: 768px) {
+  .card-match {
+    padding: 20px;
+  }
+
+  .card-match__teams {
+    gap: 16px;
+  }
+
+  .card-match__team-logo {
+    width: 56px;
+    height: 56px;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .material-symbols-outlined {
+      font-size: 28px;
+    }
+  }
+
+  .card-match__team-name {
+    display: none;
+  }
+
+  .card-match__score-number {
+    font-size: 40px;
+  }
+
+  .card-match__countdown-value {
+    font-size: 28px;
+    padding: 10px 12px;
+    min-width: 52px;
+  }
+
+  .card-match__countdown-item {
+    min-width: 52px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-match {
+    padding: 16px;
+  }
+  .card-match__team-name {
+    display: block;
+  }
+  .card-match__header {
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+  }
+
+  .card-match__teams {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card-match__team {
+    justify-content: center;
+
+    &--away {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .card-match__middle {
+    order: -1;
+  }
+
+  .card-match__team-logo {
+    width: 48px;
+    height: 48px;
+
+    img {
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  .card-match__team-name {
+    font-size: 15px;
+  }
+
+  .card-match__countdown-value {
+    font-size: 24px;
+    padding: 8px 10px;
+    min-width: 44px;
+  }
+
+  .card-match__countdown-item {
+    min-width: 44px;
+  }
+
+  .card-match__countdown-label {
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,93 @@
+.section {
+      &__bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+  &--margin {
+    margin-bottom: 64px;
+  }
+  &__inner {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+
+// dev/assets/styles/sections/_news-section.scss
+
+// ============================================
+// NEWS SECTION
+// ============================================
+
+.news__layout {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 32px;
+  margin-top: 32px;
+}
+
+.news__main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.news__sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: sticky;
+  top: 148px;
+  align-self: flex-start;
+}
+
+.news__sidebar-title {
+  font-family: $font-title;
+  font-size: 20px;
+  font-weight: 700;
+  color: $color-light;
+  margin: 0 0 8px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid $color-primary;
+}
+
+@media (max-width: 1024px) {
+  .news__layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .news__sidebar {
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    &-title {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .news__layout {
+    gap: 32px;
+    margin-top: 24px;
+  }
+
+  .news__sidebar {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .news__layout {
+    margin-top: 20px;
+  }
+}

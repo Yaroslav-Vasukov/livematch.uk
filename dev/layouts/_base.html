@@ -1,0 +1,101 @@
+{# dev/layouts/base.twig #}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{% block title %}Untitled{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+
+    {% block head_extra %}{% endblock %}
+    <link rel="stylesheet" href="/assets/styles/main.css" />
+
+  </head>
+  <body class="{% block body_class %}page{% endblock %}">
+
+    {# Define sports data inline #}
+    {% set sportsData = {
+      sports: [
+        {
+          id: 'football',
+          name: 'Football',
+          icon: 'sports_soccer',
+          active: true,
+          leagues: [
+            { id: 'all', name: 'All Leagues', url: '/football/all' },
+            { id: 'ucl', name: 'Champions League', url: '/football/ucl' },
+            { id: 'epl', name: 'Premier League', url: '/football/epl' },
+            { id: 'laliga', name: 'La Liga', url: '/football/laliga' },
+            { id: 'bundesliga', name: 'Bundesliga', url: '/football/bundesliga' }
+          ]
+        },
+        {
+          id: 'basketball',
+          name: 'Basketball',
+          icon: 'sports_basketball',
+          active: false,
+          leagues: [
+            { id: 'all', name: 'All Leagues', url: '/basketball/all' },
+            { id: 'nba', name: 'NBA', url: '/basketball/nba' },
+            { id: 'euroleague', name: 'Euroleague', url: '/basketball/euroleague' },
+            { id: 'ncaa', name: 'NCAA', url: '/basketball/ncaa' }
+          ]
+        }
+      ],
+      moreSports: [
+        { id: 'tennis', name: 'Tennis', icon: 'sports_tennis', url: '/tennis' },
+        { id: 'hockey', name: 'Hockey', icon: 'sports_hockey', url: '/hockey' },
+        { id: 'volleyball', name: 'Volleyball', icon: 'sports_volleyball', url: '/volleyball' },
+        { id: 'handball', name: 'Handball', icon: 'sports_handball', url: '/handball' }
+      ],
+leaguePages: [
+  { id: 'home', name: 'Home', icon: 'home', active: true },
+  { id: 'live', name: 'Live', icon: 'sensors', active: false },
+  { id: 'news', name: 'News', icon: 'article', active: false },  
+  { id: 'calendar', name: 'Calendar', icon: 'calendar_month', active: false },
+  { id: 'history', name: 'History', icon: 'history', active: false },
+  { id: 'contact', name: 'Contact', icon: 'mail', active: false },
+  { id: 'team', name: 'Team', icon: 'group', active: false },
+  { id: 'teams', name: 'Teams', icon: 'groups', active: false },
+  { id: 'player', name: 'Player', icon: 'person', active: false },
+  { id: 'post', name: 'Post', icon: 'description', active: false },
+  { id: 'video', name: 'Video', icon: 'videocam', active: false },
+  { id: 'videos', name: 'Videos', icon: 'video_library', active: false },
+  { id: 'review', name: 'Review', icon: 'rate_review', active: false },
+  { id: 'privacy', name: 'Privacy', icon: 'privacy_tip', active: false }
+],
+      sections: [
+        { id: 'news', name: 'News', icon: 'article', url: '/news', active: true },
+        { id: 'video', name: 'Video', icon: 'videocam', url: '/video', active: false },
+        { id: 'matches', name: 'Matches', icon: 'calendar_month', url: '/matches', active: false },
+        { id: 'tables', name: 'Tables', icon: 'bar_chart', url: '/tables', active: false },
+        { id: 'stats', name: 'Stats', icon: 'trending_up', url: '/stats', active: false }
+      ]
+    } %}
+
+{% include '../components/header/header.twig' with {
+  sports: sportsData.sports,
+  moreSports: sportsData.moreSports,
+  leaguePages: sportsData.leaguePages,
+  sections: sportsData.sections
+} %}
+
+    <main class="page__main">
+      {% block content %}
+      {% endblock %}
+    </main>
+
+
+       {% include '../components/footer/footer.twig' %} 
+
+
+    <script type="module" src="/assets/scripts/main.js"></script>
+    {% block scripts %}{% endblock %}
+
+  </body>
+</html>

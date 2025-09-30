@@ -1,0 +1,33 @@
+{% set url = post.href|default('#') %}
+{% set post_title = post.title|default('Без названия') %}
+{% set thumb_url = post.thumb|default('/assets/images/placeholder-post.webp') %}
+{% set published = post.published_at|default(null) %}
+{% set pub_iso = published ? published|date('c') : null %}
+{% set pub_human = published ? published|date('d.m.Y, H:i') : null %}
+
+<article class="card-post card-post--horizontal" data-id="{{ post.id }}">
+  <a class="card-post__link" href="{{ url }}" aria-label="Читать: {{ post_title }}">
+    <div class="card-post__media" aria-hidden="true">
+      <img
+        class="card-post__thumb"
+        src="{{ thumb_url }}"
+        alt="{{ post_title }}"
+        loading="lazy"
+        decoding="async"
+        width="640"
+        height="360"
+      />
+    </div>
+    <div class="card-post__content">
+      
+    {% if pub_human %}
+      <time class="card-post__meta" datetime="{{ pub_iso }}">{{ pub_human }}</time>
+    {% endif %}
+      <h3 class="card-post__title">{{ post_title }}</h3>
+      <p class="card-post__descr">
+        {{ post.descr|default('No description available.') }}
+      </p>
+    </div>
+
+  </a>
+</article>

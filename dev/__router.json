@@ -1,0 +1,121 @@
+[
+  {
+    "file": "pages/calendar.html",
+    "name": "Calendar",
+    "pin": "",
+    "url": "calendar",
+    "isHome": false
+  },
+  {
+    "file": "pages/contact.html",
+    "name": "Contact",
+    "pin": "",
+    "url": "contact",
+    "isHome": false
+  },
+  {
+    "file": "pages/history.html",
+    "name": "History",
+    "pin": "",
+    "url": "history",
+    "isHome": false
+  },
+  {
+    "file": "pages/index.html",
+    "name": "Index",
+    "pin": "",
+    "url": "index",
+    "isHome": false
+  },
+  {
+    "file": "pages/league.html",
+    "name": "League",
+    "pin": "",
+    "url": "league",
+    "isHome": false
+  },
+  {
+    "file": "pages/leagues.html",
+    "name": "Leagues",
+    "pin": "",
+    "url": "leagues",
+    "isHome": false
+  },
+  {
+    "file": "pages/lives.html",
+    "name": "Lives",
+    "pin": "",
+    "url": "lives",
+    "isHome": false
+  },
+  {
+    "file": "pages/news.html",
+    "name": "News",
+    "pin": "",
+    "url": "news",
+    "isHome": false
+  },
+  {
+    "file": "pages/player.html",
+    "name": "Player",
+    "pin": "",
+    "url": "player",
+    "isHome": false
+  },
+  {
+    "file": "pages/post.html",
+    "name": "Post",
+    "pin": "",
+    "url": "post",
+    "isHome": false
+  },
+  {
+    "file": "pages/privacy.html",
+    "name": "Privacy",
+    "pin": "",
+    "url": "privacy",
+    "isHome": false
+  },
+  {
+    "file": "pages/review.html",
+    "name": "Review",
+    "pin": "",
+    "url": "review",
+    "isHome": false
+  },
+  {
+    "file": "pages/team.html",
+    "name": "Team",
+    "pin": "",
+    "url": "team",
+    "isHome": false
+  },
+  {
+    "file": "pages/teams.html",
+    "name": "Teams",
+    "pin": "",
+    "url": "teams",
+    "isHome": false
+  },
+  {
+    "file": "pages/test.html",
+    "name": "Test",
+    "pin": "",
+    "url": "test",
+    "isHome": false
+  },
+  {
+    "file": "pages/video.html",
+    "name": "Video",
+    "pin": "",
+    "url": "video",
+    "isHome": false
+  },
+  {
+    "file": "pages/videos.html",
+    "name": "Videos",
+    "pin": "",
+    "url": "videos",
+    "isHome": false
+  }
+]
