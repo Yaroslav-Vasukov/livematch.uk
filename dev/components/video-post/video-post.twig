@@ -1,0 +1,52 @@
+{% set variant = variant|default('default') %}
+{% set video = video|default({}) %}
+
+<article class="card-video-post card-video-post--{{ variant }}" data-module="card-video-post" data-video-id="{{ video.id }}">
+  <div class="card-video-post__media">
+    <a href="{{ video.href }}" class="card-video-post__link" aria-label="Watch {{ video.title }}">
+      <img 
+        src="{{ video.thumb }}" 
+        alt="{{ video.title }}"
+        class="card-video-post__thumbnail"
+        loading="lazy"
+      >
+      <div class="card-video-post__overlay">
+        <span class="card-video-post__play-icon" aria-hidden="true">
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+            <circle cx="32" cy="32" r="32" fill="currentColor" fill-opacity="0.9"/>
+            <path d="M26 20L44 32L26 44V20Z" fill="white"/>
+          </svg>
+        </span>
+      </div>
+      {% if video.duration %}
+      <span class="card-video-post__duration">{{ video.duration }}</span>
+      {% endif %}
+      {% if video.category %}
+      <span class="card-video-post__category">{{ video.category }}</span>
+      {% endif %}
+    </a>
+  </div>
+
+  <div class="card-video-post__content">
+    <h3 class="card-video-post__title">
+      <a href="{{ video.href }}" class="card-video-post__title-link">
+        {{ video.title }}
+      </a>
+    </h3>
+
+    <div class="card-video-post__meta">
+      {% if video.views %}
+      <span class="card-video-post__stat">
+        <span class="material-icons">visibility</span>
+        <span>{{ video.views|number_format }}</span>
+      </span>
+      {% endif %}
+
+      {% if video.published_at %}
+      <time class="card-video-post__date" datetime="{{ video.published_at }}">
+        {{ video.published_at|date('M d, Y') }}
+      </time>
+      {% endif %}
+    </div>
+  </div>
+</article>

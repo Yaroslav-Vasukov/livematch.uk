@@ -1,86 +1,101 @@
 {% extends "../layouts/_base.html" %} 
+{% set currentPage = 'video' %}
 {% block title %}Video{% endblock %} 
 {% block active_nav %}video{% endblock %} 
 {% block body_class %}page page--video{% endblock %} 
-{% block head_extra %}{% endblock %} 
-
+{% block head_extra %}
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+{% endblock %} 
 {% block content %}
 
-{# Получаем данные видео по ID из URL или используем первое видео #}
-{% set videoId = app.request.get('id')|default(101) %}
-{% set allVideos = load_json('@/data/videos.json') %}
-{% set video = null %}
-{% for v in allVideos %}
-  {% if v.id == videoId %}
-    {% set video = v %}
-  {% endif %}
-{% endfor %}
+{% set videos = load_json('data/videos.json') %}
+{% set featuredVideo = videos[0] %}
 
-{# Если видео не найдено, используем первое #}
-{% if not video %}
-  {% set video = allVideos[0] %}
-{% endif %}
-
-{# Похожие видео #}
-{% set relatedVideos = [] %}
-  {% for v in allVideos if v.id != video.id and relatedVideos|length < 7 %}
-    {% set relatedVideos = relatedVideos|merge([v]) %}
-  {% endfor %}
-
-
-{% include "../components/page-head/page-head.twig" with {
-  title: video.title,
+{% include '../components/page-header/page-header.twig' with {
+  title: featuredVideo.title,
+  subtitle: featuredVideo.category ~ ' • ' ~ featuredVideo.published_at|date('M d, Y'),
+    mod: 'compact',
   breadcrumbs: [
-    { label: "Home", href: "/", home: true },
-    { label: "Videos", href: "/videos" },
-    { label: video.title }
-  ],
-} only %}
+    { label: 'Home', url: '/' },
+    { label: 'Videos', url: '/videos' },
+    { label: featuredVideo.title }
+  ]
+} %}
+
+
+
 <section class="section section--margin">
   <div class="container">
     <div class="section__inner">
-      <div class="video__block">
-        <a href="#{{ video.id }}" class="video__link">
-          <img src="{{ video.thumb }}" alt="{{ video.title }}" class="video__thumb">
-                  <span class="card-live__play material-symbols-outlined" aria-hidden="true">play_circle</span>
-        </a>
-        <h3 class="video__title">{{ video.title }}</h3>
-      </div>
+      
+      {% if videos[0] %}
+        {% include '../components/video-post/video-post.twig' with {
+          video: videos[0],
+          variant: 'featured'
+        } %}
+      {% endif %}
     </div>
   </div>
 </section>
 
-                    {% if relatedVideos %}
 <section class="section section--margin">
   <div class="container">
     <div class="section__inner">
-              {% include "../components/section-header/section-header.twig" with {
-      title: "latest videos", subtitle: true, more: "more", more_href: "/videos"
+      {% include '../components/section-header/section-header.twig' with {
+        title: 'Trending Videos',
+        icon: 'videocam',
+        more: 'See All Videos',
+        more_href: '/videos'
       } %}
-      <div class="card-video__grid">
-        {% for relVideo in relatedVideos %}
-          {% set href = relVideo.href|default('#') %}
-          {% set title = relVideo.title|default('Untitled') %}
-          {% set thumb = relVideo.thumb|default('/assets/images/pictures/img2.webp') %}
-          {% set date = relVideo.published_at is defined ? (relVideo.published_at|date('d F Y, H:i')) : '' %}
-
-          {% include "../components/card-video/card-video.twig" with {
-            post: {
-              href: href,
-              title: title,
-              image: { src: thumb, alt: title },
-              thumb: thumb,
-              date: date
-            },
-            tags: relVideo.tags|default([])
-          } only %}
-        {% endfor %}
+      
+                  <div
+        class="swiper home-videos-swiper"
+        data-swiper='{
+               "slidesPerView": 1,
+               "spaceBetween": 16,
+               "loop": true,
+               "autoplay": { "delay": 2500, "disableOnInteraction": false },
+               "breakpoints": {
+                 "0":  { "slidesPerView": 1 },
+                 "440":  { "slidesPerView": 2 },
+                 "768":  { "slidesPerView": 3 },
+                 "1024":  { "slidesPerView": 4 }
+               }
+             }'
+      >
+        <div class="swiper-wrapper">
+           {% for v in videos|slice(12, 12) %}
+          <div class="swiper-slide">
+            {% include "../components/card-video/card-video.twig" with { video: v } only %}
+          </div>
+          {% else %}
+          <div class="swiper-slide"><p class="muted">No videos.</p></div>
+          {% endfor %}
+        </div>
+        <div class="swiper-button__wrap">
+          <button
+            class="swiper-button-prev"
+            data-swiper-prev
+            aria-label="Prev"
+          ></button>
+          <button
+            class="swiper-button-next"
+            data-swiper-next
+            aria-label="Next"
+          ></button>
+        </div>
       </div>
     </div>
   </div>
 </section>
-        {% endif %}
-{% endblock %} 
 
+{% endblock %} 
 {% block scripts %}
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+></script>
 {% endblock %}

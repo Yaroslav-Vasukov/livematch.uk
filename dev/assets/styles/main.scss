@@ -15,6 +15,7 @@
 @use '../../components/card-team/card-team.scss';
 @use '../../components/card-match/card-match.scss';
 @use '../../components/card-video/card-video.scss';
+@use '../../components/video-post/video-post.scss';
 
 @use '../../components/pagination/pagination.scss';
 @use '../../components/stats-section/stats-section.scss';
@@ -22,5 +23,6 @@
 
 @use './blocks/contact.scss';
 @use './blocks/privacy.scss';
+@use './blocks/post.scss';
 // @use './pages/review.scss';
 

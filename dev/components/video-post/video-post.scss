@@ -1,0 +1,253 @@
+.card-video-post {
+  display: flex;
+  flex-direction: column;
+  background: $color-dark-gray;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba($color-primary, 0.2);
+  }
+
+  // === МЕДИА БЛОК ===
+  &__media {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; // 16:9
+    background: $color-dark;
+    overflow: hidden;
+  }
+
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    &:focus-visible {
+      outline: 3px solid $color-primary;
+      outline-offset: -3px;
+    }
+  }
+
+  &__thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+
+    .card-video-post:hover & {
+      transform: scale(1.05);
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba($color-dark, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    .card-video-post:hover & {
+      opacity: 1;
+    }
+  }
+
+  &__play-icon {
+    color: $color-primary;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+
+    .card-video-post:hover & {
+      transform: scale(1);
+    }
+
+    svg {
+      display: block;
+      filter: drop-shadow(0 4px 12px rgba($color-dark, 0.5));
+    }
+  }
+
+  &__duration {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba($color-dark, 0.9);
+    color: $color-light;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: $font-body;
+  }
+
+  &__category {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: $color-primary;
+    color: $color-light;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: $font-body;
+    text-transform: uppercase;
+  }
+
+  // === КОНТЕНТ ===
+  &__content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+  }
+
+  &__title {
+    margin: 0;
+    font-family: $font-title;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: $color-light;
+
+    @media (min-width: 768px) {
+      font-size: 18px;
+    }
+  }
+
+  &__title-link {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $color-primary;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-primary;
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+  }
+
+  // === МЕТА ИНФОРМАЦИЯ ===
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    font-size: 14px;
+    color: $color-gray;
+    margin-top: auto;
+  }
+
+  &__stat {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    .material-icons {
+      font-size: 16px;
+    }
+  }
+
+  &__date {
+    font-size: 13px;
+    color: $color-gray;
+  }
+
+  // === ВАРИАНТЫ ===
+  
+  // Компактный вариант
+  &--compact {
+    .card-video-post__content {
+      padding: 12px;
+      gap: 8px;
+    }
+
+    .card-video-post__title {
+      font-size: 14px;
+    }
+
+    .card-video-post__meta {
+      font-size: 12px;
+    }
+  }
+
+  // Featured вариант (увеличенный)
+  &--featured {
+    .card-video-post__media {
+      padding-top: 50%; // Более широкий формат
+    }
+
+    .card-video-post__content {
+      padding: 20px;
+      gap: 16px;
+    }
+
+    .card-video-post__title {
+      font-size: 20px;
+
+      @media (min-width: 768px) {
+        font-size: 24px;
+      }
+    }
+
+    .card-video-post__play-icon svg {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  // Горизонтальный вариант
+  &--horizontal {
+    flex-direction: row;
+
+    .card-video-post__media {
+      width: 280px;
+      flex-shrink: 0;
+      padding-top: 0;
+      height: 160px;
+
+      @media (max-width: 767px) {
+        width: 140px;
+        height: 100px;
+      }
+    }
+
+    .card-video-post__link {
+      position: relative;
+    }
+
+    .card-video-post__content {
+      flex: 1;
+    }
+  }
+
+  // === АДАПТИВНОСТЬ ===
+  @media (max-width: 767px) {
+    &--horizontal {
+      flex-direction: column;
+
+      .card-video-post__media {
+        width: 100%;
+        padding-top: 56.25%;
+        height: auto;
+      }
+    }
+  }
+}
