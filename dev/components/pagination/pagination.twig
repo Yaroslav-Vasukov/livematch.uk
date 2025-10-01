@@ -1,0 +1,68 @@
+{#
+  Universal Pagination Component (Client-side)
+  
+  Usage:
+  {% include '@components/pagination/pagination.twig' with {
+    card_selector: '.card-match',
+    grid_selector: '.matches-grid',
+    per_page: 24,
+    per_page_options: [12, 24, 48, 96]
+  } %}
+#}
+
+{% set cardSelector = card_selector|default('.card') %}
+{% set gridSelector = grid_selector|default('.archive__grid') %}
+{% set perPage = per_page|default(12) %}
+{% set perPageOpts = per_page_options|default([12, 24, 48]) %}
+
+<div class="pagination" 
+     data-pagination
+     data-card-selector="{{ cardSelector }}"
+     data-grid-selector="{{ gridSelector }}"
+     data-per-page="{{ perPage }}"
+     data-per-page-options="{{ perPageOpts|join(',') }}">
+  
+  <div class="pagination__info">
+    <span class="pagination__count" data-pagination-info>
+      Shown 1-{{ perPage }} of {{ perPage }}
+    </span>
+  </div>
+
+  <div class="pagination__controls">
+    <button 
+      class="pagination__arrow pagination__arrow--disabled" 
+      data-pagination-prev
+      aria-label="previous page"
+      disabled
+    >
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+
+    <div class="pagination__pages" data-pagination-pages>
+      <button class="pagination__page pagination__page--active" data-page="1">1</button>
+    </div>
+
+    <button 
+      class="pagination__arrow" 
+      data-pagination-next
+      aria-label="next page"
+    >
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+
+  <div class="pagination__per-page">
+    <label for="perPage" class="pagination__label">View:</label>
+    <select id="perPage" class="pagination__select" data-pagination-per-page>
+      {% for option in perPageOpts %}
+        <option value="{{ option }}" {% if option == perPage %}selected{% endif %}>
+          {{ option }}
+        </option>
+      {% endfor %}
+    </select>
+  </div>
+</div>

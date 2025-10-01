@@ -1,18 +1,19 @@
 {% extends "../layouts/_base.html" %}
 {% block title %}Privacy Policy{% endblock %}
+{% set currentPage = 'privacy' %}
 {% block active_nav %}privacy{% endblock %}
 {% block body_class %}page page--privacy{% endblock %}
 {% block head_extra %}{% endblock %}
 
 {% block content %}
-{% include "../components/page-head/page-head.twig" with {
-  title: "Privacy Policy",
-  subtitle: "How we protect your data",
+{% include '../components/page-header/page-header.twig' with {
+  title: 'Privacy Policy',
+    mod: 'compact',
   breadcrumbs: [
-    { label: "Home", href: "/", home: true },
-    { label: "Privacy Policy" }
-  ],
-} only %}
+    { label: 'Home', url: '/' },
+    { label: 'Privacy Policy' }
+  ]
+} %}
 
 <section class="section section--margin">
   <div class="container">
@@ -20,7 +21,7 @@
       <div class="privacy">
         <div class="privacy__intro">
           <p class="privacy__intro-text">
-            At Soccer365, we take your privacy seriously. This Privacy Policy explains how we collect, 
+            At Matchlive, we take your privacy seriously. This Privacy Policy explains how we collect, 
             use, and protect your personal information when you use our website and services.
           </p>
           <p class="privacy__intro-text">

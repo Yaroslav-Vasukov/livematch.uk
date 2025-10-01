@@ -1,0 +1,368 @@
+// Pagination Component Styles
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 32px 0;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 0;
+  }
+
+  // Info block
+  &__info {
+    flex-shrink: 0;
+  }
+
+  &__count {
+    font-size: 14px;
+    color: $color-gray;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+
+    @media (max-width: 768px) {
+      font-size: 13px;
+    }
+  }
+
+  // Controls container
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    justify-content: center;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      order: -1;
+    }
+  }
+
+  // Navigation arrows
+  &__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba($color-light, 0.1);
+    border-radius: 8px;
+    background: $color-dark-gray;
+    color: $color-light;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, $color-primary 0%, $color-primary-dark 100%);
+      opacity: 0;
+      transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 0;
+    }
+
+    svg {
+      position: relative;
+      z-index: 1;
+      transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &:hover:not(&--disabled) {
+      border-color: $color-primary;
+      color: $color-light;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba($color-primary, 0.3);
+
+      &::before {
+        opacity: 1;
+      }
+
+      svg {
+        transform: scale(1.1);
+      }
+    }
+
+    &:active:not(&--disabled) {
+      transform: translateY(0);
+      box-shadow: 0 2px 6px rgba($color-primary, 0.25);
+    }
+
+    &--disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  // Pages container
+  &__pages {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  // Page number
+  &__page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background: $color-dark-gray;
+    color: $color-light;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba($color-light, 0.05);
+      transform: scale(0);
+      transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      border-radius: 8px;
+    }
+
+    span {
+      position: relative;
+      z-index: 1;
+    }
+
+    &:hover:not(&--active) {
+      border-color: rgba($color-primary, 0.3);
+      color: $color-primary-light;
+      transform: translateY(-2px);
+
+      &::before {
+        transform: scale(1);
+      }
+    }
+
+    &--active {
+      border-color: $color-primary;
+      background: linear-gradient(135deg, $color-primary 0%, $color-primary-dark 100%);
+      color: $color-light;
+      cursor: default;
+      pointer-events: none;
+      box-shadow: 0 4px 12px rgba($color-primary, 0.4);
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 480px) {
+      min-width: 36px;
+      height: 36px;
+      padding: 0 8px;
+      font-size: 13px;
+    }
+  }
+
+  // Ellipsis
+  &__ellipsis {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 40px;
+    color: $color-gray;
+    font-size: 14px;
+    user-select: none;
+    opacity: 0.6;
+    animation: ellipsisPulse 2s ease-in-out infinite;
+
+    @media (max-width: 480px) {
+      min-width: 36px;
+      height: 36px;
+    }
+  }
+
+  // Per page selector
+  &__per-page {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  &__label {
+    font-size: 14px;
+    color: $color-gray;
+    font-weight: 500;
+    white-space: nowrap;
+
+    @media (max-width: 768px) {
+      font-size: 13px;
+    }
+  }
+
+  &__select {
+    min-width: 80px;
+    height: 40px;
+    padding: 0 32px 0 12px;
+    border: 1px solid rgba($color-light, 0.1);
+    border-radius: 8px;
+    background: $color-dark-gray url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23FFFFFF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 12px center;
+    background-size: 12px;
+    color: $color-light;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    appearance: none;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      border-color: $color-primary;
+      transform: translateY(-1px);
+      box-shadow: 0 2px 8px rgba($color-primary, 0.2);
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $color-primary;
+      box-shadow: 0 0 0 3px rgba($color-primary, 0.15);
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 768px) {
+      height: 38px;
+      font-size: 13px;
+    }
+  }
+}
+
+// Animations
+@keyframes ellipsisPulse {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Fade animation for page buttons
+.pagination__page,
+.pagination__ellipsis {
+  animation: fadeIn 0.3s cubic-bezier(0.4, 0, 0.2, 1) backwards;
+  
+  @for $i from 1 through 10 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.03}s;
+    }
+  }
+}
+
+// Compact variant
+.pagination--compact {
+  padding: 16px 0;
+
+  .pagination__arrow,
+  .pagination__page {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+  }
+
+  .pagination__select {
+    height: 36px;
+    min-width: 70px;
+  }
+}
+
+// Light theme variant (если нужен)
+.pagination--light {
+  .pagination__count,
+  .pagination__label {
+    color: #6b7280;
+  }
+
+  .pagination__arrow,
+  .pagination__page {
+    border-color: #e5e7eb;
+    background: #fff;
+    color: #374151;
+
+    &::before {
+      background: linear-gradient(135deg, $color-primary 0%, $color-primary-dark 100%);
+    }
+
+    &:hover:not(.pagination__arrow--disabled):not(.pagination__page--active) {
+      border-color: $color-primary;
+      color: #fff;
+
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  .pagination__page--active {
+    border-color: $color-primary;
+    background: linear-gradient(135deg, $color-primary 0%, $color-primary-dark 100%);
+    color: #fff;
+  }
+
+  .pagination__select {
+    border-color: #e5e7eb;
+    background-color: #fff;
+    color: #374151;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23374151' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+
+    &:hover {
+      border-color: $color-primary;
+    }
+  }
+}
+
+// Loading state
+.pagination--loading {
+  pointer-events: none;
+  
+  .pagination__arrow,
+  .pagination__page,
+  .pagination__select {
+    opacity: 0.5;
+  }
+  
+  .pagination__count {
+    opacity: 0.5;
+  }
+}

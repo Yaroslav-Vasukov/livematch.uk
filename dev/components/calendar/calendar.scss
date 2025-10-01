@@ -1,0 +1,229 @@
+// Карточки событий (используем вашу сетку)
+.calendar-events {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 450px), 1fr));
+  gap: 20px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  &__empty {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    color: $color-gray;
+  }
+
+  &__empty-icon {
+    margin-bottom: 20px;
+    opacity: 0.5;
+  }
+
+  &__empty-text {
+    font-size: 18px;
+    color: $color-gray;
+  }
+}
+
+
+.calendar-section {
+  padding: 60px 0;
+  min-height: 100vh;
+
+  &__title {
+    font-family: $font-title;
+    font-size: 48px;
+    font-weight: 700;
+    color: $color-light;
+    margin-bottom: 40px;
+    text-align: center;
+
+    @media (max-width: 768px) {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.calendar {
+  max-width: 400px;
+  margin-bottom: 48px;
+
+  &__picker-wrapper {
+    position: relative;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 16px 20px;
+    font-size: 18px;
+    color: $color-light;
+    background: $color-dark-gray;
+    border: 2px solid rgba($color-primary, 0.3);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      border-color: $color-primary;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $color-primary;
+      box-shadow: 0 0 0 4px rgba($color-primary, 0.1);
+    }
+
+    &::placeholder {
+      color: $color-gray;
+    }
+  }
+
+  &__info {
+    margin-top: 20px;
+    padding: 16px;
+    background: rgba($color-primary, 0.1);
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  &__info-text {
+    color: $color-light;
+    font-size: 16px;
+
+    strong {
+      color: $color-primary;
+      font-weight: 600;
+    }
+  }
+}
+
+// Кастомизация Flatpickr под темную тему и БЭМ
+.flatpickr-calendar {
+  background: $color-dark-gray !important;
+  border: 2px solid rgba($color-primary, 0.3) !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5) !important;
+  border-radius: 12px !important;
+}
+
+.flatpickr-months {
+  background: $color-dark-gray !important;
+  
+  .flatpickr-month {
+    color: $color-light !important;
+  }
+
+  .flatpickr-prev-month,
+  .flatpickr-next-month {
+    fill: $color-light !important;
+    
+    &:hover svg {
+      fill: $color-primary !important;
+    }
+  }
+}
+
+.flatpickr-current-month {
+  .flatpickr-monthDropdown-months {
+    background: $color-dark-gray !important;
+    color: $color-light !important;
+  }
+
+  input.cur-year {
+    color: $color-light !important;
+    background: $color-dark-gray !important;
+  }
+}
+
+.flatpickr-weekdays {
+  background: $color-dark-gray !important;
+}
+
+.flatpickr-weekday {
+  color: $color-gray !important;
+}
+
+.flatpickr-day {
+  color: $color-light !important;
+  border-radius: 8px !important;
+
+  &:hover {
+    background: rgba($color-primary, 0.2) !important;
+    border-color: rgba($color-primary, 0.2) !important;
+  }
+
+  &.today {
+    border-color: $color-primary !important;
+    
+    &:hover {
+      background: rgba($color-primary, 0.3) !important;
+    }
+  }
+
+  &.selected {
+    background: $color-primary !important;
+    border-color: $color-primary !important;
+    color: $color-dark !important;
+    font-weight: 600;
+  }
+
+  &.disabled {
+    color: rgba($color-gray, 0.3) !important;
+  }
+}
+
+// Индикатор событий на датах
+.flatpickr-day-event-dot {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  background: $color-primary;
+  border-radius: 50%;
+}
+
+// Карточки событий (используем вашу сетку)
+.calendar-events {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 500px), 1fr));
+  gap: 24px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  &__empty {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    color: $color-gray;
+  }
+
+  &__empty-icon {
+    margin-bottom: 20px;
+    opacity: 0.5;
+  }
+
+  &__empty-text {
+    font-size: 18px;
+    color: $color-gray;
+  }
+}
+
+// Обертка для card-match в календаре
+.calendar-match-card {
+  width: 100%;
+  
+
+}

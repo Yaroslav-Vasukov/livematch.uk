@@ -1,18 +1,19 @@
-{% extends "../layouts/_base.html" %}
+{% extends "../layouts/_base.html" %}                                                                                              
+{% set currentPage = 'contact' %}
 {% block title %}Contact{% endblock %}
 {% block active_nav %}contact{% endblock %}
 {% block body_class %}page page--contact{% endblock %}
 {% block head_extra %}{% endblock %}
 
 {% block content %}
-{% include "../components/page-head/page-head.twig" with {
-  title: "Contact Us",
-  subtitle: "Get in touch with us",
+{% include '../components/page-header/page-header.twig' with {
+  title: 'Contact Us',
+    mod: 'compact',
   breadcrumbs: [
-    { label: "Home", href: "/", home: true },
-    { label: "Contact Us" }
-  ],
-} only %}
+    { label: 'Home', url: '/' },
+    { label: 'Contact Us' }
+  ]
+} %}
 
 <section class="section section--margin">
   <div class="container">
@@ -21,9 +22,10 @@
         <div class="contact__grid">
           <!-- Contact Information -->
           <div class="contact__info">
-            {% include "../components/section-header/section-header.twig" with {
-              title: "Contact Information"
-            } %}
+      {% include "../components/section-header/section-header.twig" with {
+      title: "Contact Information",
+      show_more: false
+    } only %}
             <p class="contact__description">
               Have questions about soccer news, live matches, or want to share your thoughts? 
               We'd love to hear from you. Send us a message and we'll get back to you as soon as possible.
@@ -139,7 +141,6 @@
               </div>
               <button type="submit" class="contact__btn contact__submit">
                 <span class="contact__btn-text">Send Message</span>
-                <span class="material-symbols-outlined contact__btn-icon">send</span>
               </button>
             </form>
           </div>

@@ -1,5 +1,5 @@
 {# dev/components/header/header.twig #}
-
+{% set currentPage = currentPage|default('home') %}
 {% set headerData = headerData|default({
   logo: {
     text: 'MATCH',
@@ -85,12 +85,12 @@
     <div class="secondary-nav__container">
       <ul class="secondary-nav__list">
         {% for page in leaguePages %}
-        <li class="secondary-nav__item {{ page.active ? 'secondary-nav__item--active' : '' }}">
-          <a href="{{ page.url|default('#') }}" class="secondary-nav__link">
-            <span class="secondary-nav__icon material-symbols-outlined">{{ page.icon }}</span>
-            <span class="secondary-nav__text">{{ page.name }}</span>
-          </a>
-        </li>
+      <li class="secondary-nav__item {{ page.id == currentPage ? 'secondary-nav__item--active' : '' }}">
+        <a href="{{ page.url|default('#') }}" class="secondary-nav__link">
+          <span class="secondary-nav__icon material-symbols-outlined">{{ page.icon }}</span>
+          <span class="secondary-nav__text">{{ page.name }}</span>
+        </a>
+      </li>
         {% endfor %}
       </ul>
     </div>

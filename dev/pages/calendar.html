@@ -1,44 +1,56 @@
 {% extends "../layouts/_base.html" %} 
+{% set currentPage = 'calendar' %}
 {% block title %}Calendar{% endblock %} 
-{% block active_nav %}calendar{% endblock %} 
+{% block active_nav %}Calendar{% endblock %} 
 {% block body_class %}page page--calendar{% endblock %} 
-{% block head_extra %}{% endblock %} 
+{% block head_extra %}
+{% endblock %} {% block content %}
 
-{% block content %}
-{% set calendar_raw = load_json('@/data/calendar.json') %}
+{% set calendarData = load_json('data/calendar.json') %}
 
-{% include "../components/page-head/page-head.twig" with {
-  title: "Calendar",
-  subtitle: "Our matches schedule",
+{% include '../components/page-header/page-header.twig' with {
+  title: 'Calendar of Events',
+  subtitle: 'Actual schedule of matches',
+    mod: 'compact',
   breadcrumbs: [
-    { label: "Home", href: "/", home: true },
-    { label: "Calendar" }
-  ],
-  meta: {
-    count: calendar_raw|length ~ " matches"
-  }
-} only %}
+    { label: 'Home', url: '/' },
+    { label: 'Calendar' }
+  ]
+} %}
 
-
-
-<section class="section section--margin">
-  <div class="container">
-    <div class="section__inner">
-            {% include "../components/calendar/calendar.twig" with {
-        games_list: calendar_raw,
-        id: "main-calendar",
-        class: "calendar--large"
-      } only %}
+<section class="calendar-section">
+  <div class="container">    
+    <div class="calendar" 
+         data-module="calendar" 
+         data-events='{{ calendarData | json_encode }}'>
+      <div class="calendar__picker-wrapper">
+        <input 
+          type="text" 
+          id="datepicker" 
+          class="calendar__input" 
+          placeholder="Select date"
+          readonly
+        >
+      </div>
+      <div class="calendar__info" id="calendarInfo">
+        <span class="calendar__info-text">Select a date to view events</span>
+      </div>
+    </div>
+    <div class="calendar-events" id="calendarEvents">
+      <div class="calendar-events__empty">
+        <svg class="calendar-events__empty-icon" width="64" height="64" viewBox="0 0 24 24" fill="none">
+          <path d="M8 2v3M16 2v3M3.5 9.09h17M21 8.5V17c0 3-1.5 5-5 5H8c-3.5 0-5-2-5-5V8.5c0-3 1.5-5 5-5h8c3.5 0 5 2 5 5z" 
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p class="calendar-events__empty-text">Select a date in the calendar</p>
+      </div>
     </div>
   </div>
 </section>
 
 {% endblock %} 
-
 {% block scripts %}
+  <script>
+    window.CALENDAR_EVENTS = {{ calendarData | json_encode | raw }};
+  </script>
 {% endblock %}
-
-
-
-
-

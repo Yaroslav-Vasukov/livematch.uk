@@ -33,7 +33,12 @@ function init() {
   when('[data-module="stats-section"]', () =>
     import("@components/stats-section/stats-section.js")
   );
-
+  when('[data-pagination]', () =>
+    import("@components/pagination/pagination.js")
+  );
+when('[data-module="calendar"]', () =>
+  import("@components/calendar/calendar.js")
+);
 
 }
 

@@ -1,0 +1,205 @@
+// @components/page-header/page-header.scss
+
+.page-header {
+  padding: 60px 0 40px;
+  background: linear-gradient(135deg, $color-dark 0%, $color-dark-gray 100%);
+  color: $color-light;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 48px;
+  // Декоративные элементы
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba($color-primary, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+      transparent 0%, 
+      rgba($color-primary, 0.3) 50%, 
+      transparent 100%
+    );
+  }
+
+  &__breadcrumbs {
+    margin-bottom: 28px;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    font-family: $font-title;
+    text-transform: capitalize;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 12px;
+    color: $color-light;
+    letter-spacing: -0.02em;
+
+    @media (max-width: 768px) {
+      font-size: 40px;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 32px;
+    }
+  }
+
+  &__subtitle {
+    text-transform: capitalize;
+    font-family: $font-body;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0;
+    color: $color-gray;
+
+    @media (max-width: 576px) {
+      font-size: 16px;
+    }
+  }
+
+  // Модификатор для компактной версии
+  &--compact {
+    padding: 32px 0 24px;
+
+    .page-header__title {
+      font-size: 36px;
+      margin-bottom: 0;
+
+      @media (max-width: 576px) {
+        font-size: 28px;
+      }
+    }
+
+    &::before {
+      width: 300px;
+      height: 300px;
+    }
+  }
+
+  // Модификатор с акцентом (оранжевый)
+  &--accent {
+    &::before {
+      background: radial-gradient(circle, rgba($color-accent-orange, 0.2) 0%, transparent 70%);
+    }
+
+    &::after {
+      background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba($color-accent-orange, 0.4) 50%, 
+        transparent 100%
+      );
+    }
+  }
+
+  // Модификатор с акцентом (синий)
+  &--blue {
+    &::before {
+      background: radial-gradient(circle, rgba($color-accent-blue, 0.2) 0%, transparent 70%);
+    }
+
+    &::after {
+      background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba($color-accent-blue, 0.4) 50%, 
+        transparent 100%
+      );
+    }
+  }
+}
+
+// Хлебные крошки
+.breadcrumbs {
+  position: relative;
+  z-index: 1;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    color: $color-gray;
+    font-family: $font-body;
+    font-size: 14px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+    text-transform: capitalize;
+
+    &:not(:last-child)::after {
+      content: '/';
+      margin: 0 8px;
+      opacity: 0.4;
+      color: $color-gray;
+    }
+
+    &--active {
+      color: $color-primary;
+      font-weight: 500;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 13px;
+    }
+  }
+
+  &__link {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: $color-primary;
+      transition: width 0.3s ease;
+    }
+
+    &:hover {
+      color: $color-primary-light;
+
+      &::after {
+        width: 100%;
+      }
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-primary;
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+  }
+
+  &__text {
+    color: inherit;
+  }
+}

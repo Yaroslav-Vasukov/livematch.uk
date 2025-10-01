@@ -53,29 +53,22 @@
         { id: 'volleyball', name: 'Volleyball', icon: 'sports_volleyball', url: '/volleyball' },
         { id: 'handball', name: 'Handball', icon: 'sports_handball', url: '/handball' }
       ],
-leaguePages: [
-  { id: 'home', name: 'Home', icon: 'home', active: true },
-  { id: 'live', name: 'Live', icon: 'sensors', active: false },
-  { id: 'news', name: 'News', icon: 'article', active: false },  
-  { id: 'calendar', name: 'Calendar', icon: 'calendar_month', active: false },
-  { id: 'history', name: 'History', icon: 'history', active: false },
-  { id: 'contact', name: 'Contact', icon: 'mail', active: false },
-  { id: 'team', name: 'Team', icon: 'group', active: false },
-  { id: 'teams', name: 'Teams', icon: 'groups', active: false },
-  { id: 'player', name: 'Player', icon: 'person', active: false },
-  { id: 'post', name: 'Post', icon: 'description', active: false },
-  { id: 'video', name: 'Video', icon: 'videocam', active: false },
-  { id: 'videos', name: 'Videos', icon: 'video_library', active: false },
-  { id: 'review', name: 'Review', icon: 'rate_review', active: false },
-  { id: 'privacy', name: 'Privacy', icon: 'privacy_tip', active: false }
-],
-      sections: [
-        { id: 'news', name: 'News', icon: 'article', url: '/news', active: true },
-        { id: 'video', name: 'Video', icon: 'videocam', url: '/video', active: false },
-        { id: 'matches', name: 'Matches', icon: 'calendar_month', url: '/matches', active: false },
-        { id: 'tables', name: 'Tables', icon: 'bar_chart', url: '/tables', active: false },
-        { id: 'stats', name: 'Stats', icon: 'trending_up', url: '/stats', active: false }
-      ]
+  "leaguePages": [
+    { "id": "home", "name": "Home", "icon": "home", "url": "/", "active": true },
+    { "id": "lives", "name": "Live", "icon": "sensors", "url": "/lives", "active": false },
+    { "id": "news", "name": "News", "icon": "article", "url": "/news", "active": false },
+    { "id": "calendar", "name": "Calendar", "icon": "calendar_month", "url": "/calendar", "active": false },
+    { "id": "league", "name": "League", "icon": "sports", "url": "/league", "active": false },
+    { "id": "contact", "name": "Contact", "icon": "mail", "url": "/contact", "active": false },
+    { "id": "team", "name": "Team", "icon": "group", "url": "/team", "active": false },
+    { "id": "teams", "name": "Teams", "icon": "groups", "url": "/teams", "active": false },
+    { "id": "player", "name": "Player", "icon": "person", "url": "/player", "active": false },
+    { "id": "post", "name": "Post", "icon": "description", "url": "/post", "active": false },
+    { "id": "video", "name": "Video", "icon": "videocam", "url": "/video", "active": false },
+    { "id": "videos", "name": "Videos", "icon": "video_library", "url": "/videos", "active": false },
+    { "id": "review", "name": "Review", "icon": "rate_review", "url": "/review", "active": false },
+    { "id": "privacy", "name": "Privacy", "icon": "privacy_tip", "url": "/privacy", "active": false }
+  ]
     } %}
 
 {% include '../components/header/header.twig' with {

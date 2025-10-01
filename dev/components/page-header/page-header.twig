@@ -1,0 +1,32 @@
+
+{% set breadcrumbs = breadcrumbs|default([]) %}
+{% set title = title|default('Page Title') %}
+{% set subtitle = subtitle|default('') %}
+{% set mod = mod|default('') %}
+
+<section class="page-header{{ mod ? ' page-header--' ~ mod : '' }}">
+  <div class="container">
+    {% if breadcrumbs|length > 0 %}
+      <nav class="page-header__breadcrumbs breadcrumbs" aria-label="Breadcrumb">
+        <ul class="breadcrumbs__list">
+          {% for item in breadcrumbs %}
+            <li class="breadcrumbs__item{{ loop.last ? ' breadcrumbs__item--active' : '' }}">
+              {% if item.url and not loop.last %}
+                <a href="{{ item.url }}" class="breadcrumbs__link">{{ item.label }}</a>
+              {% else %}
+                <span class="breadcrumbs__text">{{ item.label }}</span>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    {% endif %}
+
+    <div class="page-header__content">
+      <h1 class="page-header__title">{{ title }}</h1>
+      {% if subtitle %}
+        <p class="page-header__subtitle">{{ subtitle }}</p>
+      {% endif %}
+    </div>
+  </div>
+</section>

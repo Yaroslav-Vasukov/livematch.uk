@@ -1,41 +1,41 @@
 {% extends "../layouts/_base.html" %} 
+{% set currentPage = 'news' %}
 {% block title %}News{% endblock %} 
 {% block active_nav %}news{% endblock %} 
 {% block body_class %}page page--news{% endblock %} 
-{% block head_extra %}{% endblock %} 
+{% block head_extra %}
+{% endblock %} {% block content %}
 
-{% block content %}
-{% set posts = load_json("@/data/posts.json") %}
+{% set postsData = load_json('data/posts.json') %}
 
-{% include "../components/page-head/page-head.twig" with {
-  title: "Latest Posts",
-  subtitle: "Popular news",
+{% include '../components/page-header/page-header.twig' with {
+  title: 'Popular News',
+  subtitle: 'Stay updated with the latest news',
+    mod: 'compact',
   breadcrumbs: [
-    { label: "Home", href: "/", home: true },
-    { label: "Latest Posts" }
-  ],
-  meta: {
-    count: posts|length ~ " posts" 
-  }
-} only %}
+    { label: 'Home', url: '/' },
+    { label: 'News' }
+  ]
+} %}
+
 
 <section class="section section--margin">
   <div class="container">
     <div class="section__inner">
-      {% include "../components/infinite-scroll/infinite-scroll.twig" with {
-        type: 'news',
-        data: posts,
-        initial_count: 8,
-        items_per_page: 8,
-        loading_text: 'Loading more articles...',
-        end_text: 'All articles loaded',
-        no_items_text: 'No articles available'
-      } only %}
+      <div class="archive__grid archive__grid--news">     
+{% for post in postsData %}
+    {% include '../components/card-post/card-post.twig' %}
+{% endfor %}
+      </div>
+
+      {% include '../components/pagination/pagination.twig' with {
+  card_selector: '.card-post',
+  grid_selector: '.archive__grid--news',
+  per_page: 12
+} %}
     </div>
   </div>
 </section>
 
-{% endblock %} 
-
-{% block scripts %}
+{% endblock %} {% block scripts %}
 {% endblock %}

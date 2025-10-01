@@ -8,15 +8,19 @@
 @use '../../components/swiper/swiper.scss';
 @use '../../components/table/table.scss';
 @use '../../components/tabs/tabs.scss';
+@use '../../components/page-header/page-header.scss';
+@use '../../components/calendar/calendar.scss';
 
 @use '../../components/card-post/card-post.scss';
 @use '../../components/card-team/card-team.scss';
 @use '../../components/card-match/card-match.scss';
 @use '../../components/card-video/card-video.scss';
 
+@use '../../components/pagination/pagination.scss';
 @use '../../components/stats-section/stats-section.scss';
 
 
-// @use './blocks/privacy.scss';
+@use './blocks/contact.scss';
+@use './blocks/privacy.scss';
 // @use './pages/review.scss';
 
