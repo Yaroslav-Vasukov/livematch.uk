@@ -20,7 +20,7 @@
 {% set serieA = load_json("@/data/leagues/serie-a.json") %}
 {% set postsData = load_json('data/posts.json') %}
 {% set statsData = load_json('data/stats-data.json') %}
-
+{% set postsData = load_json('data/posts.json') %}
 
 
 
@@ -215,7 +215,7 @@
             <div class="news__layout">
         
         <div class="news__main">
-          {% set postsData = load_json('data/posts.json') %}
+
           {% for post in postsData|slice(0, 10) %}
               {% include '../components/card-post/card-post-horizontal.twig' with { post: post } %}
           {% endfor %}
@@ -252,7 +252,6 @@
     </div>
   </div>
 </section>
-
 <section class="section section--margin">
   <div class="container">
     <div class="section__inner">
