@@ -1,0 +1,153 @@
+// dev/components/review-stats/review-stats.scss
+
+.review-stats {
+  background: $color-dark-gray;
+  border-radius: 16px;
+  padding: 24px;
+
+  @media (min-width: 768px) {
+    padding: 32px;
+  }
+
+  // ========================================
+  // Заголовок
+  // ========================================
+  &__title {
+    font-family: $font-title;
+    font-size: 20px;
+    font-weight: 700;
+    color: $color-light;
+    margin: 0 0 24px;
+
+    @media (min-width: 768px) {
+      font-size: 24px;
+      margin-bottom: 32px;
+    }
+  }
+
+  // ========================================
+  // Список статистик
+  // ========================================
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  // ========================================
+  // Элемент статистики
+  // ========================================
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__label {
+    font-family: $font-body;
+    font-size: 14px;
+    font-weight: 600;
+    color: $color-gray;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  // ========================================
+  // Шкала с значениями
+  // ========================================
+  &__bar {
+    display: grid;
+    grid-template-columns: 48px 1fr 48px;
+    gap: 12px;
+    align-items: center;
+
+    @media (min-width: 768px) {
+      grid-template-columns: 64px 1fr 64px;
+      gap: 16px;
+    }
+  }
+
+  &__value {
+    font-family: $font-title;
+    font-size: 16px;
+    font-weight: 700;
+    color: $color-light;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      font-size: 18px;
+    }
+
+    &--home {
+      color: $color-primary;
+    }
+
+    &--away {
+      color: $color-light;
+    }
+  }
+
+  // ========================================
+  // Трек (контейнер шкалы)
+  // ========================================
+  &__track {
+    position: relative;
+    display: flex;
+    height: 32px;
+    background: $color-dark;
+    border-radius: 8px;
+    overflow: hidden;
+
+    @media (min-width: 768px) {
+      height: 40px;
+    }
+  }
+
+  // ========================================
+  // Заполнение шкалы
+  // ========================================
+  &__fill {
+    height: 100%;
+    transition: width 0.6s ease;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.1) 50%,
+        transparent 100%
+      );
+      animation: shimmer 2s infinite;
+    }
+
+    &--home {
+      background: linear-gradient(90deg, $color-primary-dark, $color-primary);
+      border-radius: 8px 0 0 8px;
+    }
+
+    &--away {
+      background: linear-gradient(90deg, $color-light, rgba($color-light, 0.8));
+      border-radius: 0 8px 8px 0;
+    }
+  }
+}
+
+// ========================================
+// Анимация блеска
+// ========================================
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

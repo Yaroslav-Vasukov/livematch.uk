@@ -1,0 +1,34 @@
+
+.review-content {
+  display: grid;
+  grid-template-columns: 1fr 440px;
+  align-items: flex-start;
+  gap: 32px;
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 0;
+      .sidebar-widget {
+    display: none;
+  }
+  }
+
+}
+.review-descr {
+  padding: 16px;
+  background-color: $color-dark-gray;
+  border-radius: 16px;
+  border: 1px solid rgba($color-light, 0.1);
+}
+.review-text {
+  color: rgba($color-light, 0.8);
+}
+.review-text + .review-text {
+  margin-top: 16px;
+}
+.review-img {
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  margin: 16px 0;
+}
+

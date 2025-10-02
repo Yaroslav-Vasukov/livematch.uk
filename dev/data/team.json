@@ -1,240 +1,367 @@
 {
   "name": "Manchester City",
-  "logo": "/assets/images/teams/team-5.webp",
-  "stadium": "Etihad Stadium",
+  "short_name": "Man City",
   "founded": 1880,
-  "manager": "Pep Guardiola",
+  "logo": "/assets/images/team-4.webp",
+  "stadium": {
+    "name": "Etihad Stadium",
+    "capacity": 53400,
+    "image": "/assets/images/stadium.webp"
+  },
   "league": {
     "name": "Premier League",
-    "logo": "/assets/images/leagues/leg5.webp",
+    "logo": "/assets/images/premier-league.webp",
     "href": "/league/premier-league"
   },
+  "manager": {
+    "name": "Pep Guardiola",
+    "nationality": "Spain",
+    "since": "2016",
+    "avatar": "/assets/images/personal1.webp"
+  },
+  "info": [
+    {
+      "label": "Full Name",
+      "value": "Manchester City Football Club"
+    },
+    {
+      "label": "Founded",
+      "value": "1880"
+    },
+    {
+      "label": "Stadium",
+      "value": "Etihad Stadium"
+    },
+    {
+      "label": "Capacity",
+      "value": "53,400"
+    },
+    {
+      "label": "Location",
+      "value": "Manchester, England"
+    },
+    {
+      "label": "Chairman",
+      "value": "Khaldoon Al Mubarak"
+    },
+    {
+      "label": "Manager",
+      "value": "Pep Guardiola"
+    },
+    {
+      "label": "League",
+      "value": "Premier League"
+    }
+  ],
   "statistics": [
     {
-      "label": "Matches Played",
-      "value": 38
+      "icon": "emoji_events",
+      "label": "League Titles",
+      "value": 9
     },
     {
-      "label": "Wins",
-      "value": 28
-    },
-    {
-      "label": "Draws",
-      "value": 5
-    },
-    {
-      "label": "Losses",
-      "value": 5
-    },
-    {
+      "icon": "sports_soccer",
       "label": "Goals Scored",
-      "value": 94
+      "value": 42
     },
     {
-      "label": "Goals Conceded",
-      "value": 33
-    },
-    {
+      "icon": "shield",
       "label": "Clean Sheets",
-      "value": 18
+      "value": 8
     },
     {
-      "label": "Points",
-      "value": 89
+      "icon": "trending_up",
+      "label": "Win Rate",
+      "value": "75%"
+    },
+    {
+      "icon": "group",
+      "label": "Squad Size",
+      "value": 25
+    },
+    {
+      "icon": "public",
+      "label": "UEFA Ranking",
+      "value": 3
+    },
+    {
+      "icon": "star",
+      "label": "Market Value",
+      "value": "€1.2B"
+    },
+    {
+      "icon": "history",
+      "label": "Years Active",
+      "value": 144
     }
   ],
   "achievements": [
     {
       "icon": "emoji_events",
-      "title": "Premier League",
-      "count": 9,
-      "years": "1936-37, 1967-68, 2011-12, 2013-14, 2017-18, 2018-19, 2020-21, 2021-22, 2022-23"
-    },
-    {
-      "icon": "military_tech",
-      "title": "FA Cup",
-      "count": 7,
-      "years": "1904, 1934, 1956, 1969, 2011, 2019, 2023"
-    },
-    {
-      "icon": "workspace_premium",
-      "title": "League Cup",
-      "count": 8,
-      "years": "1970, 1976, 2014, 2016, 2018, 2019, 2020, 2021"
+      "title": "Premier League Champions",
+      "year": "2022-23"
     },
     {
       "icon": "public",
-      "title": "UEFA Champions League",
-      "count": 1,
-      "years": "2022-23"
+      "title": "UEFA Champions League Winners",
+      "year": "2022-23"
     },
     {
-      "icon": "stars",
-      "title": "UEFA Super Cup",
-      "count": 1,
-      "years": "2023"
+      "icon": "military_tech",
+      "title": "FA Cup Winners",
+      "year": "2022-23"
     },
     {
-      "icon": "language",
+      "icon": "workspace_premium",
+      "title": "UEFA Super Cup Winners",
+      "year": "2023"
+    },
+    {
+      "icon": "trophy",
       "title": "FIFA Club World Cup",
-      "count": 1,
-      "years": "2023"
+      "year": "2023"
+    },
+    {
+      "icon": "emoji_events",
+      "title": "EFL Cup Winners",
+      "year": "2023-24"
     }
   ],
+  "history": "<p><strong>Manchester City Football Club</strong> is an English professional football club based in Manchester. Founded in 1880 as St. Mark's (West Gorton), they became Ardwick Association Football Club in 1887 and Manchester City in 1894.</p><p>The club has won nine league titles, including four Premier League titles in the past decade under manager Pep Guardiola. City won their first major honour with the FA Cup in 1904 and their first Football League title in 1937.</p><p>In 2008, the club was purchased by Abu Dhabi United Group and has since become one of the wealthiest clubs in the world. The investment has led to unprecedented success, including winning the UEFA Champions League in 2023, completing a historic treble of Premier League, FA Cup, and Champions League.</p><p>Manchester City plays their home matches at the Etihad Stadium, which has been their home since 2003. The club's traditional rivals include Manchester United and Liverpool.</p>",
   "squad": [
     {
-      "number": 31,
+      "pos": 1,
+      "player": {
+        "name": "Erling Haaland",
+        "logo": {
+          "src": "/assets/images/player1.webp",
+          "alt": "Erling Haaland"
+        },
+        "href": "/player/haaland",
+        "meta": "Forward"
+      },
+      "number": "9",
+      "nationality": "Norway",
+      "age": 24,
+      "apps": 10,
+      "goals": 12,
+      "assists": 2
+    },
+    {
+      "pos": 2,
+      "player": {
+        "name": "Kevin De Bruyne",
+        "logo": {
+          "src": "/assets/images/player2.webp",
+          "alt": "Kevin De Bruyne"
+        },
+        "href": "/player/de-bruyne",
+        "meta": "Midfielder"
+      },
+      "number": "17",
+      "nationality": "Belgium",
+      "age": 32,
+      "apps": 8,
+      "goals": 3,
+      "assists": 7
+    },
+    {
+      "pos": 3,
+      "player": {
+        "name": "Phil Foden",
+        "logo": {
+          "src": "/assets/images/player3.webp",
+          "alt": "Phil Foden"
+        },
+        "href": "/player/foden",
+        "meta": "Midfielder"
+      },
+      "number": "47",
+      "nationality": "England",
+      "age": 24,
+      "apps": 10,
+      "goals": 5,
+      "assists": 4
+    },
+    {
+      "pos": 4,
       "player": {
         "name": "Ederson",
-        "avatar": "/assets/images/players/ederson.webp",
-        "href": "/player/ederson"
+        "logo": {
+          "src": "/assets/images/player4.webp",
+          "alt": "Ederson"
+        },
+        "href": "/player/ederson",
+        "meta": "Goalkeeper"
       },
-      "position": "Goalkeeper",
-      "age": 30,
+      "number": "31",
       "nationality": "Brazil",
-      "apps": 38,
+      "age": 30,
+      "apps": 10,
       "goals": 0,
       "assists": 1
     },
     {
-      "number": 2,
+      "pos": 1,
       "player": {
-        "name": "Kyle Walker",
-        "avatar": "/assets/images/players/player1.webp",
-        "href": "/player/walker"
+        "name": "Erling Haaland",
+        "logo": {
+          "src": "/assets/images/player1.webp",
+          "alt": "Erling Haaland"
+        },
+        "href": "/player/haaland",
+        "meta": "Forward"
       },
-      "position": "Defender",
-      "age": 33,
-      "nationality": "England",
-      "apps": 35,
-      "goals": 1,
-      "assists": 3
-    },
-    {
-      "number": 3,
-      "player": {
-        "name": "Rúben Dias",
-        "avatar": "/assets/images/players/player2.webp",
-        "href": "/player/dias"
-      },
-      "position": "Defender",
-      "age": 27,
-      "nationality": "Portugal",
-      "apps": 36,
-      "goals": 2,
-      "assists": 1
-    },
-    {
-      "number": 5,
-      "player": {
-        "name": "John Stones",
-        "avatar": "/assets/images/players/player3.webp",
-        "href": "/player/stones"
-      },
-      "position": "Defender",
-      "age": 29,
-      "nationality": "England",
-      "apps": 32,
-      "goals": 3,
+      "number": "9",
+      "nationality": "Norway",
+      "age": 24,
+      "apps": 10,
+      "goals": 12,
       "assists": 2
     },
     {
-      "number": 17,
+      "pos": 2,
       "player": {
         "name": "Kevin De Bruyne",
-        "avatar": "/assets/images/players/player4.webp",
-        "href": "/player/de-bruyne"
+        "logo": {
+          "src": "/assets/images/player2.webp",
+          "alt": "Kevin De Bruyne"
+        },
+        "href": "/player/de-bruyne",
+        "meta": "Midfielder"
       },
-      "position": "Midfielder",
-      "age": 32,
+      "number": "17",
       "nationality": "Belgium",
-      "apps": 34,
-      "goals": 12,
-      "assists": 18
+      "age": 32,
+      "apps": 8,
+      "goals": 3,
+      "assists": 7
     },
     {
-      "number": 16,
-      "player": {
-        "name": "Rodri",
-        "avatar": "/assets/images/players/player5.webp",
-        "href": "/player/rodri"
-      },
-      "position": "Midfielder",
-      "age": 27,
-      "nationality": "Spain",
-      "apps": 37,
-      "goals": 8,
-      "assists": 5
-    },
-    {
-      "number": 20,
-      "player": {
-        "name": "Bernardo Silva",
-        "avatar": "/assets/images/players/player6.webp",
-        "href": "/player/bernardo"
-      },
-      "position": "Midfielder",
-      "age": 29,
-      "nationality": "Portugal",
-      "apps": 36,
-      "goals": 9,
-      "assists": 11
-    },
-    {
-      "number": 47,
+      "pos": 3,
       "player": {
         "name": "Phil Foden",
-        "avatar": "/assets/images/players/player1.webp",
-        "href": "/player/foden"
+        "logo": {
+          "src": "/assets/images/player3.webp",
+          "alt": "Phil Foden"
+        },
+        "href": "/player/foden",
+        "meta": "Midfielder"
       },
-      "position": "Midfielder",
-      "age": 24,
+      "number": "47",
       "nationality": "England",
-      "apps": 35,
-      "goals": 15,
-      "assists": 9
+      "age": 24,
+      "apps": 10,
+      "goals": 5,
+      "assists": 4
     },
     {
-      "number": 9,
+      "pos": 4,
+      "player": {
+        "name": "Ederson",
+        "logo": {
+          "src": "/assets/images/player4.webp",
+          "alt": "Ederson"
+        },
+        "href": "/player/ederson",
+        "meta": "Goalkeeper"
+      },
+      "number": "31",
+      "nationality": "Brazil",
+      "age": 30,
+      "apps": 10,
+      "goals": 0,
+      "assists": 1
+    },
+    {
+      "pos": 1,
       "player": {
         "name": "Erling Haaland",
-        "avatar": "/assets/images/players/player2.webp",
-        "href": "/player/haaland"
+        "logo": {
+          "src": "/assets/images/player1.webp",
+          "alt": "Erling Haaland"
+        },
+        "href": "/player/haaland",
+        "meta": "Forward"
       },
-      "position": "Forward",
-      "age": 24,
+      "number": "9",
       "nationality": "Norway",
-      "apps": 37,
-      "goals": 36,
-      "assists": 8
-    },
-    {
-      "number": 19,
-      "player": {
-        "name": "Julián Álvarez",
-        "avatar": "/assets/images/players/player3.webp",
-        "href": "/player/alvarez"
-      },
-      "position": "Forward",
       "age": 24,
-      "nationality": "Argentina",
-      "apps": 31,
-      "goals": 11,
-      "assists": 6
+      "apps": 10,
+      "goals": 12,
+      "assists": 2
     },
     {
-      "number": 10,
+      "pos": 2,
       "player": {
-        "name": "Jack Grealish",
-        "avatar": "/assets/images/players/player4.webp",
-        "href": "/player/grealish"
+        "name": "Kevin De Bruyne",
+        "logo": {
+          "src": "/assets/images/player2.webp",
+          "alt": "Kevin De Bruyne"
+        },
+        "href": "/player/de-bruyne",
+        "meta": "Midfielder"
       },
-      "position": "Forward",
-      "age": 28,
+      "number": "17",
+      "nationality": "Belgium",
+      "age": 32,
+      "apps": 8,
+      "goals": 3,
+      "assists": 7
+    },
+    {
+      "pos": 3,
+      "player": {
+        "name": "Phil Foden",
+        "logo": {
+          "src": "/assets/images/player3.webp",
+          "alt": "Phil Foden"
+        },
+        "href": "/player/foden",
+        "meta": "Midfielder"
+      },
+      "number": "47",
       "nationality": "England",
-      "apps": 33,
-      "goals": 7,
-      "assists": 10
+      "age": 24,
+      "apps": 10,
+      "goals": 5,
+      "assists": 4
+    },
+    {
+      "pos": 4,
+      "player": {
+        "name": "Ederson",
+        "logo": {
+          "src": "/assets/images/player4.webp",
+          "alt": "Ederson"
+        },
+        "href": "/player/ederson",
+        "meta": "Goalkeeper"
+      },
+      "number": "31",
+      "nationality": "Brazil",
+      "age": 30,
+      "apps": 10,
+      "goals": 0,
+      "assists": 1
+    },
+    {
+      "pos": 5,
+      "player": {
+        "name": "Ruben Dias",
+        "logo": {
+          "src": "/assets/images/player5.webp",
+          "alt": "Ruben Dias"
+        },
+        "href": "/player/dias",
+        "meta": "Defender"
+      },
+      "number": "3",
+      "nationality": "Portugal",
+      "age": 27,
+      "apps": 9,
+      "goals": 1,
+      "assists": 0
     }
   ]
 }

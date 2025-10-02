@@ -1,0 +1,53 @@
+{
+  "date": "2025-10-02T19:45:00Z",
+  "league": {
+    "name": "Premier League",
+    "logo": "/assets/images/leg5.webp",
+    "url": "/league/premier-league"
+  },
+  "team1": {
+    "name": "Manchester City",
+    "logo": "/assets/images/team-5.webp",
+        "url": "/team/liverpool",
+    "position": 2,
+    "players": [
+      {
+        "name": "Haaland",
+        "url": "/player/haaland",
+        "minutes": "23"
+      },
+      {
+        "name": "De Bruyne",
+        "url": "/player/de-bruyne",
+        "minutes": "67"
+      }
+    ],
+    "card": {
+      "count": 1,
+      "type": "yellow",
+      "icon": "/assets/images/yellow.webp"
+    }
+  },
+  "team2": {
+    "name": "Liverpool",
+    "logo": "/assets/images/team-12.webp",
+    "url": "/team/liverpool",
+    "position": 1,
+    "players": [
+      {
+        "name": "Salah",
+        "url": "/player/salah",
+        "minutes": "45"
+      }
+    ],
+    "card": {
+      "count": 2,
+      "type": "yellow",
+      "icon": "/assets/images/yellow.webp"
+    }
+  },
+  "score": {
+    "team1": 2,
+    "team2": 1
+  }
+}

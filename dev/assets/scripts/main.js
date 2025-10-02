@@ -39,7 +39,12 @@ function init() {
 when('[data-module="calendar"]', () =>
   import("@components/calendar/calendar.js")
 );
-
+when('[data-module="player-stats"]', () =>
+  import("@components/player-stats/player-stats.js")
+);
+when('[data-module="player-stats"]', () =>
+  import("@components/player-stats/player-stats.js")
+);
 }
 
 // DOM ready

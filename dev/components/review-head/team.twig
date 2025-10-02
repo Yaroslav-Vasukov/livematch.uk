@@ -1,0 +1,66 @@
+
+
+
+<div class="review-head__team review-head__team--{{ modifier }}" itemprop="{{ modifier == 'home' ? 'homeTeam' : 'awayTeam' }}" itemscope itemtype="https://schema.org/SportsTeam">
+  
+
+  {% if team.position %}
+    <span class="review-head__position">{{ team.position }}{{ team.position|ordinal }}</span>
+  {% endif %}
+
+  <div class="review-head__team-content">
+    
+
+    <a href="{{ team.url }}" class="review-head__team-info">
+      <img 
+        src="{{ team.logo }}" 
+        alt="{{ team.name }}"
+        class="review-head__team-logo"
+        width="48"
+        height="48"
+        loading="lazy"
+        itemprop="logo"
+      >
+      <span class="review-head__team-name" itemprop="name">{{ team.name }}</span>
+    </a>
+
+
+    {% if team.players or team.card %}
+      <div class="review-head__events">
+
+        {% if team.players %}
+          <ul class="review-head__players" aria-label="Goal scorers">
+            {% for player in team.players %}
+              <li class="review-head__player-item">
+                <a href="{{ player.url }}" class="review-head__player-link">
+                  {{ player.name }}
+                  {% if player.minutes %}
+                    <span class="review-head__minute" aria-label="Minute">{{ player.minutes }}'</span>
+                  {% endif %}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+
+        {# Карточки #}
+        {% if team.card and team.card.count > 0 %}
+          <div class="review-head__cards" aria-label="Cards received">
+            <span class="review-head__card-count">{{ team.card.count }}</span>
+            <img 
+              src="{{ team.card.icon }}" 
+              alt="{{ team.card.type|default('Yellow') }} card"
+              class="review-head__card-icon"
+              width="16"
+              height="20"
+              loading="lazy"
+            >
+          </div>
+        {% endif %}
+
+      </div>
+    {% endif %}
+
+  </div>
+
+</div>

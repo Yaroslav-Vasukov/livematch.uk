@@ -1,0 +1,30 @@
+{# 
+  player-stats.twig
+  @param {array} stats - массив статистики игрока
+  @param {string} title - заголовок секции (опционально)
+#}
+
+<div class="player-stats" data-module="player-stats">
+  {% if title %}
+    <h2 class="player-stats__title">{{ title }}</h2>
+  {% endif %}
+
+  <div class="player-stats__grid">
+    {% for stat in stats %}
+      <div class="player-stats__item">
+        <div class="player-stats__icon-wrapper">
+          <span class="material-symbols-outlined player-stats__icon">
+            {{ stat.icon }}
+          </span>
+        </div>
+        
+        <div class="player-stats__content">
+          <div class="player-stats__value" data-count="{{ stat.value }}">
+            {{ stat.value }}
+          </div>
+          <div class="player-stats__label">{{ stat.label }}</div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

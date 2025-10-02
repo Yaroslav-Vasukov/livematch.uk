@@ -1,0 +1,71 @@
+{# dev/components/review-head/review-head.twig #}
+
+{# 
+  Компонент: Заголовок обзора матча
+  
+  Ожидаемые данные:
+  - review.date - Дата матча
+  - review.league - Данные лиги
+  - review.team1 - Домашняя команда
+  - review.team2 - Гостевая команда
+  - review.score - Счет матча
+#}
+<div class="review-head" itemscope itemtype="https://schema.org/SportsEvent">
+  
+  {# Метаинформация #}
+  <div class="review-head__meta">
+    <time 
+      datetime="{{ review.date|date('c') }}" 
+      class="review-head__date"
+      itemprop="startDate"
+    >
+      {{ review.date|date('j F Y') }}
+    </time>
+    
+    {% if review.league %}
+      <a 
+        href="{{ review.league.url }}" 
+        class="review-head__league"
+        aria-label="View {{ review.league.name }} league"
+      >
+        <img 
+          src="{{ review.league.logo }}" 
+          alt="{{ review.league.name }}"
+          class="review-head__league-icon"
+          width="32"
+          height="32"
+          loading="lazy"
+        >
+      </a>
+    {% endif %}
+  </div>
+
+  {# Основной контент матча #}
+  <div class="review-head__match" role="group" aria-label="Match details">
+    
+    {# Команда 1 #}
+    {% include '../review-head/team.twig' with {
+      team: review.team1,
+      modifier: 'home'
+    } only %}
+
+    {# Счет #}
+    <div class="review-head__score" role="status" aria-live="polite">
+      <span class="review-head__score-value" itemprop="homeTeamScore">
+        {{ review.score.team1 }}
+      </span>
+      <span class="review-head__score-separator" aria-hidden="true">-</span>
+      <span class="review-head__score-value" itemprop="awayTeamScore">
+        {{ review.score.team2 }}
+      </span>
+    </div>
+
+    {# Команда 2 #}
+    {% include '../review-head/team.twig' with {
+      team: review.team2,
+      modifier: 'away'
+    } only %}
+
+  </div>
+
+</div>

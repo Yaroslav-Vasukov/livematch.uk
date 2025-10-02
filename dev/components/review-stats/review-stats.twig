@@ -1,0 +1,64 @@
+{# dev/components/review-stats/review-stats.twig #}
+
+{# 
+  Компонент: Статистика матча
+  
+  Ожидаемые данные:
+  - title - Заголовок секции (опционально)
+  - statistics - Массив статистик
+    - label - Название показателя
+    - home - Значение домашней команды
+    - away - Значение гостевой команды
+#}
+
+<div class="review-stats">
+  
+  {% if title %}
+    <h3 class="review-stats__title">{{ title }}</h3>
+  {% endif %}
+
+  <div class="review-stats__list">
+    {% for stat in statistics %}
+      <div class="review-stats__item">
+        
+        {# Название показателя #}
+        <div class="review-stats__label">{{ stat.label }}</div>
+
+        {# Шкала со значениями #}
+        <div class="review-stats__bar">
+          
+          {# Значение домашней команды #}
+          <div class="review-stats__value review-stats__value--home">
+            {{ stat.home }}
+          </div>
+
+          {# Трек с заполнением #}
+          <div class="review-stats__track" role="progressbar" aria-label="{{ stat.label }}">
+            {% set total = stat.home + stat.away %}
+            {% set homePercent = total > 0 ? (stat.home / total * 100)|round(2) : 50 %}
+            {% set awayPercent = total > 0 ? (stat.away / total * 100)|round(2) : 50 %}
+            
+            <div 
+              class="review-stats__fill review-stats__fill--home" 
+              style="width: {{ homePercent }}%"
+              aria-valuenow="{{ homePercent }}"
+            ></div>
+            <div 
+              class="review-stats__fill review-stats__fill--away" 
+              style="width: {{ awayPercent }}%"
+              aria-valuenow="{{ awayPercent }}"
+            ></div>
+          </div>
+
+          {# Значение гостевой команды #}
+          <div class="review-stats__value review-stats__value--away">
+            {{ stat.away }}
+          </div>
+
+        </div>
+
+      </div>
+    {% endfor %}
+  </div>
+
+</div>

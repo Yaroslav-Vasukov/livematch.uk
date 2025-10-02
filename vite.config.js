@@ -52,7 +52,15 @@ Twig.extendFunction("load_json", (p) => {
   }
 });
 
-
+Twig.extendFilter("ordinal", (num) => {
+  const n = parseInt(num);
+  if (isNaN(n)) return num;
+  
+  const suffixes = ["th", "st", "nd", "rd"];
+  const value = n % 100;
+  
+  return suffixes[(value - 20) % 10] || suffixes[value] || suffixes[0];
+});
 Twig.extendFunction("get_url_param", (paramName, defaultValue = null) => {
   try {
     // В серверной среде Twig нет доступа к URL, но мы можем использовать

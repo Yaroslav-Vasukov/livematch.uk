@@ -10,6 +10,8 @@
 @use '../../components/tabs/tabs.scss';
 @use '../../components/page-header/page-header.scss';
 @use '../../components/calendar/calendar.scss';
+@use '../../components/review-head/review-head.scss';
+@use '../../components/review-stats/review-stats.scss';
 
 @use '../../components/card-post/card-post.scss';
 @use '../../components/card-team/card-team.scss';
@@ -19,8 +21,12 @@
 
 @use '../../components/pagination/pagination.scss';
 @use '../../components/stats-section/stats-section.scss';
+@use '../../components/player-stats/player-stats.scss';
 
 
+@use './blocks/team.scss';
+@use './blocks/player.scss';
+@use './blocks/review.scss';
 @use './blocks/contact.scss';
 @use './blocks/privacy.scss';
 @use './blocks/post.scss';

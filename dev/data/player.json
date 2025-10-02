@@ -4,11 +4,11 @@
   "position": "Forward",
   "nationality": "Norway",
   "age": 24,
-  "avatar": "/assets/images/players/player-full-6.webp",
+  "avatar": "/assets/images/player-full-6.webp",
   "hero_image": "/assets/images/bg/bg1.webp",
   "team": {
     "name": "Manchester City",
-    "logo": "/assets/images/teams/team-4.webp",
+    "logo": "/assets/images/team-4.webp",
     "href": "/team/manchester-city"
   },
   "info": [
@@ -134,7 +134,7 @@
       "team": {
         "name": "Manchester City",
         "logo": {
-          "src": "/assets/images/teams/team-4.webp",
+          "src": "/assets/images/team-4.webp",
           "alt": "Manchester City"
         },
         "href": "/team/manchester-city"
@@ -149,7 +149,7 @@
       "team": {
         "name": "Manchester City",
         "logo": {
-          "src": "/assets/images/teams/team-2.webp",
+          "src": "/assets/images/team-2.webp",
           "alt": "Manchester City"
         },
         "href": "/team/manchester-city"
@@ -164,7 +164,7 @@
       "team": {
         "name": "Manchester City",
         "logo": {
-          "src": "/assets/images/teams/team-1.webp",
+          "src": "/assets/images/team-1.webp",
           "alt": "Manchester City"
         },
         "href": "/team/manchester-city"
@@ -179,7 +179,7 @@
       "team": {
         "name": "Borussia Dortmund",
         "logo": {
-          "src": "/assets/images/teams/team-5.webp",
+          "src": "/assets/images/team-5.webp",
           "alt": "Borussia Dortmund"
         },
         "href": "/team/dortmund"
@@ -194,7 +194,7 @@
       "team": {
         "name": "Borussia Dortmund",
         "logo": {
-          "src": "/assets/images/teams/team-5.webp",
+          "src": "/assets/images/team-5.webp",
           "alt": "Borussia Dortmund"
         },
         "href": "/team/dortmund"
@@ -209,7 +209,7 @@
       "team": {
         "name": "Red Bull Salzburg",
         "logo": {
-          "src": "/assets/images/teams/team-6.webp",
+          "src": "/assets/images/team-6.webp",
           "alt": "Red Bull Salzburg"
         },
         "href": "/team/salzburg"
@@ -224,7 +224,7 @@
       "team": {
         "name": "Borussia Dortmund",
         "logo": {
-          "src": "/assets/images/teams/team-5.webp",
+          "src": "/assets/images/team-5.webp",
           "alt": "Borussia Dortmund"
         },
         "href": "/team/dortmund"
@@ -239,7 +239,7 @@
       "team": {
         "name": "Red Bull Salzburg",
         "logo": {
-          "src": "/assets/images/teams/team-6.webp",
+          "src": "/assets/images/team-6.webp",
           "alt": "Red Bull Salzburg"
         },
         "href": "/team/salzburg"
