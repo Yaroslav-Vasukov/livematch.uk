@@ -556,3 +556,65 @@
     opacity: 1;
   }
 }
+// ===== ИНДИКАТОР ГОРИЗОНТАЛЬНОГО СКРОЛЛА =====
+.table__wrap {
+  position: relative;
+  
+  // Градиент справа - показывает что можно скроллить
+  &.is-scrollable {
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 40px;
+      background: linear-gradient(
+        to right,
+        transparent,
+        rgba(0, 0, 0, 0.4)
+      );
+      pointer-events: none;
+      z-index: 2;
+      transition: opacity 0.3s ease;
+    }
+    
+    // Скрываем индикатор когда начали скроллить
+    &.table__wrap--scrolled::after {
+      opacity: 0;
+    }
+  }
+  
+  // Градиент слева - показывает что есть контент слева
+  &.table__wrap--scrolled::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    background: linear-gradient(
+      to left,
+      transparent,
+      rgba(0, 0, 0, 0.3)
+    );
+    pointer-events: none;
+    z-index: 2;
+  }
+}
+
+// Для мобильных делаем индикатор более заметным
+@media (max-width: 768px) {
+  .table__wrap.is-scrollable::after {
+    width: 60px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgba(0, 0, 0, 0.5)
+    );
+  }
+  
+  .table__wrap--scrolled::before {
+    width: 60px;
+  }
+}

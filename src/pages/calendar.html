@@ -1,0 +1,508 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Calendar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+
+    
+
+
+    <script type="module" crossorigin src="/assets/scripts/main.B5Qt9EMX.js"></script>
+    <script type="module" crossorigin src="/assets/scripts/main.DGg0Pxgu.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/styles/style.B4pXO9nM.css">
+  </head>
+  <body class="page page--calendar">
+
+    
+    
+
+
+
+
+
+<header class="header" data-module="header">
+  <div class="header__container">
+    
+    
+    <a href="/" class="header__logo">
+      <span class="header__logo-text">MATCH</span>
+      <span class="header__logo-accent">LIVE</span>
+    </a>
+
+    
+    <nav class="header__main-nav main-nav" aria-label="Sports">
+      <ul class="main-nav__list">
+
+        
+        
+        <li class="main-nav__item main-nav__item--active" data-sport="football">
+          <button class="main-nav__link main-nav__link--dropdown" aria-expanded="false">
+            <span class="main-nav__icon material-symbols-outlined">sports_soccer</span>
+            <span class="main-nav__text">FOOTBALL</span>
+            <span class="main-nav__arrow material-symbols-outlined">expand_more</span>
+          </button>
+          
+          
+          <div class="main-nav__dropdown" hidden>
+            <ul class="main-nav__dropdown-list">
+              
+              <li class="main-nav__dropdown-item">
+                <a href="/football/all" class="main-nav__dropdown-link">
+                  All Leagues
+                </a>
+              </li>
+              
+              <li class="main-nav__dropdown-item">
+                <a href="/football/ucl" class="main-nav__dropdown-link">
+                  Champions League
+                </a>
+              </li>
+              
+              <li class="main-nav__dropdown-item">
+                <a href="/football/epl" class="main-nav__dropdown-link">
+                  Premier League
+                </a>
+              </li>
+              
+              <li class="main-nav__dropdown-item">
+                <a href="/football/laliga" class="main-nav__dropdown-link">
+                  La Liga
+                </a>
+              </li>
+              
+              <li class="main-nav__dropdown-item">
+                <a href="/football/bundesliga" class="main-nav__dropdown-link">
+                  Bundesliga
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+        </li>
+        
+        <li class="main-nav__item " data-sport="basketball">
+          <button class="main-nav__link main-nav__link--dropdown" aria-expanded="false">
+            <span class="main-nav__icon material-symbols-outlined">sports_basketball</span>
+            <span class="main-nav__text">BASKETBALL</span>
+            <span class="main-nav__arrow material-symbols-outlined">expand_more</span>
+          </button>
+          
+          
+          <div class="main-nav__dropdown" hidden>
+            <ul class="main-nav__dropdown-list">
+              
+              <li class="main-nav__dropdown-item">
+                <a href="/basketball/all" class="main-nav__dropdown-link">
+                  All Leagues
+                </a>
+              </li>
+              
+              <li class="main-nav__dropdown-item">
+                <a href="/basketball/nba" class="main-nav__dropdown-link">
+                  NBA
+                </a>
+              </li>
+              
+              <li class="main-nav__dropdown-item">
+                <a href="/basketball/euroleague" class="main-nav__dropdown-link">
+                  Euroleague
+                </a>
+              </li>
+              
+              <li class="main-nav__dropdown-item">
+                <a href="/basketball/ncaa" class="main-nav__dropdown-link">
+                  NCAA
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+        </li>
+        
+
+        
+        
+        <li class="main-nav__item main-nav__item--more">
+          <button class="main-nav__link main-nav__link--dropdown" aria-expanded="false">
+            <span class="main-nav__text">MORE</span>
+            <span class="main-nav__arrow material-symbols-outlined">expand_more</span>
+          </button>
+          
+          <div class="main-nav__dropdown" hidden>
+            <ul class="main-nav__dropdown-list">
+              
+              <li class="main-nav__dropdown-item">
+                <a href="/tennis" class="main-nav__dropdown-link">
+                  <span class="main-nav__icon material-symbols-outlined">sports_tennis</span>
+                  Tennis
+                </a>
+              </li>
+              
+              <li class="main-nav__dropdown-item">
+                <a href="/hockey" class="main-nav__dropdown-link">
+                  <span class="main-nav__icon material-symbols-outlined">sports_hockey</span>
+                  Hockey
+                </a>
+              </li>
+              
+              <li class="main-nav__dropdown-item">
+                <a href="/volleyball" class="main-nav__dropdown-link">
+                  <span class="main-nav__icon material-symbols-outlined">sports_volleyball</span>
+                  Volleyball
+                </a>
+              </li>
+              
+              <li class="main-nav__dropdown-item">
+                <a href="/handball" class="main-nav__dropdown-link">
+                  <span class="main-nav__icon material-symbols-outlined">sports_handball</span>
+                  Handball
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+        </li>
+        
+
+      </ul>
+    </nav>
+
+    
+    <button class="header__burger" aria-label="Menu" aria-expanded="false">
+      <span class="header__burger-line"></span>
+      <span class="header__burger-line"></span>
+      <span class="header__burger-line"></span>
+    </button>
+
+  </div>
+
+  
+  <nav class="header__secondary-nav secondary-nav" aria-label="Sections">
+    <div class="secondary-nav__container">
+      <ul class="secondary-nav__list">
+        
+      <li class="secondary-nav__item ">
+        <a href="/" class="secondary-nav__link">
+          <span class="secondary-nav__icon material-symbols-outlined">home</span>
+          <span class="secondary-nav__text">Home</span>
+        </a>
+      </li>
+        
+      <li class="secondary-nav__item ">
+        <a href="/lives" class="secondary-nav__link">
+          <span class="secondary-nav__icon material-symbols-outlined">sensors</span>
+          <span class="secondary-nav__text">Live</span>
+        </a>
+      </li>
+        
+      <li class="secondary-nav__item ">
+        <a href="/news" class="secondary-nav__link">
+          <span class="secondary-nav__icon material-symbols-outlined">article</span>
+          <span class="secondary-nav__text">News</span>
+        </a>
+      </li>
+        
+      <li class="secondary-nav__item secondary-nav__item--active">
+        <a href="/calendar" class="secondary-nav__link">
+          <span class="secondary-nav__icon material-symbols-outlined">calendar_month</span>
+          <span class="secondary-nav__text">Calendar</span>
+        </a>
+      </li>
+        
+      <li class="secondary-nav__item ">
+        <a href="/league" class="secondary-nav__link">
+          <span class="secondary-nav__icon material-symbols-outlined">sports</span>
+          <span class="secondary-nav__text">League</span>
+        </a>
+      </li>
+        
+      <li class="secondary-nav__item ">
+        <a href="/contact" class="secondary-nav__link">
+          <span class="secondary-nav__icon material-symbols-outlined">mail</span>
+          <span class="secondary-nav__text">Contact</span>
+        </a>
+      </li>
+        
+      <li class="secondary-nav__item ">
+        <a href="/team" class="secondary-nav__link">
+          <span class="secondary-nav__icon material-symbols-outlined">group</span>
+          <span class="secondary-nav__text">Team</span>
+        </a>
+      </li>
+        
+      <li class="secondary-nav__item ">
+        <a href="/teams" class="secondary-nav__link">
+          <span class="secondary-nav__icon material-symbols-outlined">groups</span>
+          <span class="secondary-nav__text">Teams</span>
+        </a>
+      </li>
+        
+      <li class="secondary-nav__item ">
+        <a href="/player" class="secondary-nav__link">
+          <span class="secondary-nav__icon material-symbols-outlined">person</span>
+          <span class="secondary-nav__text">Player</span>
+        </a>
+      </li>
+        
+      <li class="secondary-nav__item ">
+        <a href="/post" class="secondary-nav__link">
+          <span class="secondary-nav__icon material-symbols-outlined">description</span>
+          <span class="secondary-nav__text">Post</span>
+        </a>
+      </li>
+        
+      <li class="secondary-nav__item ">
+        <a href="/video" class="secondary-nav__link">
+          <span class="secondary-nav__icon material-symbols-outlined">videocam</span>
+          <span class="secondary-nav__text">Video</span>
+        </a>
+      </li>
+        
+      <li class="secondary-nav__item ">
+        <a href="/videos" class="secondary-nav__link">
+          <span class="secondary-nav__icon material-symbols-outlined">video_library</span>
+          <span class="secondary-nav__text">Videos</span>
+        </a>
+      </li>
+        
+      <li class="secondary-nav__item ">
+        <a href="/review" class="secondary-nav__link">
+          <span class="secondary-nav__icon material-symbols-outlined">rate_review</span>
+          <span class="secondary-nav__text">Review</span>
+        </a>
+      </li>
+        
+      <li class="secondary-nav__item ">
+        <a href="/privacy" class="secondary-nav__link">
+          <span class="secondary-nav__icon material-symbols-outlined">privacy_tip</span>
+          <span class="secondary-nav__text">Privacy</span>
+        </a>
+      </li>
+        
+      </ul>
+    </div>
+  </nav>
+
+</header>
+
+    <main class="page__main">
+      
+
+
+
+
+
+
+
+
+
+<section class="page-header page-header--compact">
+  <div class="container">
+    
+      <nav class="page-header__breadcrumbs breadcrumbs" aria-label="Breadcrumb">
+        <ul class="breadcrumbs__list">
+          
+            <li class="breadcrumbs__item">
+              
+                <a href="/" class="breadcrumbs__link">Home</a>
+              
+            </li>
+          
+            <li class="breadcrumbs__item breadcrumbs__item--active">
+              
+                <span class="breadcrumbs__text">Calendar</span>
+              
+            </li>
+          
+        </ul>
+      </nav>
+    
+
+    <div class="page-header__content">
+      <h1 class="page-header__title">Calendar of Events</h1>
+      
+        <p class="page-header__subtitle">Actual schedule of matches</p>
+      
+    </div>
+  </div>
+</section>
+
+<section class="calendar-section">
+  <div class="container">    
+    <div class="calendar" 
+         data-module="calendar" 
+         data-events='[{"id":201,"href":"/match/201","league":{"name":"Premier League","href":"/league/premier-league","logo":"/assets/images/leg3.webp"},"team1":{"name":"Arsenal","href":"/team/arsenal","logo":"/assets/images/team-1.webp"},"team2":{"name":"Chelsea","href":"/team/chelsea","logo":"/assets/images/team-2.webp"},"published_at":"2025-09-24 19:30","status":"finished","score":{"t1":3,"t2":2}},{"id":202,"href":"/match/202","league":{"name":"La Liga","href":"/league/la-liga","logo":"/assets/images/leg2.webp"},"team1":{"name":"Barcelona","href":"/team/barcelona","logo":"/assets/images/team-3.webp"},"team2":{"name":"Real Madrid","href":"/team/real-madrid","logo":"/assets/images/team-4.webp"},"published_at":"2025-10-02 22:00","status":"scheduled"},{"id":203,"href":"/match/203","league":{"name":"Serie A","href":"/league/serie-a","logo":"/assets/images/leg1.webp"},"team1":{"name":"Inter","href":"/team/inter","logo":"/assets/images/team-5.webp"},"team2":{"name":"Milan","href":"/team/milan","logo":"/assets/images/team-6.webp"},"published_at":"2025-09-20 21:45","status":"finished","score":{"t1":2,"t2":0}},{"id":204,"href":"/match/204","league":{"name":"Bundesliga","href":"/league/bundesliga","logo":"/assets/images/leg1.webp"},"team1":{"name":"Bayern","href":"/team/bayern","logo":"/assets/images/team-7.webp"},"team2":{"name":"Dortmund","href":"/team/dortmund","logo":"/assets/images/team-8.webp"},"published_at":"2025-11-03 19:30","status":"scheduled"},{"id":205,"href":"/match/205","league":{"name":"Ligue 1","href":"/league/ligue-1","logo":"/assets/images/leg3.webp"},"team1":{"name":"PSG","href":"/team/psg","logo":"/assets/images/team-9.webp"},"team2":{"name":"Marseille","href":"/team/marseille","logo":"/assets/images/team-10.webp"},"published_at":"2025-09-19 22:00","status":"finished","score":{"t1":4,"t2":1}},{"id":206,"href":"/match/206","league":{"name":"Champions League","href":"/league/champions-league","logo":"/assets/images/leg4.webp"},"team1":{"name":"Arsenal","href":"/team/arsenal","logo":"/assets/images/team-1.webp"},"team2":{"name":"Juventus","href":"/team/juventus","logo":"/assets/images/team-11.webp"},"published_at":"2025-09-17 21:00","status":"finished","score":{"t1":2,"t2":1}},{"id":207,"href":"/match/207","league":{"name":"Premier League","href":"/league/premier-league","logo":"/assets/images/leg7.webp"},"team1":{"name":"Liverpool","href":"/team/liverpool","logo":"/assets/images/team-12.webp"},"team2":{"name":"Manchester City","href":"/team/man-city","logo":"/assets/images/team-13.webp"},"published_at":"2025-10-05 18:30","status":"scheduled"},{"id":208,"href":"/match/208","league":{"name":"La Liga","href":"/league/la-liga","logo":"/assets/images/leg2.webp"},"team1":{"name":"Atletico","href":"/team/atletico","logo":"/assets/images/team-14.webp"},"team2":{"name":"Sevilla","href":"/team/sevilla","logo":"/assets/images/team-5.webp"},"published_at":"2025-09-13 20:30","status":"finished","score":{"t1":1,"t2":1}},{"id":209,"href":"/match/209","league":{"name":"Serie A","href":"/league/serie-a","logo":"/assets/images/leg6.webp"},"team1":{"name":"Napoli","href":"/team/napoli","logo":"/assets/images/team-6.webp"},"team2":{"name":"Roma","href":"/team/roma","logo":"/assets/images/team-1.webp"},"published_at":"2025-10-12 21:45","status":"scheduled"},{"id":210,"href":"/match/210","league":{"name":"Bundesliga","href":"/league/bundesliga","logo":"/assets/images/leg1.webp"},"team1":{"name":"Leipzig","href":"/team/leipzig","logo":"/assets/images/team-8.webp"},"team2":{"name":"Leverkusen","href":"/team/leverkusen","logo":"/assets/images/team-9.webp"},"published_at":"2025-09-11 19:30","status":"finished","score":{"t1":0,"t2":2}},{"id":211,"href":"/match/211","league":{"name":"Ligue 1","href":"/league/ligue-1","logo":"/assets/images/leg4.webp"},"team1":{"name":"Lyon","href":"/team/lyon","logo":"/assets/images/team-2.webp"},"team2":{"name":"Monaco","href":"/team/monaco","logo":"/assets/images/team-4.webp"},"published_at":"2025-10-20 22:00","status":"scheduled"},{"id":212,"href":"/match/212","league":{"name":"Champions League","href":"/league/champions-league","logo":"/assets/images/leg6.webp"},"team1":{"name":"Real Madrid","href":"/team/real-madrid","logo":"/assets/images/team-4.webp"},"team2":{"name":"Bayern","href":"/team/bayern","logo":"/assets/images/team-7.webp"},"published_at":"2025-09-06 21:00","status":"finished","score":{"t1":3,"t2":1}},{"id":213,"href":"/match/213","league":{"name":"Premier League","href":"/league/premier-league","logo":"/assets/images/leg2.webp"},"team1":{"name":"Tottenham","href":"/team/tottenham","logo":"/assets/images/team-9.webp"},"team2":{"name":"Newcastle","href":"/team/newcastle","logo":"/assets/images/team-10.webp"},"published_at":"2025-09-28 17:00","status":"scheduled"},{"id":214,"href":"/match/214","league":{"name":"La Liga","href":"/league/la-liga","logo":"/assets/images/leg7.webp"},"team1":{"name":"Valencia","href":"/team/valencia","logo":"/assets/images/team-2.webp"},"team2":{"name":"Villarreal","href":"/team/villarreal","logo":"/assets/images/team-5.webp"},"published_at":"2025-09-05 20:00","status":"finished","score":{"t1":2,"t2":2}},{"id":215,"href":"/match/215","league":{"name":"Serie A","href":"/league/serie-a","logo":"/assets/images/leg1.webp"},"team1":{"name":"Lazio","href":"/team/lazio","logo":"/assets/images/team-14.webp"},"team2":{"name":"Fiorentina","href":"/team/fiorentina","logo":"/assets/images/team-9.webp"},"published_at":"2025-11-10 21:45","status":"scheduled"},{"id":216,"href":"/match/216","league":{"name":"Bundesliga","href":"/league/bundesliga","logo":"/assets/images/leg4.webp"},"team1":{"name":"Gladbach","href":"/team/gladbach","logo":"/assets/images/team-4.webp"},"team2":{"name":"Frankfurt","href":"/team/frankfurt","logo":"/assets/images/team-9.webp"},"published_at":"2025-10-01 19:30","status":"scheduled"},{"id":217,"href":"/match/217","league":{"name":"Ligue 1","href":"/league/ligue-1","logo":"/assets/images/leg5.webp"},"team1":{"name":"Nice","href":"/team/nice","logo":"/assets/images/team-8.webp"},"team2":{"name":"Lille","href":"/team/lille","logo":"/assets/images/team-5.webp"},"published_at":"2025-09-29 22:00","status":"scheduled"},{"id":218,"href":"/match/218","league":{"name":"Champions League","href":"/league/champions-league","logo":"/assets/images/leg2.webp"},"team1":{"name":"Manchester City","href":"/team/man-city","logo":"/assets/images/team-13.webp"},"team2":{"name":"Inter","href":"/team/inter","logo":"/assets/images/team-9.webp"},"published_at":"2025-09-26 21:00","status":"live","score":{"t1":1,"t2":0}},{"id":219,"href":"/match/219","league":{"name":"Premier League","href":"/league/premier-league","logo":"/assets/images/leg5.webp"},"team1":{"name":"Everton","href":"/team/everton","logo":"/assets/images/team-4.webp"},"team2":{"name":"Aston Villa","href":"/team/aston-villa","logo":"/assets/images/team-3.webp"},"published_at":"2025-08-31 16:00","status":"finished","score":{"t1":0,"t2":1}},{"id":220,"href":"/match/220","league":{"name":"La Liga","href":"/league/la-liga","logo":"/assets/images/leg6.webp"},"team1":{"name":"Real Sociedad","href":"/team/real-sociedad","logo":"/assets/images/team-9.webp"},"team2":{"name":"Athletic Club","href":"/team/athletic","logo":"/assets/images/team-6.webp"},"published_at":"2025-10-18 22:00","status":"scheduled"},{"id":221,"href":"/match/221","league":{"name":"Serie A","href":"/league/serie-a","logo":"/assets/images/leg1.webp"},"team1":{"name":"Juventus","href":"/team/juventus","logo":"/assets/images/team-9.webp"},"team2":{"name":"Atalanta","href":"/team/atalanta","logo":"/assets/images/team-4.webp"},"published_at":"2025-09-21 21:45","status":"finished","score":{"t1":1,"t2":1}},{"id":222,"href":"/match/222","league":{"name":"Bundesliga","href":"/league/bundesliga","logo":"/assets/images/leg2.webp"},"team1":{"name":"Stuttgart","href":"/team/stuttgart","logo":"/assets/images/team-1.webp"},"team2":{"name":"Freiburg","href":"/team/freiburg","logo":"/assets/images/team-14.webp"},"published_at":"2025-09-04 19:30","status":"finished","score":{"t1":2,"t2":3}},{"id":223,"href":"/match/223","league":{"name":"Ligue 1","href":"/league/ligue-1","logo":"/assets/images/leg2.webp"},"team1":{"name":"Rennes","href":"/team/rennes","logo":"/assets/images/team-9.webp"},"team2":{"name":"Reims","href":"/team/reims","logo":"/assets/images/team-4.webp"},"published_at":"2025-11-01 18:00","status":"scheduled"},{"id":224,"href":"/match/224","league":{"name":"Champions League","href":"/league/champions-league","logo":"/assets/images/leg7.webp"},"team1":{"name":"Barcelona","href":"/team/barcelona","logo":"/assets/images/team-8.webp"},"team2":{"name":"Napoli","href":"/team/napoli","logo":"/assets/images/team-5.webp"},"published_at":"2025-10-23 22:00","status":"scheduled"},{"id":225,"href":"/match/225","league":{"name":"Premier League","href":"/league/premier-league","logo":"/assets/images/leg7.webp"},"team1":{"name":"Brighton","href":"/team/brighton","logo":"/assets/images/team-5.webp"},"team2":{"name":"West Ham","href":"/team/west-ham","logo":"/assets/images/team-4.webp"},"published_at":"2025-09-07 15:00","status":"finished","score":{"t1":1,"t2":0}},{"id":226,"href":"/match/226","league":{"name":"La Liga","href":"/league/la-liga","logo":"/assets/images/leg5.webp"},"team1":{"name":"Celta","href":"/team/celta","logo":"/assets/images/team-9.webp"},"team2":{"name":"Betis","href":"/team/betis","logo":"/assets/images/team-10.webp"},"published_at":"2025-09-30 20:30","status":"scheduled"},{"id":227,"href":"/match/227","league":{"name":"Serie A","href":"/league/serie-a","logo":"/assets/images/leg2.webp"},"team1":{"name":"Torino","href":"/team/torino","logo":"/assets/images/team-9.webp"},"team2":{"name":"Sassuolo","href":"/team/sassuolo","logo":"/assets/images/team-14.webp"},"published_at":"2025-08-29 21:45","status":"finished","score":{"t1":0,"t2":0}},{"id":228,"href":"/match/228","league":{"name":"Bundesliga","href":"/league/bundesliga","logo":"/assets/images/leg3.webp"},"team1":{"name":"Wolfsburg","href":"/team/wolfsburg","logo":"/assets/images/team-13.webp"},"team2":{"name":"Hoffenheim","href":"/team/hoffenheim","logo":"/assets/images/team-11.webp"},"published_at":"2025-10-08 19:30","status":"scheduled"},{"id":229,"href":"/match/229","league":{"name":"Ligue 1","href":"/league/ligue-1","logo":"/assets/images/leg6.webp"},"team1":{"name":"Nantes","href":"/team/nantes","logo":"/assets/images/team-9.webp"},"team2":{"name":"Brest","href":"/team/brest","logo":"/assets/images/team-12.webp"},"published_at":"2025-08-22 18:00","status":"finished","score":{"t1":2,"t2":1}},{"id":230,"href":"/match/230","league":{"name":"Champions League","href":"/league/champions-league","logo":"/assets/images/leg5.webp"},"team1":{"name":"PSG","href":"/team/psg","logo":"/assets/images/team-13.webp"},"team2":{"name":"Liverpool","href":"/team/liverpool","logo":"/assets/images/team-4.webp"},"published_at":"2025-11-20 22:00","status":"scheduled"},{"id":231,"href":"/match/231","league":{"name":"Bundesliga","href":"/league/bundesliga","logo":"/assets/images/leg4.webp"},"team1":{"name":"Gladbach","href":"/team/gladbach","logo":"/assets/images/team-4.webp"},"team2":{"name":"Frankfurt","href":"/team/frankfurt","logo":"/assets/images/team-9.webp"},"published_at":"2025-10-01 20:30","status":"scheduled"},{"id":232,"href":"/match/232","league":{"name":"Ligue 1","href":"/league/ligue-1","logo":"/assets/images/leg5.webp"},"team1":{"name":"Nice","href":"/team/nice","logo":"/assets/images/team-8.webp"},"team2":{"name":"Lille","href":"/team/lille","logo":"/assets/images/team-5.webp"},"published_at":"2025-09-29 22:30","status":"scheduled"},{"id":233,"href":"/match/233","league":{"name":"Champions League","href":"/league/champions-league","logo":"/assets/images/leg2.webp"},"team1":{"name":"Manchester City","href":"/team/man-city","logo":"/assets/images/team-13.webp"},"team2":{"name":"Inter","href":"/team/inter","logo":"/assets/images/team-9.webp"},"published_at":"2025-09-26 21:30","status":"live","score":{"t1":1,"t2":0}},{"id":234,"href":"/match/234","league":{"name":"Premier League","href":"/league/premier-league","logo":"/assets/images/leg5.webp"},"team1":{"name":"Everton","href":"/team/everton","logo":"/assets/images/team-4.webp"},"team2":{"name":"Aston Villa","href":"/team/aston-villa","logo":"/assets/images/team-3.webp"},"published_at":"2025-08-31 19:00","status":"finished","score":{"t1":0,"t2":1}},{"id":235,"href":"/match/235","league":{"name":"La Liga","href":"/league/la-liga","logo":"/assets/images/leg6.webp"},"team1":{"name":"Real Sociedad","href":"/team/real-sociedad","logo":"/assets/images/team-9.webp"},"team2":{"name":"Athletic Club","href":"/team/athletic","logo":"/assets/images/team-6.webp"},"published_at":"2025-10-18 22:45","status":"scheduled"},{"id":236,"href":"/match/236","league":{"name":"Serie A","href":"/league/serie-a","logo":"/assets/images/leg1.webp"},"team1":{"name":"Juventus","href":"/team/juventus","logo":"/assets/images/team-9.webp"},"team2":{"name":"Atalanta","href":"/team/atalanta","logo":"/assets/images/team-4.webp"},"published_at":"2025-09-21 22:45","status":"finished","score":{"t1":1,"t2":1}},{"id":237,"href":"/match/237","league":{"name":"La Liga","href":"/league/la-liga","logo":"/assets/images/leg2.webp"},"team1":{"name":"Barcelona","href":"/team/barcelona","logo":"/assets/images/team-3.webp"},"team2":{"name":"Real Madrid","href":"/team/real-madrid","logo":"/assets/images/team-4.webp"},"published_at":"2025-09-21 12:45","status":"scheduled"},{"id":238,"href":"/match/238","league":{"name":"Serie A","href":"/league/serie-a","logo":"/assets/images/leg1.webp"},"team1":{"name":"Inter","href":"/team/inter","logo":"/assets/images/team-5.webp"},"team2":{"name":"Milan","href":"/team/milan","logo":"/assets/images/team-6.webp"},"published_at":"2025-09-21 12:45","status":"finished","score":{"t1":2,"t2":0}},{"id":239,"href":"/match/239","league":{"name":"Bundesliga","href":"/league/bundesliga","logo":"/assets/images/leg1.webp"},"team1":{"name":"Bayern","href":"/team/bayern","logo":"/assets/images/team-7.webp"},"team2":{"name":"Dortmund","href":"/team/dortmund","logo":"/assets/images/team-8.webp"},"published_at":"2025-09-21 14:15","status":"scheduled"}]'>
+      <div class="calendar__picker-wrapper">
+        <input 
+          type="text" 
+          id="datepicker" 
+          class="calendar__input" 
+          placeholder="Select date"
+          readonly
+        >
+      </div>
+      <div class="calendar__info" id="calendarInfo">
+        <span class="calendar__info-text">Select a date to view events</span>
+      </div>
+    </div>
+    <div class="calendar-events" id="calendarEvents">
+      <div class="calendar-events__empty">
+        <svg class="calendar-events__empty-icon" width="64" height="64" viewBox="0 0 24 24" fill="none">
+          <path d="M8 2v3M16 2v3M3.5 9.09h17M21 8.5V17c0 3-1.5 5-5 5H8c-3.5 0-5-2-5-5V8.5c0-3 1.5-5 5-5h8c3.5 0 5 2 5 5z" 
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p class="calendar-events__empty-text">Select a date in the calendar</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    </main>
+
+
+       
+
+
+
+<footer class="footer">
+  <div class="footer__container">
+    
+    
+    <div class="footer__top">
+      
+      
+      <div class="footer__brand">
+        <a href="/" class="footer__logo">
+          <span class="footer__logo-text">MATCH</span>
+          <span class="footer__logo-accent">LIVE</span>
+        </a>
+        
+        <p class="footer__description">Your ultimate destination for the latest sports news, live scores, and in-depth analysis.</p>
+      
+      </div>
+
+      
+      <div class="footer__links">
+        
+        <div class="footer__column">
+          <h3 class="footer__column-title">Sports</h3>
+          <ul class="footer__list">
+            
+            <li class="footer__list-item">
+              <a href="/football" class="footer__link">Football</a>
+            </li>
+            
+            <li class="footer__list-item">
+              <a href="/basketball" class="footer__link">Basketball</a>
+            </li>
+            
+            <li class="footer__list-item">
+              <a href="/tennis" class="footer__link">Tennis</a>
+            </li>
+            
+            <li class="footer__list-item">
+              <a href="/hockey" class="footer__link">Hockey</a>
+            </li>
+            
+          </ul>
+        </div>
+        
+        <div class="footer__column">
+          <h3 class="footer__column-title">Sections</h3>
+          <ul class="footer__list">
+            
+            <li class="footer__list-item">
+              <a href="/news" class="footer__link">News</a>
+            </li>
+            
+            <li class="footer__list-item">
+              <a href="/live" class="footer__link">Live</a>
+            </li>
+            
+            <li class="footer__list-item">
+              <a href="/video" class="footer__link">Video</a>
+            </li>
+            
+            <li class="footer__list-item">
+              <a href="/matches" class="footer__link">Matches</a>
+            </li>
+            
+          </ul>
+        </div>
+        
+        <div class="footer__column">
+          <h3 class="footer__column-title">Company</h3>
+          <ul class="footer__list">
+            
+            <li class="footer__list-item">
+              <a href="/about" class="footer__link">About Us</a>
+            </li>
+            
+            <li class="footer__list-item">
+              <a href="/contact" class="footer__link">Contact</a>
+            </li>
+            
+            <li class="footer__list-item">
+              <a href="/advertise" class="footer__link">Advertise</a>
+            </li>
+            
+            <li class="footer__list-item">
+              <a href="/careers" class="footer__link">Careers</a>
+            </li>
+            
+          </ul>
+        </div>
+        
+        <div class="footer__column">
+          <h3 class="footer__column-title">Legal</h3>
+          <ul class="footer__list">
+            
+            <li class="footer__list-item">
+              <a href="/privacy" class="footer__link">Privacy Policy</a>
+            </li>
+            
+            <li class="footer__list-item">
+              <a href="/terms" class="footer__link">Terms of Service</a>
+            </li>
+            
+            <li class="footer__list-item">
+              <a href="/cookies" class="footer__link">Cookie Policy</a>
+            </li>
+            
+            <li class="footer__list-item">
+              <a href="/dmca" class="footer__link">DMCA</a>
+            </li>
+            
+          </ul>
+        </div>
+        
+      </div>
+
+    </div>
+
+    
+    <div class="footer__bottom">
+      <p class="footer__copyright">© 2024 MatchLive. All rights reserved.</p>
+    </div>
+
+  </div>
+</footer> 
+
+
+    
+  <script>
+    window.CALENDAR_EVENTS = [{"id":201,"href":"/match/201","league":{"name":"Premier League","href":"/league/premier-league","logo":"/assets/images/leg3.webp"},"team1":{"name":"Arsenal","href":"/team/arsenal","logo":"/assets/images/team-1.webp"},"team2":{"name":"Chelsea","href":"/team/chelsea","logo":"/assets/images/team-2.webp"},"published_at":"2025-09-24 19:30","status":"finished","score":{"t1":3,"t2":2}},{"id":202,"href":"/match/202","league":{"name":"La Liga","href":"/league/la-liga","logo":"/assets/images/leg2.webp"},"team1":{"name":"Barcelona","href":"/team/barcelona","logo":"/assets/images/team-3.webp"},"team2":{"name":"Real Madrid","href":"/team/real-madrid","logo":"/assets/images/team-4.webp"},"published_at":"2025-10-02 22:00","status":"scheduled"},{"id":203,"href":"/match/203","league":{"name":"Serie A","href":"/league/serie-a","logo":"/assets/images/leg1.webp"},"team1":{"name":"Inter","href":"/team/inter","logo":"/assets/images/team-5.webp"},"team2":{"name":"Milan","href":"/team/milan","logo":"/assets/images/team-6.webp"},"published_at":"2025-09-20 21:45","status":"finished","score":{"t1":2,"t2":0}},{"id":204,"href":"/match/204","league":{"name":"Bundesliga","href":"/league/bundesliga","logo":"/assets/images/leg1.webp"},"team1":{"name":"Bayern","href":"/team/bayern","logo":"/assets/images/team-7.webp"},"team2":{"name":"Dortmund","href":"/team/dortmund","logo":"/assets/images/team-8.webp"},"published_at":"2025-11-03 19:30","status":"scheduled"},{"id":205,"href":"/match/205","league":{"name":"Ligue 1","href":"/league/ligue-1","logo":"/assets/images/leg3.webp"},"team1":{"name":"PSG","href":"/team/psg","logo":"/assets/images/team-9.webp"},"team2":{"name":"Marseille","href":"/team/marseille","logo":"/assets/images/team-10.webp"},"published_at":"2025-09-19 22:00","status":"finished","score":{"t1":4,"t2":1}},{"id":206,"href":"/match/206","league":{"name":"Champions League","href":"/league/champions-league","logo":"/assets/images/leg4.webp"},"team1":{"name":"Arsenal","href":"/team/arsenal","logo":"/assets/images/team-1.webp"},"team2":{"name":"Juventus","href":"/team/juventus","logo":"/assets/images/team-11.webp"},"published_at":"2025-09-17 21:00","status":"finished","score":{"t1":2,"t2":1}},{"id":207,"href":"/match/207","league":{"name":"Premier League","href":"/league/premier-league","logo":"/assets/images/leg7.webp"},"team1":{"name":"Liverpool","href":"/team/liverpool","logo":"/assets/images/team-12.webp"},"team2":{"name":"Manchester City","href":"/team/man-city","logo":"/assets/images/team-13.webp"},"published_at":"2025-10-05 18:30","status":"scheduled"},{"id":208,"href":"/match/208","league":{"name":"La Liga","href":"/league/la-liga","logo":"/assets/images/leg2.webp"},"team1":{"name":"Atletico","href":"/team/atletico","logo":"/assets/images/team-14.webp"},"team2":{"name":"Sevilla","href":"/team/sevilla","logo":"/assets/images/team-5.webp"},"published_at":"2025-09-13 20:30","status":"finished","score":{"t1":1,"t2":1}},{"id":209,"href":"/match/209","league":{"name":"Serie A","href":"/league/serie-a","logo":"/assets/images/leg6.webp"},"team1":{"name":"Napoli","href":"/team/napoli","logo":"/assets/images/team-6.webp"},"team2":{"name":"Roma","href":"/team/roma","logo":"/assets/images/team-1.webp"},"published_at":"2025-10-12 21:45","status":"scheduled"},{"id":210,"href":"/match/210","league":{"name":"Bundesliga","href":"/league/bundesliga","logo":"/assets/images/leg1.webp"},"team1":{"name":"Leipzig","href":"/team/leipzig","logo":"/assets/images/team-8.webp"},"team2":{"name":"Leverkusen","href":"/team/leverkusen","logo":"/assets/images/team-9.webp"},"published_at":"2025-09-11 19:30","status":"finished","score":{"t1":0,"t2":2}},{"id":211,"href":"/match/211","league":{"name":"Ligue 1","href":"/league/ligue-1","logo":"/assets/images/leg4.webp"},"team1":{"name":"Lyon","href":"/team/lyon","logo":"/assets/images/team-2.webp"},"team2":{"name":"Monaco","href":"/team/monaco","logo":"/assets/images/team-4.webp"},"published_at":"2025-10-20 22:00","status":"scheduled"},{"id":212,"href":"/match/212","league":{"name":"Champions League","href":"/league/champions-league","logo":"/assets/images/leg6.webp"},"team1":{"name":"Real Madrid","href":"/team/real-madrid","logo":"/assets/images/team-4.webp"},"team2":{"name":"Bayern","href":"/team/bayern","logo":"/assets/images/team-7.webp"},"published_at":"2025-09-06 21:00","status":"finished","score":{"t1":3,"t2":1}},{"id":213,"href":"/match/213","league":{"name":"Premier League","href":"/league/premier-league","logo":"/assets/images/leg2.webp"},"team1":{"name":"Tottenham","href":"/team/tottenham","logo":"/assets/images/team-9.webp"},"team2":{"name":"Newcastle","href":"/team/newcastle","logo":"/assets/images/team-10.webp"},"published_at":"2025-09-28 17:00","status":"scheduled"},{"id":214,"href":"/match/214","league":{"name":"La Liga","href":"/league/la-liga","logo":"/assets/images/leg7.webp"},"team1":{"name":"Valencia","href":"/team/valencia","logo":"/assets/images/team-2.webp"},"team2":{"name":"Villarreal","href":"/team/villarreal","logo":"/assets/images/team-5.webp"},"published_at":"2025-09-05 20:00","status":"finished","score":{"t1":2,"t2":2}},{"id":215,"href":"/match/215","league":{"name":"Serie A","href":"/league/serie-a","logo":"/assets/images/leg1.webp"},"team1":{"name":"Lazio","href":"/team/lazio","logo":"/assets/images/team-14.webp"},"team2":{"name":"Fiorentina","href":"/team/fiorentina","logo":"/assets/images/team-9.webp"},"published_at":"2025-11-10 21:45","status":"scheduled"},{"id":216,"href":"/match/216","league":{"name":"Bundesliga","href":"/league/bundesliga","logo":"/assets/images/leg4.webp"},"team1":{"name":"Gladbach","href":"/team/gladbach","logo":"/assets/images/team-4.webp"},"team2":{"name":"Frankfurt","href":"/team/frankfurt","logo":"/assets/images/team-9.webp"},"published_at":"2025-10-01 19:30","status":"scheduled"},{"id":217,"href":"/match/217","league":{"name":"Ligue 1","href":"/league/ligue-1","logo":"/assets/images/leg5.webp"},"team1":{"name":"Nice","href":"/team/nice","logo":"/assets/images/team-8.webp"},"team2":{"name":"Lille","href":"/team/lille","logo":"/assets/images/team-5.webp"},"published_at":"2025-09-29 22:00","status":"scheduled"},{"id":218,"href":"/match/218","league":{"name":"Champions League","href":"/league/champions-league","logo":"/assets/images/leg2.webp"},"team1":{"name":"Manchester City","href":"/team/man-city","logo":"/assets/images/team-13.webp"},"team2":{"name":"Inter","href":"/team/inter","logo":"/assets/images/team-9.webp"},"published_at":"2025-09-26 21:00","status":"live","score":{"t1":1,"t2":0}},{"id":219,"href":"/match/219","league":{"name":"Premier League","href":"/league/premier-league","logo":"/assets/images/leg5.webp"},"team1":{"name":"Everton","href":"/team/everton","logo":"/assets/images/team-4.webp"},"team2":{"name":"Aston Villa","href":"/team/aston-villa","logo":"/assets/images/team-3.webp"},"published_at":"2025-08-31 16:00","status":"finished","score":{"t1":0,"t2":1}},{"id":220,"href":"/match/220","league":{"name":"La Liga","href":"/league/la-liga","logo":"/assets/images/leg6.webp"},"team1":{"name":"Real Sociedad","href":"/team/real-sociedad","logo":"/assets/images/team-9.webp"},"team2":{"name":"Athletic Club","href":"/team/athletic","logo":"/assets/images/team-6.webp"},"published_at":"2025-10-18 22:00","status":"scheduled"},{"id":221,"href":"/match/221","league":{"name":"Serie A","href":"/league/serie-a","logo":"/assets/images/leg1.webp"},"team1":{"name":"Juventus","href":"/team/juventus","logo":"/assets/images/team-9.webp"},"team2":{"name":"Atalanta","href":"/team/atalanta","logo":"/assets/images/team-4.webp"},"published_at":"2025-09-21 21:45","status":"finished","score":{"t1":1,"t2":1}},{"id":222,"href":"/match/222","league":{"name":"Bundesliga","href":"/league/bundesliga","logo":"/assets/images/leg2.webp"},"team1":{"name":"Stuttgart","href":"/team/stuttgart","logo":"/assets/images/team-1.webp"},"team2":{"name":"Freiburg","href":"/team/freiburg","logo":"/assets/images/team-14.webp"},"published_at":"2025-09-04 19:30","status":"finished","score":{"t1":2,"t2":3}},{"id":223,"href":"/match/223","league":{"name":"Ligue 1","href":"/league/ligue-1","logo":"/assets/images/leg2.webp"},"team1":{"name":"Rennes","href":"/team/rennes","logo":"/assets/images/team-9.webp"},"team2":{"name":"Reims","href":"/team/reims","logo":"/assets/images/team-4.webp"},"published_at":"2025-11-01 18:00","status":"scheduled"},{"id":224,"href":"/match/224","league":{"name":"Champions League","href":"/league/champions-league","logo":"/assets/images/leg7.webp"},"team1":{"name":"Barcelona","href":"/team/barcelona","logo":"/assets/images/team-8.webp"},"team2":{"name":"Napoli","href":"/team/napoli","logo":"/assets/images/team-5.webp"},"published_at":"2025-10-23 22:00","status":"scheduled"},{"id":225,"href":"/match/225","league":{"name":"Premier League","href":"/league/premier-league","logo":"/assets/images/leg7.webp"},"team1":{"name":"Brighton","href":"/team/brighton","logo":"/assets/images/team-5.webp"},"team2":{"name":"West Ham","href":"/team/west-ham","logo":"/assets/images/team-4.webp"},"published_at":"2025-09-07 15:00","status":"finished","score":{"t1":1,"t2":0}},{"id":226,"href":"/match/226","league":{"name":"La Liga","href":"/league/la-liga","logo":"/assets/images/leg5.webp"},"team1":{"name":"Celta","href":"/team/celta","logo":"/assets/images/team-9.webp"},"team2":{"name":"Betis","href":"/team/betis","logo":"/assets/images/team-10.webp"},"published_at":"2025-09-30 20:30","status":"scheduled"},{"id":227,"href":"/match/227","league":{"name":"Serie A","href":"/league/serie-a","logo":"/assets/images/leg2.webp"},"team1":{"name":"Torino","href":"/team/torino","logo":"/assets/images/team-9.webp"},"team2":{"name":"Sassuolo","href":"/team/sassuolo","logo":"/assets/images/team-14.webp"},"published_at":"2025-08-29 21:45","status":"finished","score":{"t1":0,"t2":0}},{"id":228,"href":"/match/228","league":{"name":"Bundesliga","href":"/league/bundesliga","logo":"/assets/images/leg3.webp"},"team1":{"name":"Wolfsburg","href":"/team/wolfsburg","logo":"/assets/images/team-13.webp"},"team2":{"name":"Hoffenheim","href":"/team/hoffenheim","logo":"/assets/images/team-11.webp"},"published_at":"2025-10-08 19:30","status":"scheduled"},{"id":229,"href":"/match/229","league":{"name":"Ligue 1","href":"/league/ligue-1","logo":"/assets/images/leg6.webp"},"team1":{"name":"Nantes","href":"/team/nantes","logo":"/assets/images/team-9.webp"},"team2":{"name":"Brest","href":"/team/brest","logo":"/assets/images/team-12.webp"},"published_at":"2025-08-22 18:00","status":"finished","score":{"t1":2,"t2":1}},{"id":230,"href":"/match/230","league":{"name":"Champions League","href":"/league/champions-league","logo":"/assets/images/leg5.webp"},"team1":{"name":"PSG","href":"/team/psg","logo":"/assets/images/team-13.webp"},"team2":{"name":"Liverpool","href":"/team/liverpool","logo":"/assets/images/team-4.webp"},"published_at":"2025-11-20 22:00","status":"scheduled"},{"id":231,"href":"/match/231","league":{"name":"Bundesliga","href":"/league/bundesliga","logo":"/assets/images/leg4.webp"},"team1":{"name":"Gladbach","href":"/team/gladbach","logo":"/assets/images/team-4.webp"},"team2":{"name":"Frankfurt","href":"/team/frankfurt","logo":"/assets/images/team-9.webp"},"published_at":"2025-10-01 20:30","status":"scheduled"},{"id":232,"href":"/match/232","league":{"name":"Ligue 1","href":"/league/ligue-1","logo":"/assets/images/leg5.webp"},"team1":{"name":"Nice","href":"/team/nice","logo":"/assets/images/team-8.webp"},"team2":{"name":"Lille","href":"/team/lille","logo":"/assets/images/team-5.webp"},"published_at":"2025-09-29 22:30","status":"scheduled"},{"id":233,"href":"/match/233","league":{"name":"Champions League","href":"/league/champions-league","logo":"/assets/images/leg2.webp"},"team1":{"name":"Manchester City","href":"/team/man-city","logo":"/assets/images/team-13.webp"},"team2":{"name":"Inter","href":"/team/inter","logo":"/assets/images/team-9.webp"},"published_at":"2025-09-26 21:30","status":"live","score":{"t1":1,"t2":0}},{"id":234,"href":"/match/234","league":{"name":"Premier League","href":"/league/premier-league","logo":"/assets/images/leg5.webp"},"team1":{"name":"Everton","href":"/team/everton","logo":"/assets/images/team-4.webp"},"team2":{"name":"Aston Villa","href":"/team/aston-villa","logo":"/assets/images/team-3.webp"},"published_at":"2025-08-31 19:00","status":"finished","score":{"t1":0,"t2":1}},{"id":235,"href":"/match/235","league":{"name":"La Liga","href":"/league/la-liga","logo":"/assets/images/leg6.webp"},"team1":{"name":"Real Sociedad","href":"/team/real-sociedad","logo":"/assets/images/team-9.webp"},"team2":{"name":"Athletic Club","href":"/team/athletic","logo":"/assets/images/team-6.webp"},"published_at":"2025-10-18 22:45","status":"scheduled"},{"id":236,"href":"/match/236","league":{"name":"Serie A","href":"/league/serie-a","logo":"/assets/images/leg1.webp"},"team1":{"name":"Juventus","href":"/team/juventus","logo":"/assets/images/team-9.webp"},"team2":{"name":"Atalanta","href":"/team/atalanta","logo":"/assets/images/team-4.webp"},"published_at":"2025-09-21 22:45","status":"finished","score":{"t1":1,"t2":1}},{"id":237,"href":"/match/237","league":{"name":"La Liga","href":"/league/la-liga","logo":"/assets/images/leg2.webp"},"team1":{"name":"Barcelona","href":"/team/barcelona","logo":"/assets/images/team-3.webp"},"team2":{"name":"Real Madrid","href":"/team/real-madrid","logo":"/assets/images/team-4.webp"},"published_at":"2025-09-21 12:45","status":"scheduled"},{"id":238,"href":"/match/238","league":{"name":"Serie A","href":"/league/serie-a","logo":"/assets/images/leg1.webp"},"team1":{"name":"Inter","href":"/team/inter","logo":"/assets/images/team-5.webp"},"team2":{"name":"Milan","href":"/team/milan","logo":"/assets/images/team-6.webp"},"published_at":"2025-09-21 12:45","status":"finished","score":{"t1":2,"t2":0}},{"id":239,"href":"/match/239","league":{"name":"Bundesliga","href":"/league/bundesliga","logo":"/assets/images/leg1.webp"},"team1":{"name":"Bayern","href":"/team/bayern","logo":"/assets/images/team-7.webp"},"team2":{"name":"Dortmund","href":"/team/dortmund","logo":"/assets/images/team-8.webp"},"published_at":"2025-09-21 14:15","status":"scheduled"}];
+  </script>
+
+
+  </body>
+</html>

@@ -1,1 +1,182 @@
-[]
+[
+  {
+    "filepath": ".htaccess",
+    "fullPath": "C:\\Users\\vasya\\AppData\\Roaming\\Manarify\\ManarifyProjects\\mnrfy-engine\\.htaccess",
+    "task": "upload"
+  },
+  {
+    "filepath": "cache/Cache.php",
+    "fullPath": "C:\\Users\\vasya\\AppData\\Roaming\\Manarify\\ManarifyProjects\\mnrfy-engine\\cache\\Cache.php",
+    "task": "upload"
+  },
+  {
+    "filepath": "core/Application.php",
+    "fullPath": "C:\\Users\\vasya\\AppData\\Roaming\\Manarify\\ManarifyProjects\\mnrfy-engine\\core\\Application.php",
+    "task": "upload"
+  },
+  {
+    "filepath": "core/Autoloader.php",
+    "fullPath": "C:\\Users\\vasya\\AppData\\Roaming\\Manarify\\ManarifyProjects\\mnrfy-engine\\core\\Autoloader.php",
+    "task": "upload"
+  },
+  {
+    "filepath": "core/ErrorHandler.php",
+    "fullPath": "C:\\Users\\vasya\\AppData\\Roaming\\Manarify\\ManarifyProjects\\mnrfy-engine\\core\\ErrorHandler.php",
+    "task": "upload"
+  },
+  {
+    "filepath": "core/ExceptionHandler.php",
+    "fullPath": "C:\\Users\\vasya\\AppData\\Roaming\\Manarify\\ManarifyProjects\\mnrfy-engine\\core\\ExceptionHandler.php",
+    "task": "upload"
+  },
+  {
+    "filepath": "database/ConnectionManager.php",
+    "fullPath": "C:\\Users\\vasya\\AppData\\Roaming\\Manarify\\ManarifyProjects\\mnrfy-engine\\database\\ConnectionManager.php",
+    "task": "upload"
+  },
+  {
+    "filepath": "database/Database.php",
+    "fullPath": "C:\\Users\\vasya\\AppData\\Roaming\\Manarify\\ManarifyProjects\\mnrfy-engine\\database\\Database.php",
+    "task": "upload"
+  },
+  {
+    "filepath": "database/drivers/DatabaseDriverInterface.php",
+    "fullPath": "C:\\Users\\vasya\\AppData\\Roaming\\Manarify\\ManarifyProjects\\mnrfy-engine\\database\\drivers\\DatabaseDriverInterface.php",
+    "task": "upload"
+  },
+  {
+    "filepath": "database/drivers/MysqlDriver.php",
+    "fullPath": "C:\\Users\\vasya\\AppData\\Roaming\\Manarify\\ManarifyProjects\\mnrfy-engine\\database\\drivers\\MysqlDriver.php",
+    "task": "upload"
+  },
+  {
+    "filepath": "database/drivers/PostgresDriver.php",
+    "fullPath": "C:\\Users\\vasya\\AppData\\Roaming\\Manarify\\ManarifyProjects\\mnrfy-engine\\database\\drivers\\PostgresDriver.php",
+    "task": "upload"
+  },
+  {
+    "filepath": "database/drivers/RedisDriver.php",
+    "fullPath": "C:\\Users\\vasya\\AppData\\Roaming\\Manarify\\ManarifyProjects\\mnrfy-engine\\database\\drivers\\RedisDriver.php",
+    "task": "upload"
+  },
+  {
+    "filepath": "database/drivers/SqliteDriver.php",
+    "fullPath": "C:\\Users\\vasya\\AppData\\Roaming\\Manarify\\ManarifyProjects\\mnrfy-engine\\database\\drivers\\SqliteDriver.php",
+    "task": "upload"
+  },
+  {
+    "filepath": "database/helpers/DatabaseHelper.php",
+    "fullPath": "C:\\Users\\vasya\\AppData\\Roaming\\Manarify\\ManarifyProjects\\mnrfy-engine\\database\\helpers\\DatabaseHelper.php",
+    "task": "upload"
+  },
+  {
+    "filepath": "database/QueryBuilder.php",
+    "fullPath": "C:\\Users\\vasya\\AppData\\Roaming\\Manarify\\ManarifyProjects\\mnrfy-engine\\database\\QueryBuilder.php",
+    "task": "upload"
+  },
+  {
+    "filepath": "form/FormHandler.php",
+    "fullPath": "C:\\Users\\vasya\\AppData\\Roaming\\Manarify\\ManarifyProjects\\mnrfy-engine\\form\\FormHandler.php",
+    "task": "upload"
+  },
+  {
+    "filepath": "form/ValidationResult.php",
+    "fullPath": "C:\\Users\\vasya\\AppData\\Roaming\\Manarify\\ManarifyProjects\\mnrfy-engine\\form\\ValidationResult.php",
+    "task": "upload"
+  },
+  {
+    "filepath": "form/Validator.php",
+    "fullPath": "C:\\Users\\vasya\\AppData\\Roaming\\Manarify\\ManarifyProjects\\mnrfy-engine\\form\\Validator.php",
+    "task": "upload"
+  },
+  {
+    "filepath": "http/Request.php",
+    "fullPath": "C:\\Users\\vasya\\AppData\\Roaming\\Manarify\\ManarifyProjects\\mnrfy-engine\\http\\Request.php",
+    "task": "upload"
+  },
+  {
+    "filepath": "http/Response.php",
+    "fullPath": "C:\\Users\\vasya\\AppData\\Roaming\\Manarify\\ManarifyProjects\\mnrfy-engine\\http\\Response.php",
+    "task": "upload"
+  },
+  {
+    "filepath": "index.php",
+    "fullPath": "C:\\Users\\vasya\\AppData\\Roaming\\Manarify\\ManarifyProjects\\mnrfy-engine\\index.php",
+    "task": "upload"
+  },
+  {
+    "filepath": "routing/Router.php",
+    "fullPath": "C:\\Users\\vasya\\AppData\\Roaming\\Manarify\\ManarifyProjects\\mnrfy-engine\\routing\\Router.php",
+    "task": "upload"
+  },
+  {
+    "filepath": "security/CSRF.php",
+    "fullPath": "C:\\Users\\vasya\\AppData\\Roaming\\Manarify\\ManarifyProjects\\mnrfy-engine\\security\\CSRF.php",
+    "task": "upload"
+  },
+  {
+    "filepath": "security/Sanitizer.php",
+    "fullPath": "C:\\Users\\vasya\\AppData\\Roaming\\Manarify\\ManarifyProjects\\mnrfy-engine\\security\\Sanitizer.php",
+    "task": "upload"
+  },
+  {
+    "filepath": "session/Session.php",
+    "fullPath": "C:\\Users\\vasya\\AppData\\Roaming\\Manarify\\ManarifyProjects\\mnrfy-engine\\session\\Session.php",
+    "task": "upload"
+  },
+  {
+    "filepath": "template/Engine - единым файлом.php",
+    "fullPath": "C:\\Users\\vasya\\AppData\\Roaming\\Manarify\\ManarifyProjects\\mnrfy-engine\\template\\Engine - единым файлом.php",
+    "task": "upload"
+  },
+  {
+    "filepath": "template/Engine — без удаления переносов {{ {% {!.php",
+    "fullPath": "C:\\Users\\vasya\\AppData\\Roaming\\Manarify\\ManarifyProjects\\mnrfy-engine\\template\\Engine — без удаления переносов {{ {% {!.php",
+    "task": "upload"
+  },
+  {
+    "filepath": "template/Engine.php",
+    "fullPath": "C:\\Users\\vasya\\AppData\\Roaming\\Manarify\\ManarifyProjects\\mnrfy-engine\\template\\Engine.php",
+    "task": "upload"
+  },
+  {
+    "filepath": "translation/AutoTranslationHelper.php",
+    "fullPath": "C:\\Users\\vasya\\AppData\\Roaming\\Manarify\\ManarifyProjects\\mnrfy-engine\\translation\\AutoTranslationHelper.php",
+    "task": "upload"
+  },
+  {
+    "filepath": "translation/AutoTranslator.php",
+    "fullPath": "C:\\Users\\vasya\\AppData\\Roaming\\Manarify\\ManarifyProjects\\mnrfy-engine\\translation\\AutoTranslator.php",
+    "task": "upload"
+  },
+  {
+    "filepath": "translation/LocaleDetector.php",
+    "fullPath": "C:\\Users\\vasya\\AppData\\Roaming\\Manarify\\ManarifyProjects\\mnrfy-engine\\translation\\LocaleDetector.php",
+    "task": "upload"
+  },
+  {
+    "filepath": "translation/TranslationManager.php",
+    "fullPath": "C:\\Users\\vasya\\AppData\\Roaming\\Manarify\\ManarifyProjects\\mnrfy-engine\\translation\\TranslationManager.php",
+    "task": "upload"
+  },
+  {
+    "filepath": "translation/Translator.php",
+    "fullPath": "C:\\Users\\vasya\\AppData\\Roaming\\Manarify\\ManarifyProjects\\mnrfy-engine\\translation\\Translator.php",
+    "task": "upload"
+  },
+  {
+    "filepath": "utils/BrowserDetector.php",
+    "fullPath": "C:\\Users\\vasya\\AppData\\Roaming\\Manarify\\ManarifyProjects\\mnrfy-engine\\utils\\BrowserDetector.php",
+    "task": "upload"
+  },
+  {
+    "filepath": "version.txt",
+    "fullPath": "C:\\Users\\vasya\\AppData\\Roaming\\Manarify\\ManarifyProjects\\mnrfy-engine\\version.txt",
+    "task": "upload"
+  },
+  {
+    "filepath": "Структура Проекта.txt",
+    "fullPath": "C:\\Users\\vasya\\AppData\\Roaming\\Manarify\\ManarifyProjects\\mnrfy-engine\\Структура Проекта.txt",
+    "task": "upload"
+  }
+]

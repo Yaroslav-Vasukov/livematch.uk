@@ -1,0 +1,2367 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title> - Player Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+
+    
+
+    <script type="module" crossorigin src="/assets/scripts/main.B5Qt9EMX.js"></script>
+    <script type="module" crossorigin src="/assets/scripts/main.DGg0Pxgu.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/styles/style.B4pXO9nM.css">
+  </head>
+  <body class="page page--player">
+
+    
+    
+
+
+
+
+
+<header class="header" data-module="header">
+  <div class="header__container">
+    
+    
+    <a href="/" class="header__logo">
+      <span class="header__logo-text">MATCH</span>
+      <span class="header__logo-accent">LIVE</span>
+    </a>
+
+    
+    <nav class="header__main-nav main-nav" aria-label="Sports">
+      <ul class="main-nav__list">
+
+        
+        
+        <li class="main-nav__item main-nav__item--active" data-sport="football">
+          <button class="main-nav__link main-nav__link--dropdown" aria-expanded="false">
+            <span class="main-nav__icon material-symbols-outlined">sports_soccer</span>
+            <span class="main-nav__text">FOOTBALL</span>
+            <span class="main-nav__arrow material-symbols-outlined">expand_more</span>
+          </button>
+          
+          
+          <div class="main-nav__dropdown" hidden>
+            <ul class="main-nav__dropdown-list">
+              
+              <li class="main-nav__dropdown-item">
+                <a href="/football/all" class="main-nav__dropdown-link">
+                  All Leagues
+                </a>
+              </li>
+              
+              <li class="main-nav__dropdown-item">
+                <a href="/football/ucl" class="main-nav__dropdown-link">
+                  Champions League
+                </a>
+              </li>
+              
+              <li class="main-nav__dropdown-item">
+                <a href="/football/epl" class="main-nav__dropdown-link">
+                  Premier League
+                </a>
+              </li>
+              
+              <li class="main-nav__dropdown-item">
+                <a href="/football/laliga" class="main-nav__dropdown-link">
+                  La Liga
+                </a>
+              </li>
+              
+              <li class="main-nav__dropdown-item">
+                <a href="/football/bundesliga" class="main-nav__dropdown-link">
+                  Bundesliga
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+        </li>
+        
+        <li class="main-nav__item " data-sport="basketball">
+          <button class="main-nav__link main-nav__link--dropdown" aria-expanded="false">
+            <span class="main-nav__icon material-symbols-outlined">sports_basketball</span>
+            <span class="main-nav__text">BASKETBALL</span>
+            <span class="main-nav__arrow material-symbols-outlined">expand_more</span>
+          </button>
+          
+          
+          <div class="main-nav__dropdown" hidden>
+            <ul class="main-nav__dropdown-list">
+              
+              <li class="main-nav__dropdown-item">
+                <a href="/basketball/all" class="main-nav__dropdown-link">
+                  All Leagues
+                </a>
+              </li>
+              
+              <li class="main-nav__dropdown-item">
+                <a href="/basketball/nba" class="main-nav__dropdown-link">
+                  NBA
+                </a>
+              </li>
+              
+              <li class="main-nav__dropdown-item">
+                <a href="/basketball/euroleague" class="main-nav__dropdown-link">
+                  Euroleague
+                </a>
+              </li>
+              
+              <li class="main-nav__dropdown-item">
+                <a href="/basketball/ncaa" class="main-nav__dropdown-link">
+                  NCAA
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+        </li>
+        
+
+        
+        
+        <li class="main-nav__item main-nav__item--more">
+          <button class="main-nav__link main-nav__link--dropdown" aria-expanded="false">
+            <span class="main-nav__text">MORE</span>
+            <span class="main-nav__arrow material-symbols-outlined">expand_more</span>
+          </button>
+          
+          <div class="main-nav__dropdown" hidden>
+            <ul class="main-nav__dropdown-list">
+              
+              <li class="main-nav__dropdown-item">
+                <a href="/tennis" class="main-nav__dropdown-link">
+                  <span class="main-nav__icon material-symbols-outlined">sports_tennis</span>
+                  Tennis
+                </a>
+              </li>
+              
+              <li class="main-nav__dropdown-item">
+                <a href="/hockey" class="main-nav__dropdown-link">
+                  <span class="main-nav__icon material-symbols-outlined">sports_hockey</span>
+                  Hockey
+                </a>
+              </li>
+              
+              <li class="main-nav__dropdown-item">
+                <a href="/volleyball" class="main-nav__dropdown-link">
+                  <span class="main-nav__icon material-symbols-outlined">sports_volleyball</span>
+                  Volleyball
+                </a>
+              </li>
+              
+              <li class="main-nav__dropdown-item">
+                <a href="/handball" class="main-nav__dropdown-link">
+                  <span class="main-nav__icon material-symbols-outlined">sports_handball</span>
+                  Handball
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+        </li>
+        
+
+      </ul>
+    </nav>
+
+    
+    <button class="header__burger" aria-label="Menu" aria-expanded="false">
+      <span class="header__burger-line"></span>
+      <span class="header__burger-line"></span>
+      <span class="header__burger-line"></span>
+    </button>
+
+  </div>
+
+  
+  <nav class="header__secondary-nav secondary-nav" aria-label="Sections">
+    <div class="secondary-nav__container">
+      <ul class="secondary-nav__list">
+        
+      <li class="secondary-nav__item ">
+        <a href="/" class="secondary-nav__link">
+          <span class="secondary-nav__icon material-symbols-outlined">home</span>
+          <span class="secondary-nav__text">Home</span>
+        </a>
+      </li>
+        
+      <li class="secondary-nav__item ">
+        <a href="/lives" class="secondary-nav__link">
+          <span class="secondary-nav__icon material-symbols-outlined">sensors</span>
+          <span class="secondary-nav__text">Live</span>
+        </a>
+      </li>
+        
+      <li class="secondary-nav__item ">
+        <a href="/news" class="secondary-nav__link">
+          <span class="secondary-nav__icon material-symbols-outlined">article</span>
+          <span class="secondary-nav__text">News</span>
+        </a>
+      </li>
+        
+      <li class="secondary-nav__item ">
+        <a href="/calendar" class="secondary-nav__link">
+          <span class="secondary-nav__icon material-symbols-outlined">calendar_month</span>
+          <span class="secondary-nav__text">Calendar</span>
+        </a>
+      </li>
+        
+      <li class="secondary-nav__item ">
+        <a href="/league" class="secondary-nav__link">
+          <span class="secondary-nav__icon material-symbols-outlined">sports</span>
+          <span class="secondary-nav__text">League</span>
+        </a>
+      </li>
+        
+      <li class="secondary-nav__item ">
+        <a href="/contact" class="secondary-nav__link">
+          <span class="secondary-nav__icon material-symbols-outlined">mail</span>
+          <span class="secondary-nav__text">Contact</span>
+        </a>
+      </li>
+        
+      <li class="secondary-nav__item ">
+        <a href="/team" class="secondary-nav__link">
+          <span class="secondary-nav__icon material-symbols-outlined">group</span>
+          <span class="secondary-nav__text">Team</span>
+        </a>
+      </li>
+        
+      <li class="secondary-nav__item ">
+        <a href="/teams" class="secondary-nav__link">
+          <span class="secondary-nav__icon material-symbols-outlined">groups</span>
+          <span class="secondary-nav__text">Teams</span>
+        </a>
+      </li>
+        
+      <li class="secondary-nav__item secondary-nav__item--active">
+        <a href="/player" class="secondary-nav__link">
+          <span class="secondary-nav__icon material-symbols-outlined">person</span>
+          <span class="secondary-nav__text">Player</span>
+        </a>
+      </li>
+        
+      <li class="secondary-nav__item ">
+        <a href="/post" class="secondary-nav__link">
+          <span class="secondary-nav__icon material-symbols-outlined">description</span>
+          <span class="secondary-nav__text">Post</span>
+        </a>
+      </li>
+        
+      <li class="secondary-nav__item ">
+        <a href="/video" class="secondary-nav__link">
+          <span class="secondary-nav__icon material-symbols-outlined">videocam</span>
+          <span class="secondary-nav__text">Video</span>
+        </a>
+      </li>
+        
+      <li class="secondary-nav__item ">
+        <a href="/videos" class="secondary-nav__link">
+          <span class="secondary-nav__icon material-symbols-outlined">video_library</span>
+          <span class="secondary-nav__text">Videos</span>
+        </a>
+      </li>
+        
+      <li class="secondary-nav__item ">
+        <a href="/review" class="secondary-nav__link">
+          <span class="secondary-nav__icon material-symbols-outlined">rate_review</span>
+          <span class="secondary-nav__text">Review</span>
+        </a>
+      </li>
+        
+      <li class="secondary-nav__item ">
+        <a href="/privacy" class="secondary-nav__link">
+          <span class="secondary-nav__icon material-symbols-outlined">privacy_tip</span>
+          <span class="secondary-nav__text">Privacy</span>
+        </a>
+      </li>
+        
+      </ul>
+    </div>
+  </nav>
+
+</header>
+
+    <main class="page__main">
+      
+
+
+
+
+
+
+
+<section class="page-header page-header--compact">
+  <div class="container">
+    
+      <nav class="page-header__breadcrumbs breadcrumbs" aria-label="Breadcrumb">
+        <ul class="breadcrumbs__list">
+          
+            <li class="breadcrumbs__item">
+              
+                <a href="/" class="breadcrumbs__link">Home</a>
+              
+            </li>
+          
+            <li class="breadcrumbs__item">
+              
+                <a href="/team/manchester-city" class="breadcrumbs__link">Manchester City</a>
+              
+            </li>
+          
+            <li class="breadcrumbs__item breadcrumbs__item--active">
+              
+                <span class="breadcrumbs__text">Erling Haaland</span>
+              
+            </li>
+          
+        </ul>
+      </nav>
+    
+
+    <div class="page-header__content">
+      <h1 class="page-header__title">Erling Haaland</h1>
+      
+        <p class="page-header__subtitle">Forward • Norway • #9</p>
+      
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section__inner">
+      <div class="player-hero-card">
+        <div class="player-hero-card__image">
+          <img src="/assets/images/player-full-6.webp" alt="Erling Haaland">
+          <div class="player-hero-card__number">9</div>
+        </div>
+        
+        <div class="player-hero-card__info">
+          <div class="player-hero-card__team">
+            <img src="/assets/images/team-4.webp" alt="Manchester City">
+            <span>Manchester City</span>
+          </div>
+          
+          <div class="player-hero-card__stats-quick">
+            <div class="player-hero-card__stat">
+              <span class="player-hero-card__stat-value">24</span>
+              <span class="player-hero-card__stat-label">Years</span>
+            </div>
+            <div class="player-hero-card__stat">
+              <span class="player-hero-card__stat-value">Norway</span>
+              <span class="player-hero-card__stat-label">Country</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section section--margin">
+  <div class="container">
+    <div class="section__inner">
+      
+
+
+
+
+
+
+
+
+<div class="section-header">
+  <div class="section-header__content">
+    <h2 class="section-header__title">
+      
+        <span class="material-symbols-outlined section-header__icon">sports</span>
+      
+      Season Statistics
+    </h2>
+    
+    
+  </div>
+
+  
+</div>      
+      
+
+<div class="player-stats" data-module="player-stats">
+  
+
+  <div class="player-stats__grid">
+    
+      <div class="player-stats__item">
+        <div class="player-stats__icon-wrapper">
+          <span class="material-symbols-outlined player-stats__icon">
+            sports_soccer
+          </span>
+        </div>
+        
+        <div class="player-stats__content">
+          <div class="player-stats__value" data-count="36">
+            36
+          </div>
+          <div class="player-stats__label">Goals</div>
+        </div>
+      </div>
+    
+      <div class="player-stats__item">
+        <div class="player-stats__icon-wrapper">
+          <span class="material-symbols-outlined player-stats__icon">
+            timeline
+          </span>
+        </div>
+        
+        <div class="player-stats__content">
+          <div class="player-stats__value" data-count="8">
+            8
+          </div>
+          <div class="player-stats__label">Assists</div>
+        </div>
+      </div>
+    
+      <div class="player-stats__item">
+        <div class="player-stats__icon-wrapper">
+          <span class="material-symbols-outlined player-stats__icon">
+            confirmation_number
+          </span>
+        </div>
+        
+        <div class="player-stats__content">
+          <div class="player-stats__value" data-count="37">
+            37
+          </div>
+          <div class="player-stats__label">Appearances</div>
+        </div>
+      </div>
+    
+      <div class="player-stats__item">
+        <div class="player-stats__icon-wrapper">
+          <span class="material-symbols-outlined player-stats__icon">
+            schedule
+          </span>
+        </div>
+        
+        <div class="player-stats__content">
+          <div class="player-stats__value" data-count="3142">
+            3142
+          </div>
+          <div class="player-stats__label">Minutes Played</div>
+        </div>
+      </div>
+    
+      <div class="player-stats__item">
+        <div class="player-stats__icon-wrapper">
+          <span class="material-symbols-outlined player-stats__icon">
+            bolt
+          </span>
+        </div>
+        
+        <div class="player-stats__content">
+          <div class="player-stats__value" data-count="4.8">
+            4.8
+          </div>
+          <div class="player-stats__label">Shots per Game</div>
+        </div>
+      </div>
+    
+      <div class="player-stats__item">
+        <div class="player-stats__icon-wrapper">
+          <span class="material-symbols-outlined player-stats__icon">
+            target
+          </span>
+        </div>
+        
+        <div class="player-stats__content">
+          <div class="player-stats__value" data-count="62%">
+            62%
+          </div>
+          <div class="player-stats__label">Shot Accuracy</div>
+        </div>
+      </div>
+    
+      <div class="player-stats__item">
+        <div class="player-stats__icon-wrapper">
+          <span class="material-symbols-outlined player-stats__icon">
+            warning
+          </span>
+        </div>
+        
+        <div class="player-stats__content">
+          <div class="player-stats__value" data-count="4">
+            4
+          </div>
+          <div class="player-stats__label">Yellow Cards</div>
+        </div>
+      </div>
+    
+      <div class="player-stats__item">
+        <div class="player-stats__icon-wrapper">
+          <span class="material-symbols-outlined player-stats__icon">
+            block
+          </span>
+        </div>
+        
+        <div class="player-stats__content">
+          <div class="player-stats__value" data-count="0">
+            0
+          </div>
+          <div class="player-stats__label">Red Cards</div>
+        </div>
+      </div>
+    
+  </div>
+</div>    </div>
+  </div>
+</section>
+
+
+<section class="section section--margin">
+  <div class="container">
+    <div class="section__inner">
+      <div class="player-info-grid">
+        
+        
+        <div class="player-info">
+          
+
+
+
+
+
+
+
+
+<div class="section-header">
+  <div class="section-header__content">
+    <h2 class="section-header__title">
+      
+        <span class="material-symbols-outlined section-header__icon">person</span>
+      
+      Player Information
+    </h2>
+    
+    
+  </div>
+
+  
+</div>          
+          <div class="player-info__list">
+                          <div class="player-info__item">
+                <span class="player-info__label">Full Name</span>
+                <span class="player-info__value">Erling Braut Haaland</span>
+              </div>
+                          <div class="player-info__item">
+                <span class="player-info__label">Date of Birth</span>
+                <span class="player-info__value">21 July 2000</span>
+              </div>
+                          <div class="player-info__item">
+                <span class="player-info__label">Place of Birth</span>
+                <span class="player-info__value">Leeds, England</span>
+              </div>
+                          <div class="player-info__item">
+                <span class="player-info__label">Height</span>
+                <span class="player-info__value">1.95 m (6 ft 5 in)</span>
+              </div>
+                          <div class="player-info__item">
+                <span class="player-info__label">Weight</span>
+                <span class="player-info__value">88 kg (194 lb)</span>
+              </div>
+                          <div class="player-info__item">
+                <span class="player-info__label">Preferred Foot</span>
+                <span class="player-info__value">Left</span>
+              </div>
+                          <div class="player-info__item">
+                <span class="player-info__label">Current Club</span>
+                <span class="player-info__value">Manchester City</span>
+              </div>
+                          <div class="player-info__item">
+                <span class="player-info__label">Squad Number</span>
+                <span class="player-info__value">9</span>
+              </div>
+                          <div class="player-info__item">
+                <span class="player-info__label">Contract Until</span>
+                <span class="player-info__value">30 June 2027</span>
+              </div>
+                          <div class="player-info__item">
+                <span class="player-info__label">Market Value</span>
+                <span class="player-info__value">€180M</span>
+              </div>
+                      </div>
+        </div>
+        
+        
+        <div class="player-achievements">
+          
+
+
+
+
+
+
+
+
+<div class="section-header">
+  <div class="section-header__content">
+    <h2 class="section-header__title">
+      
+        <span class="material-symbols-outlined section-header__icon">emoji_events</span>
+      
+      Achievements
+    </h2>
+    
+    
+  </div>
+
+  
+</div>          
+          <div class="player-achievements__list">
+                          <div class="player-achievements__item">
+                <span class="material-symbols-outlined player-achievements__icon">
+                  emoji_events
+                </span>
+                <div class="player-achievements__content">
+                  <div class="player-achievements__title">Premier League Champion</div>
+                  <div class="player-achievements__year">2022-23</div>
+                </div>
+              </div>
+                          <div class="player-achievements__item">
+                <span class="material-symbols-outlined player-achievements__icon">
+                  public
+                </span>
+                <div class="player-achievements__content">
+                  <div class="player-achievements__title">UEFA Champions League Winner</div>
+                  <div class="player-achievements__year">2022-23</div>
+                </div>
+              </div>
+                          <div class="player-achievements__item">
+                <span class="material-symbols-outlined player-achievements__icon">
+                  military_tech
+                </span>
+                <div class="player-achievements__content">
+                  <div class="player-achievements__title">FA Cup Winner</div>
+                  <div class="player-achievements__year">2022-23</div>
+                </div>
+              </div>
+                          <div class="player-achievements__item">
+                <span class="material-symbols-outlined player-achievements__icon">
+                  sports_soccer
+                </span>
+                <div class="player-achievements__content">
+                  <div class="player-achievements__title">Premier League Golden Boot</div>
+                  <div class="player-achievements__year">2022-23</div>
+                </div>
+              </div>
+                          <div class="player-achievements__item">
+                <span class="material-symbols-outlined player-achievements__icon">
+                  star
+                </span>
+                <div class="player-achievements__content">
+                  <div class="player-achievements__title">PFA Players' Player of the Year</div>
+                  <div class="player-achievements__year">2022-23</div>
+                </div>
+              </div>
+                          <div class="player-achievements__item">
+                <span class="material-symbols-outlined player-achievements__icon">
+                  workspace_premium
+                </span>
+                <div class="player-achievements__content">
+                  <div class="player-achievements__title">UEFA Champions League Top Scorer</div>
+                  <div class="player-achievements__year">2022-23</div>
+                </div>
+              </div>
+                      </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section section--margin">
+  <div class="container">
+    <div class="section__inner">
+      
+
+
+
+
+
+
+
+
+<div class="section-header">
+  <div class="section-header__content">
+    <h2 class="section-header__title">
+      
+        <span class="material-symbols-outlined section-header__icon">article</span>
+      
+      Biography
+    </h2>
+    
+    
+  </div>
+
+  
+</div>      
+      <div class="player-bio">
+        <div class="player-bio__content">
+          <p><strong>Erling Braut Haaland</strong> is a Norwegian professional footballer who plays as a striker for Premier League club Manchester City and the Norway national team. Considered one of the best players in the world, he is known for his speed, strength, positioning, and finishing inside the box.</p><p>Born in Leeds, England, while his father Alf-Inge Haaland was playing for Leeds United, Haaland moved to Bryne at the age of three. He joined the youth system at Bryne in 2006, and moved to that of Molde in 2014. In 2017, he signed his first professional contract with Molde, and also spent time on loan with the reserve team of fellow Eliteserien side Strømsgodset. He made his professional debut in 2016.</p><p>After his performances in Austria, Haaland signed with Borussia Dortmund in December 2019. In his debut match, he scored a hat-trick in just 23 minutes. He finished the 2020–21 season with 41 goals in 41 matches across all competitions. In May 2022, Haaland signed for Manchester City on a five-year contract.</p><p>In his debut season with Manchester City, Haaland broke the Premier League single-season scoring record with 36 goals, surpassing the previous records of 32 goals in a 38-game season and 34 goals in a 42-game season. He also helped City win their first UEFA Champions League title, scoring twice in the final against Inter Milan.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section section--margin">
+  <div class="container">
+    <div class="section__inner">
+      
+
+
+
+
+
+
+
+
+<div class="section-header">
+  <div class="section-header__content">
+    <h2 class="section-header__title">
+      
+        <span class="material-symbols-outlined section-header__icon">history</span>
+      
+      Career History
+    </h2>
+    
+    
+  </div>
+
+  
+</div>      
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+<div id="table-1533031261" class="table table--default" data-table="default">
+  
+  
+  
+  
+  
+  <div class="table__wrap">
+    <table class="table__table" role="table">
+      
+      
+      
+        <colgroup>
+          
+          
+            <col style="width: 120px">
+          
+            <col style="width: minmax(200px, 1fr)">
+          
+            <col style="width: 180px">
+          
+            <col style="width: 80px">
+          
+            <col style="width: 80px">
+          
+            <col style="width: 80px">
+          
+        </colgroup>
+      
+      
+      
+      <thead class="table__head">
+        <tr class="table__tr">
+          
+          
+          
+            
+            
+            
+            
+            
+            <th 
+              scope="col" 
+              class="table__th"
+              style="text-align: left"
+              
+            >
+              Season
+            </th>
+          
+            
+            
+            
+            
+            
+            <th 
+              scope="col" 
+              class="table__th"
+              style="text-align: left"
+              
+            >
+              Team
+            </th>
+          
+            
+            
+            
+            
+            
+            <th 
+              scope="col" 
+              class="table__th"
+              style="text-align: left"
+              
+            >
+              Competition
+            </th>
+          
+            
+            
+            
+            
+            
+            <th 
+              scope="col" 
+              class="table__th"
+              style="text-align: center"
+              
+            >
+              Apps
+            </th>
+          
+            
+            
+            
+            
+            
+            <th 
+              scope="col" 
+              class="table__th"
+              style="text-align: center"
+              
+            >
+              Goals
+            </th>
+          
+            
+            
+            
+            
+            
+            <th 
+              scope="col" 
+              class="table__th"
+              style="text-align: center"
+              
+            >
+              Assists
+            </th>
+          
+        </tr>
+      </thead>
+      
+      
+      <tbody class="table__body">
+        
+          
+            
+            
+            
+            
+            <tr 
+              class="table__tr"
+              
+              
+            >
+              
+              
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--text"
+                  style="text-align: left"
+                >
+                  
+                  
+                  
+                  
+                    2024-25
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--team"
+                  style="text-align: left"
+                >
+                  
+                  
+                  
+                  
+                    
+                    <a class="entity" href="/team/manchester-city" title="Manchester City">
+                      
+                        <div class="entity__logo">
+                          <img 
+                            src="/assets/images/team-4.webp" 
+                            alt="Manchester City"
+                            loading="lazy"
+                          >
+                        </div>
+                      
+                      <div class="entity__info">
+                        <span class="entity__name">Manchester City</span>
+                        
+                      </div>
+                    </a>
+                  
+                  
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--text"
+                  style="text-align: left"
+                >
+                  
+                  
+                  
+                  
+                    Premier League
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--number"
+                  style="text-align: center"
+                >
+                  
+                  
+                  
+                  
+                    <span class="num">
+                      
+                      10
+                      
+                    </span>
+                  
+                  
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--number"
+                  style="text-align: center"
+                >
+                  
+                  
+                  
+                  
+                    <span class="num">
+                      
+                      12
+                      
+                    </span>
+                  
+                  
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--number"
+                  style="text-align: center"
+                >
+                  
+                  
+                  
+                  
+                    <span class="num">
+                      
+                      2
+                      
+                    </span>
+                  
+                  
+                  
+                  
+                </td>
+              
+            </tr>
+          
+            
+            
+            
+            
+            <tr 
+              class="table__tr"
+              
+              
+            >
+              
+              
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--text"
+                  style="text-align: left"
+                >
+                  
+                  
+                  
+                  
+                    2023-24
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--team"
+                  style="text-align: left"
+                >
+                  
+                  
+                  
+                  
+                    
+                    <a class="entity" href="/team/manchester-city" title="Manchester City">
+                      
+                        <div class="entity__logo">
+                          <img 
+                            src="/assets/images/team-2.webp" 
+                            alt="Manchester City"
+                            loading="lazy"
+                          >
+                        </div>
+                      
+                      <div class="entity__info">
+                        <span class="entity__name">Manchester City</span>
+                        
+                      </div>
+                    </a>
+                  
+                  
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--text"
+                  style="text-align: left"
+                >
+                  
+                  
+                  
+                  
+                    Premier League
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--number"
+                  style="text-align: center"
+                >
+                  
+                  
+                  
+                  
+                    <span class="num">
+                      
+                      37
+                      
+                    </span>
+                  
+                  
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--number"
+                  style="text-align: center"
+                >
+                  
+                  
+                  
+                  
+                    <span class="num">
+                      
+                      36
+                      
+                    </span>
+                  
+                  
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--number"
+                  style="text-align: center"
+                >
+                  
+                  
+                  
+                  
+                    <span class="num">
+                      
+                      8
+                      
+                    </span>
+                  
+                  
+                  
+                  
+                </td>
+              
+            </tr>
+          
+            
+            
+            
+            
+            <tr 
+              class="table__tr"
+              
+              
+            >
+              
+              
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--text"
+                  style="text-align: left"
+                >
+                  
+                  
+                  
+                  
+                    2022-23
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--team"
+                  style="text-align: left"
+                >
+                  
+                  
+                  
+                  
+                    
+                    <a class="entity" href="/team/manchester-city" title="Manchester City">
+                      
+                        <div class="entity__logo">
+                          <img 
+                            src="data:image/webp;base64,UklGRkoFAABXRUJQVlA4WAoAAAAQAAAATwAATwAAQUxQSI4BAAABd6C2jSQ1eHxPGVP8ERFQe493//G0FnJAEQBGkTPHJ8ukzpXBMjPXMWkmzVfJYO8BlewYNXMlbncfsZtkM2USEf134LZtJDHjva92DOwfBJyTW5NJF/oc3epTLuBgmskAi5o+stK+PrMLeJ4l+fnjWTLHnsV/f3YksP4hYl+B2CMcSbo3RICVS3o0hBMrL2PzKAY3sfJ0tpYXg5NYeSzbjKa7sxNiuPweDOtWaoe4esD9AfBTn8AOcV99qBEnIUk1uJiPzWtAGNhJ8BMcPF4VWAevHAI7aWPpU+B1uyBq5bNw9KNoocA+2EnOO7w4E1bqnQ2MjOHchaJCMGvQompImwUVgvlZWfja50CFgMXh9Bhaj6TXNWFhWIYvKhLQCioEQzdIrcVk+aGsSj2BmFyv81pwSqZVBTqYVb6twfGcE4Vg3S0gNnWOKITk9CpQsmyqn9CZtknKvtBe5zoJZ8IqmTVc10jZUHWVc6oi47LvaVVQXUOE/DlDrZYfr6KnSLwCP6+yXmQRr3LM13IiAFZQOCCWAwAAsBQAnQEqUABQAD5tLJJGpCIhoSj23jCADYljNwAD5FV2uRxive0O+X/Rt0fQ/WOU6Pp/wfCvtS/4DelLjuMz6d+U9p3fprZzXnn/te4T/Kv6n/tuuz+3fsq/rMhdfk8AWtD584FJStG4HL5fzd0eu1BdzlS3MaQFzuiR7f36b0V56349BPKYMnVvteq5larnyszkVSuW21HqQ49sxX0R39Vc3mbONnvmUze+5cIAAP7r43+tvinDzkI0BQaU6nQ3/KJMQNbvX1SlD4lN/zus//1f/uKBvcizkybfMVsShFIFBIaZabUHIzYhff6d+4aBS/gVv0TkEdXrYtqIie8l/GA4uAfM5LLOKnIV6c9HTxsMgFsbUMMRsuvtVtTcEZfn2tNOg/+DX+oR8/eAKxVQuQUjVNE9d/D8vrc8prX+35/kmivzO6LVRQzkl/pDbLTsFKDo517wczaXK7LESglfg7f37Or9zOcG4TrNC0z9d9+3JAAYvQEE8IAnGhxeFCUL88i/+vEPJG5xmLt0QeR/qFNldOW3/6+w1LIAoSA4YCnFcf2+18ub4/mjuEWhZeV5Bc0H9uGfNr0O5lvlTTIDrxewj4yjneTKCZGZ4chcuuCHEup9myaRfoWAO/niQlgwPa/UEnbQ1scJTn/wWiTVBDa66u+NOCnWP/il2pnbdKJidVZwXI7ZcTvtv+n9vjrPvilOqz0FYKxaN4rkG14PBh/AC8wyGC7/sMZ5fbLQ6saDRhriBhGfXe+cLJCNUuo/6tCsmfkIpWlilq4rx4WCP4zIi4MnUx+MjCU4iF/LxOlARtBB0Yuqpzu+iB+1rzSTK8+9wJzZ3orG5Ykz10e8RdJv/y0e65PJjPsRJmCtiWDrjFSK++oA02eSSuHKa3DQ1A3Sz0422g7xKYQVP4/4mPjjQzGCr6tEbv6+CnaKWGBtTDGOlGQGen11tlR6xycpGziTc5nsKRZl8DqsC1gBQHzauZp7Lf5icWW322VcH19OrNPTM/7TAwjxQd7j5pxJUiX7zybdpSLf6D1bkf6zsh9gDLjl37Q15qy/e6MlLtHtBc1Q167sjY4kn9IJ4v1IRRaM/i2IxFN1Nu1ptjGKp+qgM8DYvFL/k/P+wETYjeiGS1eiLHMadorxO0zK0RK/gP7/WRjWRZktJO0ABV8YHp9YaYGO/6znVPEPZYz1NWDJVFQUQOl9jNUYjg/B/5BuV/FYgAAA" 
+                            alt="Manchester City"
+                            loading="lazy"
+                          >
+                        </div>
+                      
+                      <div class="entity__info">
+                        <span class="entity__name">Manchester City</span>
+                        
+                      </div>
+                    </a>
+                  
+                  
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--text"
+                  style="text-align: left"
+                >
+                  
+                  
+                  
+                  
+                    Premier League
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--number"
+                  style="text-align: center"
+                >
+                  
+                  
+                  
+                  
+                    <span class="num">
+                      
+                      35
+                      
+                    </span>
+                  
+                  
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--number"
+                  style="text-align: center"
+                >
+                  
+                  
+                  
+                  
+                    <span class="num">
+                      
+                      36
+                      
+                    </span>
+                  
+                  
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--number"
+                  style="text-align: center"
+                >
+                  
+                  
+                  
+                  
+                    <span class="num">
+                      
+                      8
+                      
+                    </span>
+                  
+                  
+                  
+                  
+                </td>
+              
+            </tr>
+          
+            
+            
+            
+            
+            <tr 
+              class="table__tr"
+              
+              
+            >
+              
+              
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--text"
+                  style="text-align: left"
+                >
+                  
+                  
+                  
+                  
+                    2021-22
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--team"
+                  style="text-align: left"
+                >
+                  
+                  
+                  
+                  
+                    
+                    <a class="entity" href="/team/dortmund" title="Borussia Dortmund">
+                      
+                        <div class="entity__logo">
+                          <img 
+                            src="/assets/images/team-5.webp" 
+                            alt="Borussia Dortmund"
+                            loading="lazy"
+                          >
+                        </div>
+                      
+                      <div class="entity__info">
+                        <span class="entity__name">Borussia Dortmund</span>
+                        
+                      </div>
+                    </a>
+                  
+                  
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--text"
+                  style="text-align: left"
+                >
+                  
+                  
+                  
+                  
+                    Bundesliga
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--number"
+                  style="text-align: center"
+                >
+                  
+                  
+                  
+                  
+                    <span class="num">
+                      
+                      24
+                      
+                    </span>
+                  
+                  
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--number"
+                  style="text-align: center"
+                >
+                  
+                  
+                  
+                  
+                    <span class="num">
+                      
+                      22
+                      
+                    </span>
+                  
+                  
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--number"
+                  style="text-align: center"
+                >
+                  
+                  
+                  
+                  
+                    <span class="num">
+                      
+                      7
+                      
+                    </span>
+                  
+                  
+                  
+                  
+                </td>
+              
+            </tr>
+          
+            
+            
+            
+            
+            <tr 
+              class="table__tr"
+              
+              
+            >
+              
+              
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--text"
+                  style="text-align: left"
+                >
+                  
+                  
+                  
+                  
+                    2020-21
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--team"
+                  style="text-align: left"
+                >
+                  
+                  
+                  
+                  
+                    
+                    <a class="entity" href="/team/dortmund" title="Borussia Dortmund">
+                      
+                        <div class="entity__logo">
+                          <img 
+                            src="/assets/images/team-5.webp" 
+                            alt="Borussia Dortmund"
+                            loading="lazy"
+                          >
+                        </div>
+                      
+                      <div class="entity__info">
+                        <span class="entity__name">Borussia Dortmund</span>
+                        
+                      </div>
+                    </a>
+                  
+                  
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--text"
+                  style="text-align: left"
+                >
+                  
+                  
+                  
+                  
+                    Bundesliga
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--number"
+                  style="text-align: center"
+                >
+                  
+                  
+                  
+                  
+                    <span class="num">
+                      
+                      28
+                      
+                    </span>
+                  
+                  
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--number"
+                  style="text-align: center"
+                >
+                  
+                  
+                  
+                  
+                    <span class="num">
+                      
+                      27
+                      
+                    </span>
+                  
+                  
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--number"
+                  style="text-align: center"
+                >
+                  
+                  
+                  
+                  
+                    <span class="num">
+                      
+                      6
+                      
+                    </span>
+                  
+                  
+                  
+                  
+                </td>
+              
+            </tr>
+          
+            
+            
+            
+            
+            <tr 
+              class="table__tr"
+              
+              
+            >
+              
+              
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--text"
+                  style="text-align: left"
+                >
+                  
+                  
+                  
+                  
+                    2019-20
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--team"
+                  style="text-align: left"
+                >
+                  
+                  
+                  
+                  
+                    
+                    <a class="entity" href="/team/salzburg" title="Red Bull Salzburg">
+                      
+                        <div class="entity__logo">
+                          <img 
+                            src="/assets/images/team-6.webp" 
+                            alt="Red Bull Salzburg"
+                            loading="lazy"
+                          >
+                        </div>
+                      
+                      <div class="entity__info">
+                        <span class="entity__name">Red Bull Salzburg</span>
+                        
+                      </div>
+                    </a>
+                  
+                  
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--text"
+                  style="text-align: left"
+                >
+                  
+                  
+                  
+                  
+                    Austrian Bundesliga
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--number"
+                  style="text-align: center"
+                >
+                  
+                  
+                  
+                  
+                    <span class="num">
+                      
+                      16
+                      
+                    </span>
+                  
+                  
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--number"
+                  style="text-align: center"
+                >
+                  
+                  
+                  
+                  
+                    <span class="num">
+                      
+                      17
+                      
+                    </span>
+                  
+                  
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--number"
+                  style="text-align: center"
+                >
+                  
+                  
+                  
+                  
+                    <span class="num">
+                      
+                      5
+                      
+                    </span>
+                  
+                  
+                  
+                  
+                </td>
+              
+            </tr>
+          
+            
+            
+            
+            
+            <tr 
+              class="table__tr"
+              
+              
+            >
+              
+              
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--text"
+                  style="text-align: left"
+                >
+                  
+                  
+                  
+                  
+                    2019-20
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--team"
+                  style="text-align: left"
+                >
+                  
+                  
+                  
+                  
+                    
+                    <a class="entity" href="/team/dortmund" title="Borussia Dortmund">
+                      
+                        <div class="entity__logo">
+                          <img 
+                            src="/assets/images/team-5.webp" 
+                            alt="Borussia Dortmund"
+                            loading="lazy"
+                          >
+                        </div>
+                      
+                      <div class="entity__info">
+                        <span class="entity__name">Borussia Dortmund</span>
+                        
+                      </div>
+                    </a>
+                  
+                  
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--text"
+                  style="text-align: left"
+                >
+                  
+                  
+                  
+                  
+                    Bundesliga
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--number"
+                  style="text-align: center"
+                >
+                  
+                  
+                  
+                  
+                    <span class="num">
+                      
+                      13
+                      
+                    </span>
+                  
+                  
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--number"
+                  style="text-align: center"
+                >
+                  
+                  
+                  
+                  
+                    <span class="num">
+                      
+                      13
+                      
+                    </span>
+                  
+                  
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--number"
+                  style="text-align: center"
+                >
+                  
+                  
+                  
+                  
+                    <span class="num">
+                      
+                      2
+                      
+                    </span>
+                  
+                  
+                  
+                  
+                </td>
+              
+            </tr>
+          
+            
+            
+            
+            
+            <tr 
+              class="table__tr"
+              
+              
+            >
+              
+              
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--text"
+                  style="text-align: left"
+                >
+                  
+                  
+                  
+                  
+                    2018-19
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--team"
+                  style="text-align: left"
+                >
+                  
+                  
+                  
+                  
+                    
+                    <a class="entity" href="/team/salzburg" title="Red Bull Salzburg">
+                      
+                        <div class="entity__logo">
+                          <img 
+                            src="/assets/images/team-6.webp" 
+                            alt="Red Bull Salzburg"
+                            loading="lazy"
+                          >
+                        </div>
+                      
+                      <div class="entity__info">
+                        <span class="entity__name">Red Bull Salzburg</span>
+                        
+                      </div>
+                    </a>
+                  
+                  
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--text"
+                  style="text-align: left"
+                >
+                  
+                  
+                  
+                  
+                    Austrian Bundesliga
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--number"
+                  style="text-align: center"
+                >
+                  
+                  
+                  
+                  
+                    <span class="num">
+                      
+                      27
+                      
+                    </span>
+                  
+                  
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--number"
+                  style="text-align: center"
+                >
+                  
+                  
+                  
+                  
+                    <span class="num">
+                      
+                      16
+                      
+                    </span>
+                  
+                  
+                  
+                  
+                </td>
+              
+                
+                
+                
+                
+                
+                
+                <td 
+                  class="table__td table__td--number"
+                  style="text-align: center"
+                >
+                  
+                  
+                  
+                  
+                    <span class="num">
+                      
+                      7
+                      
+                    </span>
+                  
+                  
+                  
+                  
+                </td>
+              
+            </tr>
+          
+        
+      </tbody>
+      
+      
+      
+      
+    </table>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</section>
+
+
+    </main>
+
+
+       
+
+
+
+<footer class="footer">
+  <div class="footer__container">
+    
+    
+    <div class="footer__top">
+      
+      
+      <div class="footer__brand">
+        <a href="/" class="footer__logo">
+          <span class="footer__logo-text">MATCH</span>
+          <span class="footer__logo-accent">LIVE</span>
+        </a>
+        
+        <p class="footer__description">Your ultimate destination for the latest sports news, live scores, and in-depth analysis.</p>
+      
+      </div>
+
+      
+      <div class="footer__links">
+        
+        <div class="footer__column">
+          <h3 class="footer__column-title">Sports</h3>
+          <ul class="footer__list">
+            
+            <li class="footer__list-item">
+              <a href="/football" class="footer__link">Football</a>
+            </li>
+            
+            <li class="footer__list-item">
+              <a href="/basketball" class="footer__link">Basketball</a>
+            </li>
+            
+            <li class="footer__list-item">
+              <a href="/tennis" class="footer__link">Tennis</a>
+            </li>
+            
+            <li class="footer__list-item">
+              <a href="/hockey" class="footer__link">Hockey</a>
+            </li>
+            
+          </ul>
+        </div>
+        
+        <div class="footer__column">
+          <h3 class="footer__column-title">Sections</h3>
+          <ul class="footer__list">
+            
+            <li class="footer__list-item">
+              <a href="/news" class="footer__link">News</a>
+            </li>
+            
+            <li class="footer__list-item">
+              <a href="/live" class="footer__link">Live</a>
+            </li>
+            
+            <li class="footer__list-item">
+              <a href="/video" class="footer__link">Video</a>
+            </li>
+            
+            <li class="footer__list-item">
+              <a href="/matches" class="footer__link">Matches</a>
+            </li>
+            
+          </ul>
+        </div>
+        
+        <div class="footer__column">
+          <h3 class="footer__column-title">Company</h3>
+          <ul class="footer__list">
+            
+            <li class="footer__list-item">
+              <a href="/about" class="footer__link">About Us</a>
+            </li>
+            
+            <li class="footer__list-item">
+              <a href="/contact" class="footer__link">Contact</a>
+            </li>
+            
+            <li class="footer__list-item">
+              <a href="/advertise" class="footer__link">Advertise</a>
+            </li>
+            
+            <li class="footer__list-item">
+              <a href="/careers" class="footer__link">Careers</a>
+            </li>
+            
+          </ul>
+        </div>
+        
+        <div class="footer__column">
+          <h3 class="footer__column-title">Legal</h3>
+          <ul class="footer__list">
+            
+            <li class="footer__list-item">
+              <a href="/privacy" class="footer__link">Privacy Policy</a>
+            </li>
+            
+            <li class="footer__list-item">
+              <a href="/terms" class="footer__link">Terms of Service</a>
+            </li>
+            
+            <li class="footer__list-item">
+              <a href="/cookies" class="footer__link">Cookie Policy</a>
+            </li>
+            
+            <li class="footer__list-item">
+              <a href="/dmca" class="footer__link">DMCA</a>
+            </li>
+            
+          </ul>
+        </div>
+        
+      </div>
+
+    </div>
+
+    
+    <div class="footer__bottom">
+      <p class="footer__copyright">© 2024 MatchLive. All rights reserved.</p>
+    </div>
+
+  </div>
+</footer> 
+
+
+    
+
+  </body>
+</html>

@@ -7,113 +7,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // =============================================================================
-// ROUTER CONFIGURATION
-// =============================================================================
-
-// Базовые настройки для страниц
-const DEFAULT_PAGE_CONFIG = {
-  pin: "",
-  isHome: false,
-  category: "page", // page, news, video, etc.
-  meta: {}
-};
-
-// Специальные настройки для конкретных страниц
-const PAGE_OVERRIDES = {
-  // Главная страница
-  'home': {
-    name: 'Home',
-    url: '',
-    isHome: true,
-    category: 'main'
-  },
-  
-  // Основные разделы
-  'news': {
-    name: 'News',
-    url: 'news',
-    category: 'content'
-  },
-  'lives': {
-    name: 'Lives',
-    url: 'lives',
-    category: 'content'
-  },
-  'videos': {
-    name: 'Videos',
-    url: 'videos',
-    category: 'content'
-  },
-  
-  // Информационные страницы
-  'calendar': {
-    name: 'Calendar',
-    url: 'calendar',
-    category: 'info'
-  },
-  'history': {
-    name: 'History',
-    url: 'history',
-    category: 'info'
-  },
-  'teams': {
-    name: 'Teams',
-    url: 'teams',
-    category: 'info'
-  },
-  'league': {
-    name: 'League',
-    url: 'league',
-    category: 'info'
-  },
-  
-  // Детальные страницы (обычно динамические)
-  'post': {
-    name: 'Post',
-    url: 'post',
-    category: 'detail',
-    meta: { dynamic: true, template: 'post' }
-  },
-  'video': {
-    name: 'Video',
-    url: 'video',
-    category: 'detail',
-    meta: { dynamic: true, template: 'video' }
-  },
-  'team': {
-    name: 'Team',
-    url: 'team',
-    category: 'detail',
-    meta: { dynamic: true, template: 'team' }
-  },
-  'player': {
-    name: 'Player',
-    url: 'player',
-    category: 'detail',
-    meta: { dynamic: true, template: 'player' }
-  },
-  'review': {
-    name: 'Review',
-    url: 'review',
-    category: 'detail',
-    meta: { dynamic: true, template: 'review' }
-  },
-  
-  // Служебные страницы
-  'contact': {
-    name: 'Contact',
-    url: 'contact',
-    category: 'service'
-  },
-  'privacy': {
-    name: 'Privacy',
-    url: 'privacy',
-    category: 'service'
-  }
-};
-
-
-// =============================================================================
 // ROUTER GENERATION
 // =============================================================================
 
@@ -133,11 +26,11 @@ export function generateRouterConfig(projectRoot = process.cwd()) {
   
   for (const file of files) {
     const pageName = path.basename(file, '.html');
-    const isHome = pageName === 'home';
+    const isHome = pageName === 'index'; // ✅ Изменено с 'home' на 'index'
     
-    // Простая конфигурация - точно как в вашем файле
+    // Простая конфигурация
     const config = {
-      file: isHome ? 'home.html' : `pages/${file}`,
+      file: `pages/${file}`, // Всегда pages/имя_файла.html
       name: getPageName(pageName),
       pin: "",
       url: getPageUrl(pageName),
@@ -160,7 +53,7 @@ export function generateRouterConfig(projectRoot = process.cwd()) {
 // Получение имени страницы
 function getPageName(pageName) {
   const names = {
-    'home': 'Home',
+    'index': 'Home', // ✅ Теперь index → Home
     'calendar': 'Calendar',
     'contact': 'Contact', 
     'history': 'History',
@@ -184,7 +77,7 @@ function getPageName(pageName) {
 // Получение URL страницы  
 function getPageUrl(pageName) {
   const urls = {
-    'home': '' // Главная страница
+    'index': '' // ✅ index → пустой URL (главная страница)
   };
   
   return urls[pageName] !== undefined ? urls[pageName] : pageName;
@@ -271,12 +164,7 @@ export function generateEnhancedRouter(projectRoot = process.cwd()) {
     generated: new Date().toISOString(),
     version: getPackageVersion(projectRoot),
     stats,
-    pages: router,
-    categories: Object.keys(CATEGORY_CONFIG).map(key => ({
-      key,
-      ...CATEGORY_CONFIG[key],
-      count: stats.categories[key] || 0
-    }))
+    pages: router
   };
 }
 
